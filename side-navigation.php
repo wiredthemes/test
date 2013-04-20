@@ -2,14 +2,14 @@
 // Template Name: Side Navigation
 get_header(); ?>
 	<?php
-	if(get_post_meta($post->ID, 'pyre_full_width', true) == 'yes') {
+	if(get_post_meta($post->ID, 'wired_full_width', true) == 'yes') {
 		$content_css = 'width:100%';
 		$sidebar_css = 'display:none';
 	}
-	elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'left') {
+	elseif(get_post_meta($post->ID, 'wired_sidebar_position', true) == 'left') {
 		$content_css = 'float:right;';
 		$sidebar_css = 'float:left;';
-	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'right') {
+	} elseif(get_post_meta($post->ID, 'wired_sidebar_position', true) == 'right') {
 		$content_css = 'float:left;';
 		$sidebar_css = 'float:right;';
 	}

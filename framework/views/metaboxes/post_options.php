@@ -1,4 +1,4 @@
-<div class='pyre_metabox'>
+<div class='wired_metabox'>
 <?php
 $this->select(	'page_title',
 				'Page Title Bar',
@@ -28,7 +28,7 @@ $this->select(	'sidebar_position',
 <?php
 $this->select(	'slider_type',
 				'Slider Type',
-				array('no' => 'No Slider', 'layer' => 'LayerSlider', 'flex' => 'FlexSlider', 'flex2' => 'ThemeFusion Slider', 'rev' => 'Revolution Slider', 'elastic' => 'Elastic Slider'),
+				array('no' => 'No Slider', 'layer' => 'LayerSlider', 'flex' => 'FlexSlider', 'flex2' => 'WiredThemes Slider', 'rev' => 'Revolution Slider', 'elastic' => 'Elastic Slider'),
 				''
 			);
 ?>
@@ -86,7 +86,7 @@ while($i <= $data['flexsliders_number']){
 	$i++;
 }
 $this->select(	'flexslider',
-				'Select ThemeFusion Slider',
+				'Select WiredThemes Slider',
 				$slides_array,
 				''
 			);
@@ -109,7 +109,7 @@ $this->select(	'revslider',
 <?php
 $slides_array = array();
 $slides_array[0] = 'Select a slider';
-$slides = get_terms('themefusion_es_groups');
+$slides = get_terms('wiredthemes_es_groups');
 if($slides && !isset($slides->errors)){
 $slides = is_array($slides) ? $slides : unserialize($slides);
 foreach($slides as $key => $val){

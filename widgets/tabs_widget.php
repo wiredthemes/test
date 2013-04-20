@@ -1,7 +1,7 @@
 <?php
-add_action('widgets_init', 'pyre_tabs_load_widgets');
+add_action('widgets_init', 'wired_tabs_load_widgets');
 
-function pyre_tabs_load_widgets()
+function wired_tabs_load_widgets()
 {
 	register_widget('Pyre_Tabs_Widget');
 }
@@ -10,11 +10,11 @@ class Pyre_Tabs_Widget extends WP_Widget {
 	
 	function Pyre_Tabs_Widget()
 	{
-		$widget_ops = array('classname' => 'pyre_tabs', 'description' => 'Popular posts, recent post and comments.');
+		$widget_ops = array('classname' => 'wired_tabs', 'description' => 'Popular posts, recent post and comments.');
 
-		$control_ops = array('id_base' => 'pyre_tabs-widget');
+		$control_ops = array('id_base' => 'wired_tabs-widget');
 
-		$this->WP_Widget('pyre_tabs-widget', 'Avada: Tabs', $widget_ops, $control_ops);
+		$this->WP_Widget('wired_tabs-widget', 'Inhouse: Tabs', $widget_ops, $control_ops);
 	}
 	
 	function widget($args, $instance)
@@ -37,10 +37,10 @@ class Pyre_Tabs_Widget extends WP_Widget {
 			<div class="tab-hold tabs-wrapper">
 				<ul id="tabs" class="tabset tabs">
 					<?php if($show_popular_posts == 'true'): ?>
-					<li><a href="#tab1"><?php echo __('Popular', 'Avada'); ?></a></li>
+					<li><a href="#tab1"><?php echo __('Popular', 'Inhouse'); ?></a></li>
 					<?php endif; ?>
 					<?php if($show_recent_posts == 'true'): ?>
-					<li><a href="#tab2"><?php echo __('Recent', 'Avada'); ?></a></li>
+					<li><a href="#tab2"><?php echo __('Recent', 'Inhouse'); ?></a></li>
 					<?php endif; ?>
 					<?php if($show_comments == 'true'): ?>
 					<li><a href="#tab3"><span class="chat-icon"></span></a></li>

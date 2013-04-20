@@ -4,7 +4,7 @@
 		die ('Please do not load this page directly. Thanks!');
 
 	if ( post_password_required() ) { ?>
-		<p class="no-comments"><?php echo __('This post is password protected. Enter the password to view comments.', 'Avada'); ?></p>
+		<p class="no-comments"><?php echo __('This post is password protected. Enter the password to view comments.', 'Inhouse'); ?></p>
 	<?php
 		return;
 	}
@@ -15,10 +15,10 @@
 <?php if ( have_comments() ) : ?>
 
 	<div class="comments-container">
-		<div class="title"><h2><?php comments_number(__('No Comments', 'Avada'), __('One Comment', 'Avada'), '% '.__('Comments', 'Avada'));?></h2></div>
+		<div class="title"><h2><?php comments_number(__('No Comments', 'Inhouse'), __('One Comment', 'Inhouse'), '% '.__('Comments', 'Inhouse'));?></h2></div>
 		
 		<ol class="commentlist">
-			<?php wp_list_comments('callback=avada_comment'); ?>
+			<?php wp_list_comments('callback=inhouse_comment'); ?>
 		</ol>
 		
 		<div class="comments-navigation">
@@ -34,7 +34,7 @@
 
 	 <?php else : // comments are closed ?>
 		<!-- If comments are closed. -->
-		<p class="no-comments"><?php echo __('Comments are closed.', 'Avada'); ?></p>
+		<p class="no-comments"><?php echo __('Comments are closed.', 'Inhouse'); ?></p>
 
 	<?php endif; ?>
 
@@ -44,30 +44,30 @@
 
 <div id="respond" class="section">
 	<div>
-	<div class="title"><h2><?php comment_form_title(__('Leave A Comment', 'Avada'), __('Leave A Comment', 'Avada')); ?></h2></div>
+	<div class="title"><h2><?php comment_form_title(__('Leave A Comment', 'Inhouse'), __('Leave A Comment', 'Inhouse')); ?></h2></div>
 	<div>
 
 	<div><p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p></div>
 
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-	<p><?php printf(__('You must be %slogged in%s to post a comment.', 'Avada'), '<a href="'.wp_login_url( get_permalink() ).'">', '</a>'); ?></p>
+	<p><?php printf(__('You must be %slogged in%s to post a comment.', 'Inhouse'), '<a href="'.wp_login_url( get_permalink() ).'">', '</a>'); ?></p>
 	<?php else : ?>
 
 	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 
 		<?php if ( is_user_logged_in() ) : ?>
 
-		<p><?php echo __('Logged in as', 'Avada'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php echo __('Log out of this account'); ?>"><?php echo __('Log out &raquo;', 'Avada'); ?></a></p>
+		<p><?php echo __('Logged in as', 'Inhouse'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php echo __('Log out of this account'); ?>"><?php echo __('Log out &raquo;', 'Inhouse'); ?></a></p>
 
 		<div id="comment-textarea">
 			
-			<textarea name="comment" id="comment" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="<?php echo __('Comment...', 'Avada'); ?>"></textarea>
+			<textarea name="comment" id="comment" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="<?php echo __('Comment...', 'Inhouse'); ?>"></textarea>
 		
 		</div>
 		
 		<div id="comment-submit">
 		
-			<p><div class=""><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Post Comment', 'Avada'); ?>" class="comment-submit  small button green" /></div></p>
+			<p><div class=""><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Post Comment', 'Inhouse'); ?>" class="comment-submit  small button green" /></div></p>
 			<?php comment_id_fields(); ?>
 			<?php do_action('comment_form', $post->ID); ?>
 			
@@ -77,23 +77,23 @@
 
 		<div id="comment-input">
 
-			<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" placeholder="<?php echo __('Name (required)', 'Avada'); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> class="input-name" />
+			<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" placeholder="<?php echo __('Name (required)', 'Inhouse'); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> class="input-name" />
 
-			<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" placeholder="<?php echo __('Email (required)', 'Avada'); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> class="input-email"  />
+			<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" placeholder="<?php echo __('Email (required)', 'Inhouse'); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> class="input-email"  />
 		
-			<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" placeholder="<?php echo __('Website', 'Avada'); ?>" size="22" tabindex="3" class="input-website" />
+			<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" placeholder="<?php echo __('Website', 'Inhouse'); ?>" size="22" tabindex="3" class="input-website" />
 			
 		</div>
 		
 		<div id="comment-textarea">
 			
-			<textarea name="comment" id="comment" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="<?php echo __('Comment...', 'Avada'); ?>"></textarea>
+			<textarea name="comment" id="comment" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="<?php echo __('Comment...', 'Inhouse'); ?>"></textarea>
 		
 		</div>
 		
 		<div id="comment-submit">
 		
-			<p><div><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Post Comment', 'Avada'); ?>" class="comment-submit small button green" /></div></p>
+			<p><div><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Post Comment', 'Inhouse'); ?>" class="comment-submit small button green" /></div></p>
 			<?php comment_id_fields(); ?>
 			<?php do_action('comment_form', $post->ID); ?>
 			

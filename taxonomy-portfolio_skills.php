@@ -43,15 +43,15 @@ get_header(); ?>
 					}
 					?>
 					<div class="buttons">
-						<a href="<?php the_permalink(); ?>" class="green button small"><?php echo __('Learn More', 'Avada'); ?></a>
-						<?php if(get_post_meta($post->ID, 'pyre_project_url', true)): ?>
-						<a href="<?php echo get_post_meta($post->ID, 'pyre_project_url', true); ?>" class="green button small"><?php echo __('View Project', 'Avada'); ?></a>
+						<a href="<?php the_permalink(); ?>" class="green button small"><?php echo __('Learn More', 'Inhouse'); ?></a>
+						<?php if(get_post_meta($post->ID, 'wired_project_url', true)): ?>
+						<a href="<?php echo get_post_meta($post->ID, 'wired_project_url', true); ?>" class="green button small"><?php echo __('View Project', 'Inhouse'); ?></a>
 						<?php endif; ?>
 					</div>
 				</div>
 			</div>
 			<?php endif; endwhile; ?>
 		</div>
-		<?php themefusion_pagination($gallery->max_num_pages, $range = 2); ?>
+		<?php wiredthemes_pagination($gallery->max_num_pages, $range = 2); ?>
 	</div>
 <?php get_footer(); ?>

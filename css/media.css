@@ -10,13 +10,13 @@
 		width:100%;
 		padding:0 0 20px;
 	}
-	.avada-container .columns {
+	.inhouse-container .columns {
 		float:none;
 		width:100%;
 		margin-bottom:20px;
 	}
-	.avada-container .columns .col {float:left;}
-	.avada-container .col img{		
+	.inhouse-container .columns .col {float:left;}
+	.inhouse-container .col img{		
 		display:block;
 		margin:0 auto;
 	}
@@ -219,7 +219,7 @@
 
 	.post-content .rev_slider_wrapper{margin-left:-5px !important;}
 	.rev_slider_wrapper .tparrows,.rev_slider_wrapper:hover .tparrows{display:none !important;}
-	.ls-avada .ls-nav-prev,.ls-avada .ls-nav-next{display:none !important;}
+	.ls-inhouse .ls-nav-prev,.ls-inhouse .ls-nav-next{display:none !important;}
 
 	nav#nav{margin-right:0;}
 
@@ -304,13 +304,13 @@
 		width:100%;
 		padding:0 0 20px;
 	}
-	.avada-container .columns {
+	.inhouse-container .columns {
 		float:none;
 		width:100%;
 		margin-bottom:20px;
 	}
-	.avada-container .columns .col {float:left;}
-	.avada-container .col img{		
+	.inhouse-container .columns .col {float:left;}
+	.inhouse-container .col img{		
 		display:block;
 		margin:0 auto;
 	}
@@ -513,7 +513,7 @@
 
 	.post-content .rev_slider_wrapper{margin-left:-5px !important;}
 	.rev_slider_wrapper .tparrows,.rev_slider_wrapper:hover .tparrows{display:none !important;}
-	.ls-avada .ls-nav-prev,.ls-avada .ls-nav-next{display:none !important;}
+	.ls-inhouse .ls-nav-prev,.ls-inhouse .ls-nav-next{display:none !important;}
 
 	nav#nav{margin-right:0;}
 
@@ -607,7 +607,7 @@
 		padding:5px 0;
 		border:0 !important;
 	}
-	.avada-container .columns .col,
+	.inhouse-container .columns .col,
 	.footer-area .columns .col{
 		float:none;
 		width:100%;
@@ -651,7 +651,7 @@
 	.post-content .rev_slider_wrapper{margin-left:-5px !important;}
 
 	.rev_slider_wrapper .tparrows,.rev_slider_wrapper:hover .tparrows{display:none !important;}
-	.ls-avada .ls-nav-prev,.ls-avada .ls-nav-next{display:none !important;}
+	.ls-inhouse .ls-nav-prev,.ls-inhouse .ls-nav-next{display:none !important;}
 
 	.rev_slider .button,.ls-layer .button{
 		padding-left:10px; padding-right:10px;

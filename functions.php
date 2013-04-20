@@ -1,6 +1,6 @@
 <?php
 // Translation
-load_theme_textdomain('Avada', TEMPLATEPATH.'/languages');
+load_theme_textdomain('Inhouse', TEMPLATEPATH.'/languages');
 
 // Default RSS feed links
 add_theme_support('automatic-feed-links');
@@ -20,14 +20,14 @@ if (!isset( $content_width )) $content_width = 1000;
 require_once('admin/index.php');
 
 // Auto plugin activation
-if(get_option('avada_int_plugins', '0') == '0') {
+if(get_option('inhouse_int_plugins', '0') == '0') {
 	global $wpdb;
 	$wpdb->query("UPDATE ". $wpdb->options ." SET option_value = 'a:0:{}' WHERE option_name = 'active_plugins';");
 	$wpdb->query("UPDATE ". $wpdb->sitemeta ." SET meta_value = 'a:0:{}' WHERE meta_key = 'active_plugins';");
-	update_option('avada_int_plugins', '1');
+	update_option('inhouse_int_plugins', '1');
 }
 
-if(get_option('avada_int_plugins', '0') == '1') {
+if(get_option('inhouse_int_plugins', '0') == '1') {
 	/**************************/
 	/* Include LayerSlider WP */
 	/**************************/
@@ -36,18 +36,18 @@ if(get_option('avada_int_plugins', '0') == '1') {
 
 	include $layerslider;
 	
-	$layerslider_last_version = get_option('avada_layerslider_last_version', '1.0');
+	$layerslider_last_version = get_option('inhouse_layerslider_last_version', '1.0');
 
 	// Activate the plugin if necessary
-	if(get_option('avada_layerslider_activated', '0') == '0') {
+	if(get_option('inhouse_layerslider_activated', '0') == '0') {
 		// Run activation script
 		layerslider_activation_scripts();
 
 		// Save a flag that it is activated, so this won't run again
-		update_option('avada_layerslider_activated', '1');
+		update_option('inhouse_layerslider_activated', '1');
 
 		// Save the current version number of LayerSlider
-		update_option('avada_layerslider_last_version', $GLOBALS['lsPluginVersion']);
+		update_option('inhouse_layerslider_last_version', $GLOBALS['lsPluginVersion']);
 
 	// Do version check
 	} else if(version_compare($GLOBALS['lsPluginVersion'], $layerslider_last_version, '>')) {
@@ -55,7 +55,7 @@ if(get_option('avada_int_plugins', '0') == '1') {
 		layerslider_activation_scripts();
 
 		// Update the version number
-		update_option('avada_layerslider_last_version', $GLOBALS['lsPluginVersion']);
+		update_option('inhouse_layerslider_last_version', $GLOBALS['lsPluginVersion']);
 	}
 
 	/**************************/
@@ -66,7 +66,7 @@ if(get_option('avada_int_plugins', '0') == '1') {
 	include $revslider;
 
 	// Activate the plugin if necessary
-	if(get_option('avada_revslider_activated', '0') == '0') {
+	if(get_option('inhouse_revslider_activated', '0') == '0') {
 		if(!class_exists('RevSliderAdmin')) {
 			$revslider_admin_script = get_template_directory() . '/framework/plugins/revslider/revslider_admin.php';
 			include $revslider_admin_script;
@@ -77,7 +77,7 @@ if(get_option('avada_int_plugins', '0') == '1') {
 	    $revslider_admin->onActivate();
 
 	    // Save a flag that it is activated, so this won't run again
-	    update_option('avada_revslider_activated', '1');
+	    update_option('inhouse_revslider_activated', '1');
 	}
 
 	/**************************/
@@ -104,7 +104,7 @@ if(get_option('avada_int_plugins', '0') == '1') {
 }
 
 // Double check if rev slider table exists
-/*if(get_option('avada_revslider_activated', '0') == '1') {
+/*if(get_option('inhouse_revslider_activated', '0') == '1') {
 	global $wpdb;
 	$revslider_db_exists = $wpdb->get_results("SHOW TABLES LIKE '".$wpdb->prefix."revslider_slides'");
 	if(!$revslider_db_exists) {
@@ -139,7 +139,7 @@ if(get_option('avada_int_plugins', '0') == '1') {
 	$envato = get_template_directory() . '/framework/plugins/envato-wordpress-toolkit-library/class-envato-wordpress-theme-upgrader.php';
 	include $envato;
 	$upgrader = new Envato_WordPress_Theme_Upgrader($data['tf_username'], $data['tf_api']);
-	$check_upgrade = $upgrader->check_for_theme_update('Avada');
+	$check_upgrade = $upgrader->check_for_theme_update('Inhouse');
 	var_dump($check_upgrade);
 	if($check_upgrade->updated_themes_count && $data['tf_update']) {
 		$upgrader->upgrade_theme();
@@ -179,7 +179,7 @@ add_image_size('recent-works-thumbnail', 66, 66, true);
 if(function_exists('register_sidebar')) {
 	register_sidebar(array(
 		'name' => 'Blog Sidebar',
-		'id' => 'avada-blog-sidebar',
+		'id' => 'inhouse-blog-sidebar',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<div class="heading"><h3>',
@@ -188,7 +188,7 @@ if(function_exists('register_sidebar')) {
 
 	register_sidebar(array(
 		'name' => 'Footer Widget 1',
-		'id' => 'avada-footer-widget-1',
+		'id' => 'inhouse-footer-widget-1',
 		'before_widget' => '<div id="%1$s" class="footer-widget-col %2$s">',
 		'after_widget' => '<div style="clear:both;"></div></div>',
 		'before_title' => '<h3>',
@@ -197,7 +197,7 @@ if(function_exists('register_sidebar')) {
 
 	register_sidebar(array(
 		'name' => 'Footer Widget 2',
-		'id' => 'avada-footer-widget-2',
+		'id' => 'inhouse-footer-widget-2',
 		'before_widget' => '<div id="%1$s" class="footer-widget-col %2$s">',
 		'after_widget' => '<div style="clear:both;"></div></div>',
 		'before_title' => '<h3>',
@@ -206,7 +206,7 @@ if(function_exists('register_sidebar')) {
 
 	register_sidebar(array(
 		'name' => 'Footer Widget 3',
-		'id' => 'avada-footer-widget-3',
+		'id' => 'inhouse-footer-widget-3',
 		'before_widget' => '<div id="%1$s" class="footer-widget-col %2$s">',
 		'after_widget' => '<div style="clear:both;"></div></div>',
 		'before_title' => '<h3>',
@@ -215,7 +215,7 @@ if(function_exists('register_sidebar')) {
 
 	register_sidebar(array(
 		'name' => 'Footer Widget 4',
-		'id' => 'avada-footer-widget-4',
+		'id' => 'inhouse-footer-widget-4',
 		'before_widget' => '<div id="%1$s" class="footer-widget-col %2$s">',
 		'after_widget' => '<div style="clear:both;"></div></div>',
 		'before_title' => '<h3>',
@@ -224,11 +224,11 @@ if(function_exists('register_sidebar')) {
 }
 
 // Register custom post types
-add_action('init', 'pyre_init');
-function pyre_init() {
+add_action('init', 'wired_init');
+function wired_init() {
 	global $data;
 	register_post_type(
-		'avada_portfolio',
+		'inhouse_portfolio',
 		array(
 			'labels' => array(
 				'name' => 'Portfolio',
@@ -242,11 +242,11 @@ function pyre_init() {
 		)
 	);
 
-	register_taxonomy('portfolio_category', 'avada_portfolio', array('hierarchical' => true, 'label' => 'Categories', 'query_var' => true, 'rewrite' => true));
-	register_taxonomy('portfolio_skills', 'avada_portfolio', array('hierarchical' => true, 'label' => 'Skills', 'query_var' => true, 'rewrite' => true));
+	register_taxonomy('portfolio_category', 'inhouse_portfolio', array('hierarchical' => true, 'label' => 'Categories', 'query_var' => true, 'rewrite' => true));
+	register_taxonomy('portfolio_skills', 'inhouse_portfolio', array('hierarchical' => true, 'label' => 'Skills', 'query_var' => true, 'rewrite' => true));
 
 	register_post_type(
-		'avada_faq',
+		'inhouse_faq',
 		array(
 			'labels' => array(
 				'name' => 'FAQs',
@@ -260,10 +260,10 @@ function pyre_init() {
 		)
 	);
 
-	register_taxonomy('faq_category', 'avada_faq', array('hierarchical' => true, 'label' => 'Categories', 'query_var' => true, 'rewrite' => true));
+	register_taxonomy('faq_category', 'inhouse_faq', array('hierarchical' => true, 'label' => 'Categories', 'query_var' => true, 'rewrite' => true));
 
 	register_post_type(
-		'themefusion_elastic',
+		'wiredthemes_elastic',
 		array(
 			'labels' => array(
 				'name' => 'Elastic Slider',
@@ -278,11 +278,11 @@ function pyre_init() {
 		)
 	);
 
-	register_taxonomy('themefusion_es_groups', 'themefusion_elastic', array('hierarchical' => false, 'label' => 'Groups', 'query_var' => true, 'rewrite' => true));
+	register_taxonomy('wiredthemes_es_groups', 'wiredthemes_elastic', array('hierarchical' => false, 'label' => 'Groups', 'query_var' => true, 'rewrite' => true));
 }
 
 // How comments are displayed
-function avada_comment($comment, $args, $depth) {
+function inhouse_comment($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment; ?>
 	<?php $add_below = ''; ?>
 	<li <?php comment_class(); ?> id="comment-<?php comment_ID() ?>">
@@ -296,12 +296,12 @@ function avada_comment($comment, $args, $depth) {
 			
 				<div class="comment-author meta">
 					<strong><?php echo get_comment_author_link() ?></strong>
-					<?php printf(__('%1$s at %2$s', 'Avada'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__(' - Edit', 'Avada'),'  ','') ?><?php comment_reply_link(array_merge( $args, array('reply_text' => __(' - Reply', 'Avada'), 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+					<?php printf(__('%1$s at %2$s', 'Inhouse'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__(' - Edit', 'Inhouse'),'  ','') ?><?php comment_reply_link(array_merge( $args, array('reply_text' => __(' - Reply', 'Inhouse'), 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 				</div>
 			
 				<div class="comment-text">
 					<?php if ($comment->comment_approved == '0') : ?>
-					<em><?php echo __('Your comment is awaiting moderation.', 'Avada') ?></em>
+					<em><?php echo __('Your comment is awaiting moderation.', 'Inhouse') ?></em>
 					<br />
 					<?php endif; ?>
 					<?php comment_text() ?>
@@ -313,16 +313,16 @@ function avada_comment($comment, $args, $depth) {
 
 <?php }
 
-/*function pyre_SearchFilter($query) {
+/*function wired_SearchFilter($query) {
 	if ($query->is_search) {
 		$query->set('post_type', 'post');
 	}
 	return $query;
 }
-add_filter('pre_get_posts','pyre_SearchFilter');*/
+add_filter('pre_get_posts','wired_SearchFilter');*/
 
-add_filter('wp_get_attachment_link', 'avada_pretty');
-function avada_pretty($content) {
+add_filter('wp_get_attachment_link', 'inhouse_pretty');
+function inhouse_pretty($content) {
 	$content = preg_replace("/<a/","<a rel=\"prettyPhoto[postimages]\"",$content,1);
 	return $content;
 }
@@ -361,7 +361,7 @@ if( class_exists( 'kdMultipleFeaturedImages' )  && !$data['legacy_posts_slidesho
 
 	        $args = array(
 	                'id' => 'featured-image-'.$i,
-	                'post_type' => 'avada_portfolio',      // Set this to post or page
+	                'post_type' => 'inhouse_portfolio',      // Set this to post or page
 	                'labels' => array(
 	                    'name'      => 'Featured image '.$i,
 	                    'set'       => 'Set featured image '.$i,
@@ -377,16 +377,16 @@ if( class_exists( 'kdMultipleFeaturedImages' )  && !$data['legacy_posts_slidesho
 
 }
 
-function avada_excerpt_length( $length ) {
+function inhouse_excerpt_length( $length ) {
 	global $data;
 	
 	if(isset($data['excerpt_length_blog'])) {
 		return $data['excerpt_length_blog'];
 	}
 }
-add_filter('excerpt_length', 'avada_excerpt_length', 999);
+add_filter('excerpt_length', 'inhouse_excerpt_length', 999);
 
-function avada_admin_bar_render() {
+function inhouse_admin_bar_render() {
 	global $wp_admin_bar;
 	$wp_admin_bar->add_menu( array(
 		'parent' => 'site-name', // use 'false' for a root menu, or pass the ID of the parent menu
@@ -396,10 +396,10 @@ function avada_admin_bar_render() {
 		'meta' => false // array of any of the following options: array( 'html' => '', 'class' => '', 'onclick' => '', target => '', title => '' );
 	));
 }
-add_action( 'wp_before_admin_bar_render', 'avada_admin_bar_render' );
+add_action( 'wp_before_admin_bar_render', 'inhouse_admin_bar_render' );
 
-add_filter('upload_mimes', 'avada_filter_mime_types');
-function avada_filter_mime_types($mimes)
+add_filter('upload_mimes', 'inhouse_filter_mime_types');
+function inhouse_filter_mime_types($mimes)
 {
 	$mimes['ttf'] = 'font/ttf';
 	$mimes['woff'] = 'font/woff';
@@ -446,7 +446,7 @@ function tf_content($limit, $strip_html) {
 
 
 
-function avada_scripts() {
+function inhouse_scripts() {
 	if (!is_admin()) {
 	wp_reset_query();
     wp_enqueue_script( 'jquery', false, array(), false, true);
@@ -503,16 +503,16 @@ function avada_scripts() {
     wp_register_script( 'jquery.waypoint', get_bloginfo('template_directory').'/js/jquery.waypoint.js', array(), false, true);
 	wp_enqueue_script( 'jquery.waypoint' );
 	
-    wp_deregister_script( 'avada' );
-    wp_register_script( 'avada', get_bloginfo('template_directory').'/js/main.js', array(), false, true);
-	wp_enqueue_script( 'avada' );
+    wp_deregister_script( 'inhouse' );
+    wp_register_script( 'inhouse', get_bloginfo('template_directory').'/js/main.js', array(), false, true);
+	wp_enqueue_script( 'inhouse' );
 	}
 }
-add_action('init', 'avada_scripts');
+add_action('init', 'inhouse_scripts');
 
-add_filter('jpeg_quality', 'avada_image_full_quality');
-add_filter('wp_editor_set_quality', 'avada_image_full_quality');
-function avada_image_full_quality($quality) {
+add_filter('jpeg_quality', 'inhouse_image_full_quality');
+add_filter('wp_editor_set_quality', 'inhouse_image_full_quality');
+function inhouse_image_full_quality($quality) {
     return 100;
 }
 
@@ -535,8 +535,8 @@ function cat_count_span($links) {
 
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
 
-add_filter('pre_get_posts','avada_SearchFilter');
-function avada_SearchFilter($query) {
+add_filter('pre_get_posts','inhouse_SearchFilter');
+function inhouse_SearchFilter($query) {
 	global $data;
 	if($query->is_search) {
 		if($data['search_content'] == 'Only Posts') {

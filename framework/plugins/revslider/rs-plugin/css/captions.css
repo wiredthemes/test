@@ -1,4 +1,4 @@
-.avada_huge_white_text{
+.inhouse_huge_white_text{
 			position: absolute; 
 			color: #ffffff; 
 			font-size: 130px; 
@@ -7,7 +7,7 @@
             text-shadow: 0px 2px 5px rgba(0, 0, 0, 1);
 		}
 
-.avada_huge_black_text{
+.inhouse_huge_black_text{
 			position: absolute; 
 			color: #000000; 
 			font-size: 130px; 
@@ -15,7 +15,7 @@
 			font-family: museoslab500regular;
 		}
 
-.avada_big_black_text{
+.inhouse_big_black_text{
 			position: absolute; 
 			color: #333333; 
 			font-size: 42px; 
@@ -23,7 +23,7 @@
 			font-family: museoslab500regular;
 		}
 
-.avada_big_black_text_center{
+.inhouse_big_black_text_center{
 			position: absolute; 
 			color: #333333; 
 			font-size: 38px; 
@@ -33,7 +33,7 @@
 		}
 
 
-.avada_med_green_text{
+.inhouse_med_green_text{
 			position: absolute; 
 			color: #A0CE4E; 
 			font-size: 24px; 
@@ -42,7 +42,7 @@
 		}
 
 
-.avada_small_gray_text{
+.inhouse_small_gray_text{
 			position: absolute; 
 			color: #747474; 
 			font-size: 13px; 			
@@ -51,7 +51,7 @@
 		}
 
 
-.avada_block_black{
+.inhouse_block_black{
 			position: absolute; 
 			color: #A0CE4E; 
 			text-shadow: none; 
@@ -66,7 +66,7 @@
 			font-family: PTSansRegular, Arial, Helvetica, sans-serif;
 	}
 
-.avada_block_green{
+.inhouse_block_green{
 			position: absolute; 
 			color: #000; 
 			text-shadow: none; 
@@ -81,7 +81,7 @@
 			font-family: PTSansRegular, Arial, Helvetica, sans-serif;
 	}
 
-.avada_block_white{
+.inhouse_block_white{
 			position: absolute; 
 			color: #fff; 
 			text-shadow: none; 
@@ -97,7 +97,7 @@
 	}
 
 
-.avada_block_white_trans{
+.inhouse_block_white_trans{
 			position: absolute; 
 			color: #fff; 
 			text-shadow: none; 

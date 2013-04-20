@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 	<?php
-	if(get_post_meta($post->ID, 'pyre_full_width', true) == 'yes') {
+	if(get_post_meta($post->ID, 'wired_full_width', true) == 'yes') {
 		$content_css = 'width:100%';
 		$sidebar_css = 'display:none';
 	}
-	elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'left') {
+	elseif(get_post_meta($post->ID, 'wired_sidebar_position', true) == 'left') {
 		$content_css = 'float:right;';
 		$sidebar_css = 'float:left;';
-	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'right') {
+	} elseif(get_post_meta($post->ID, 'wired_sidebar_position', true) == 'right') {
 		$content_css = 'float:left;';
 		$sidebar_css = 'float:right;';
 	}
@@ -17,18 +17,18 @@
 		<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
 		<?php query_posts($query_string.'&paged='.$paged); ?>
 		<div class="single-navigation clearfix">
-			<?php previous_post_link('%link', __('Previous', 'Avada')); ?>
-			<?php next_post_link('%link', __('Next', 'Avada')); ?>
+			<?php previous_post_link('%link', __('Previous', 'Inhouse')); ?>
+			<?php next_post_link('%link', __('Next', 'Inhouse')); ?>
 		</div>
 		<?php if(have_posts()): the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
 			<?php
 			global $data;
-			if((!$data['legacy_posts_slideshow'] && !$data['posts_slideshow']) && get_post_meta($post->ID, 'pyre_video', true)): ?>
+			if((!$data['legacy_posts_slideshow'] && !$data['posts_slideshow']) && get_post_meta($post->ID, 'wired_video', true)): ?>
 			<!--<div class="flexslider post-slideshow">
 				<ul class="slides">
 					<li class="full-video">
-						<?php echo get_post_meta($post->ID, 'pyre_video', true); ?>
+						<?php echo get_post_meta($post->ID, 'wired_video', true); ?>
 					</li>
 				</ul>
 			</div>-->
@@ -46,16 +46,16 @@
 				'exclude' => get_post_thumbnail_id()
 			);
 			$attachments = get_posts($args);
-			if((has_post_thumbnail() || get_post_meta($post->ID, 'pyre_video', true))):
+			if((has_post_thumbnail() || get_post_meta($post->ID, 'wired_video', true))):
 			?>
 			<div class="flexslider post-slideshow">
 				<ul class="slides">
-					<?php if(get_post_meta($post->ID, 'pyre_video', true)): ?>
+					<?php if(get_post_meta($post->ID, 'wired_video', true)): ?>
 					<li class="full-video">
-						<?php echo get_post_meta($post->ID, 'pyre_video', true); ?>
+						<?php echo get_post_meta($post->ID, 'wired_video', true); ?>
 					</li>
 					<?php endif; ?>
-					<?php if(has_post_thumbnail() && !get_post_meta($post->ID, 'pyre_video', true)): ?>
+					<?php if(has_post_thumbnail() && !get_post_meta($post->ID, 'wired_video', true)): ?>
 					<?php $attachment_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); ?>
 					<?php $full_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); ?>
 					<?php $attachment_data = wp_get_attachment_metadata(get_post_thumbnail_id()); ?>
@@ -78,16 +78,16 @@
 			<?php endif; ?>
 			<?php else: ?>
 			<?php
-			if((has_post_thumbnail() || get_post_meta($post->ID, 'pyre_video', true))):
+			if((has_post_thumbnail() || get_post_meta($post->ID, 'wired_video', true))):
 			?>
 			<div class="flexslider post-slideshow">
 				<ul class="slides">
-					<?php if(get_post_meta($post->ID, 'pyre_video', true)): ?>
+					<?php if(get_post_meta($post->ID, 'wired_video', true)): ?>
 					<li class="full-video">
-						<?php echo get_post_meta($post->ID, 'pyre_video', true); ?>
+						<?php echo get_post_meta($post->ID, 'wired_video', true); ?>
 					</li>
 					<?php endif; ?>
-					<?php if(has_post_thumbnail() && !get_post_meta($post->ID, 'pyre_video', true)): ?>
+					<?php if(has_post_thumbnail() && !get_post_meta($post->ID, 'wired_video', true)): ?>
 					<?php $attachment_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); ?>
 					<?php $full_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); ?>
 					<?php $attachment_data = wp_get_attachment_metadata(get_post_thumbnail_id()); ?>
@@ -125,13 +125,13 @@
 			<?php if($data['post_meta']): ?>
 			<div class="meta-info">
 				<div class="alignleft">
-					<?php echo __('By', 'Avada'); ?> <?php the_author_posts_link(); ?><span class="sep">|</span><?php the_time($data['date_format']); ?><span class="sep">|</span><?php the_category(', '); ?><span class="sep">|</span><?php comments_popup_link(__('0 Comments', 'Avada'), __('1 Comment', 'Avada'), '% '.__('Comments', 'Avada')); ?>
+					<?php echo __('By', 'Inhouse'); ?> <?php the_author_posts_link(); ?><span class="sep">|</span><?php the_time($data['date_format']); ?><span class="sep">|</span><?php the_category(', '); ?><span class="sep">|</span><?php comments_popup_link(__('0 Comments', 'Inhouse'), __('1 Comment', 'Inhouse'), '% '.__('Comments', 'Inhouse')); ?>
 				</div>
 			</div>
 			<?php endif; ?>
 			<?php if($data['social_sharing_box']): ?>
 			<div class="share-box">
-				<h4><?php echo __('Share This Story, Choose Your Platform!', 'Avada'); ?></h4>
+				<h4><?php echo __('Share This Story, Choose Your Platform!', 'Inhouse'); ?></h4>
 				<ul class="social-networks">
 					<?php if($data['sharing_facebook']): ?>
 					<li class="facebook">
@@ -222,7 +222,7 @@
 			<?php endif; ?>
 			<?php if($data['author_info']): ?>
 			<div class="about-author">
-				<div class="title"><h2><?php echo __('About the Author:', 'Avada'); ?> <?php the_author_posts_link(); ?></h2></div>
+				<div class="title"><h2><?php echo __('About the Author:', 'Inhouse'); ?> <?php the_author_posts_link(); ?></h2></div>
 				<div class="about-author-container">
 					<div class="avatar">
 						<?php echo get_avatar(get_the_author_meta('email'), '72'); ?>
@@ -238,7 +238,7 @@
 			<?php $related = get_related_posts($post->ID); ?>
 			<?php if($related->have_posts()): ?>
 			<div class="related-posts">
-				<div class="title"><h2><?php echo __('Related Posts', 'Avada'); ?></h2></div>
+				<div class="title"><h2><?php echo __('Related Posts', 'Inhouse'); ?></h2></div>
 				<div id="carousel" class="es-carousel-wrapper">
 					<div class="es-carousel">
 						<ul>
@@ -256,8 +256,8 @@
 							<?php $full_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
 							<a class="icon link-icon" href="<?php the_permalink(); ?>">Permalink</a>
 							<?php
-							if(get_post_meta($post->ID, 'pyre_video_url', true)) {
-								$full_image[0] = get_post_meta($post->ID, 'pyre_video_url', true);
+							if(get_post_meta($post->ID, 'wired_video_url', true)) {
+								$full_image[0] = get_post_meta($post->ID, 'wired_video_url', true);
 							}
 							?>
 							<a class="icon gallery-icon" href="<?php echo $full_image[0]; ?>" rel="prettyPhoto[gallery]">Gallery</a>

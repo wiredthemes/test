@@ -61,14 +61,14 @@ if(isset($_POST['submit'])) {
 }
 ?>
 	<?php
-	if(get_post_meta($post->ID, 'pyre_full_width', true) == 'yes') {
+	if(get_post_meta($post->ID, 'wired_full_width', true) == 'yes') {
 		$content_css = 'width:100%';
 		$sidebar_css = 'display:none';
 	}
-	elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'left') {
+	elseif(get_post_meta($post->ID, 'wired_sidebar_position', true) == 'left') {
 		$content_css = 'float:right;';
 		$sidebar_css = 'float:left;';
-	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'right') {
+	} elseif(get_post_meta($post->ID, 'wired_sidebar_position', true) == 'right') {
 		$content_css = 'float:left;';
 		$sidebar_css = 'float:right;';
 	}
@@ -80,12 +80,12 @@ if(isset($_POST['submit'])) {
 				<?php the_content(); ?>
 				
 				<?php if(isset($hasError)) { //If errors are found ?>
-					<div class="alert error"><div class="msg"><?php echo __("Please check if you've filled all the fields with valid information. Thank you.", 'Avada'); ?></div></div>
+					<div class="alert error"><div class="msg"><?php echo __("Please check if you've filled all the fields with valid information. Thank you.", 'Inhouse'); ?></div></div>
 					<br />
 				<?php } ?>
 
 				<?php if(isset($emailSent) && $emailSent == true) { //If email is sent ?>
-					<div class="alert success"><div class="msg"><?php echo __('Thank you', 'Avada'); ?> <strong><?php echo $name;?></strong> <?php echo __('for using my contact form! Your email was successfully sent!', 'Avada'); ?></div></div>
+					<div class="alert success"><div class="msg"><?php echo __('Thank you', 'Inhouse'); ?> <strong><?php echo $name;?></strong> <?php echo __('for using my contact form! Your email was successfully sent!', 'Inhouse'); ?></div></div>
 					<br />
 				<?php } ?>
 			</div>
@@ -93,17 +93,17 @@ if(isset($_POST['submit'])) {
 					
 					<div id="comment-input">
 
-						<input type="text" name="contact_name" id="author" value="<?php if(isset($_POST['contact_name']) && !empty($_POST['contact_name'])) { echo $_POST['contact_name']; } ?>" placeholder="<?php echo __('Name (required)', 'Avada'); ?>" size="22" tabindex="1" aria-required="true" class="input-name">
+						<input type="text" name="contact_name" id="author" value="<?php if(isset($_POST['contact_name']) && !empty($_POST['contact_name'])) { echo $_POST['contact_name']; } ?>" placeholder="<?php echo __('Name (required)', 'Inhouse'); ?>" size="22" tabindex="1" aria-required="true" class="input-name">
 
-						<input type="text" name="email" id="email" value="<?php if(isset($_POST['email']) && !empty($_POST['email'])) { echo $_POST['email']; } ?>" placeholder="<?php echo __('Email (required)', 'Avada'); ?>" size="22" tabindex="2" aria-required="true" class="input-email">
+						<input type="text" name="email" id="email" value="<?php if(isset($_POST['email']) && !empty($_POST['email'])) { echo $_POST['email']; } ?>" placeholder="<?php echo __('Email (required)', 'Inhouse'); ?>" size="22" tabindex="2" aria-required="true" class="input-email">
 					
-						<input type="text" name="url" id="url" value="<?php if(isset($_POST['url']) && !empty($_POST['url'])) { echo $_POST['url']; } ?>" placeholder="<?php echo __('Subject', 'Avada'); ?>" size="22" tabindex="3" class="input-website">
+						<input type="text" name="url" id="url" value="<?php if(isset($_POST['url']) && !empty($_POST['url'])) { echo $_POST['url']; } ?>" placeholder="<?php echo __('Subject', 'Inhouse'); ?>" size="22" tabindex="3" class="input-website">
 						
 					</div>
 					
 					<div id="comment-textarea">
 						
-						<textarea name="msg" id="comment" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="<?php echo __('Message', 'Avada'); ?>"><?php if(isset($_POST['msg']) && !empty($_POST['msg'])) { echo $_POST['msg']; } ?></textarea>
+						<textarea name="msg" id="comment" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="<?php echo __('Message', 'Inhouse'); ?>"><?php if(isset($_POST['msg']) && !empty($_POST['msg'])) { echo $_POST['msg']; } ?></textarea>
 					
 					</div>
 
@@ -119,7 +119,7 @@ if(isset($_POST['submit'])) {
 					
 					<div id="comment-submit">
 
-						<p><div><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Submit Form', 'Avada'); ?>" class="comment-submit button small green"></div></p>			
+						<p><div><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Submit Form', 'Inhouse'); ?>" class="comment-submit button small green"></div></p>			
 					</div>
 
 			</form>

@@ -2,7 +2,7 @@
 //////////////////////////////////////////////////////////////////
 // Remove extra P tags
 //////////////////////////////////////////////////////////////////
-function avada_shortcodes_formatter($content) {
+function inhouse_shortcodes_formatter($content) {
 	$block = join("|",array("youtube", "vimeo", "soundcloud", "button", "dropcap", "highlight", "checklist", "tabs", "tab", "accordian", "toggle", "one_half", "one_third", "one_fourth", "two_third", "three_fourth", "tagline_box", "pricing_table", "pricing_column", "pricing_price", "pricing_row", "pricing_footer", "content_boxes", "content_box", "slider", "slide", "testimonials", "testimonial", "progress", "person", "recent_posts", "recent_works", "alert", "fontawesome", "social_links", "clients", "client", "title", "separator"));
 
 	// opening tag
@@ -14,8 +14,8 @@ function avada_shortcodes_formatter($content) {
 	return $rep;
 }
 
-add_filter('the_content', 'avada_shortcodes_formatter');
-add_filter('widget_text', 'avada_shortcodes_formatter');
+add_filter('the_content', 'inhouse_shortcodes_formatter');
+add_filter('widget_text', 'inhouse_shortcodes_formatter');
 
 //////////////////////////////////////////////////////////////////
 // Youtube shortcode
@@ -639,7 +639,7 @@ function shortcode_recent_posts($atts, $content = null) {
 	}
 
 	$attachment = '';
-	$html = '<div class="avada-container">';
+	$html = '<div class="inhouse-container">';
 	$html .= '<section class="columns columns-'.$atts['columns'].'" style="width:100%">';
 	$html .= '<div class="holder">';
 	if(!empty($atts['cat_id']) && $atts['cat_id']){
@@ -665,12 +665,12 @@ function shortcode_recent_posts($atts, $content = null) {
 		'exclude' => get_post_thumbnail_id()
 	);
 	$attachments = get_posts($args);
-	if($attachments || has_post_thumbnail() || get_post_meta(get_the_ID(), 'pyre_video', true)):
+	if($attachments || has_post_thumbnail() || get_post_meta(get_the_ID(), 'wired_video', true)):
 	$html .= '<div class="flexslider floated-post-slideshow">';
 		$html .= '<ul class="slides">';
-			if(get_post_meta(get_the_ID(), 'pyre_video', true)):
+			if(get_post_meta(get_the_ID(), 'wired_video', true)):
 			$html .= '<li class="full-video">';
-				$html .= get_post_meta(get_the_ID(), 'pyre_video', true);
+				$html .= get_post_meta(get_the_ID(), 'wired_video', true);
 			$html .= '</li>';
 			endif;
 			if(has_post_thumbnail()):
@@ -695,12 +695,12 @@ function shortcode_recent_posts($atts, $content = null) {
 	</div>';
 	endif;
 	else:
-	if(has_post_thumbnail() || get_post_meta(get_the_ID(), 'pyre_video', true)):
+	if(has_post_thumbnail() || get_post_meta(get_the_ID(), 'wired_video', true)):
 	$html .= '<div class="flexslider floated-post-slideshow">';
 		$html .= '<ul class="slides">';
-			if(get_post_meta(get_the_ID(), 'pyre_video', true)):
+			if(get_post_meta(get_the_ID(), 'wired_video', true)):
 			$html .= '<li class="full-video">';
-				$html .= get_post_meta(get_the_ID(), 'pyre_video', true);
+				$html .= get_post_meta(get_the_ID(), 'wired_video', true);
 			$html .= '</li>';
 			endif;
 			if(has_post_thumbnail()):
@@ -736,7 +736,7 @@ function shortcode_recent_posts($atts, $content = null) {
 	$html .= '<ul class="meta">';
 	$html .= '<li><em class="date">'.get_the_time($data['date_format'], get_the_ID()).'</em></li>';
 	if(get_comments_number(get_the_ID()) >= 1):
-	$html .= '<li><a href="'.get_permalink(get_the_ID()).'">'.get_comments_number(get_the_ID()).' '.__('Comments', 'Avada').'</a></li>';
+	$html .= '<li><a href="'.get_permalink(get_the_ID()).'">'.get_comments_number(get_the_ID()).' '.__('Comments', 'Inhouse').'</a></li>';
 	endif;
 	$html .= '</ul>';
 	endif;
@@ -772,7 +772,7 @@ function shortcode_recent_works($atts, $content = null) {
 						$number_posts = 10;
 					}
 					$args = array(
-						'post_type' => 'avada_portfolio',
+						'post_type' => 'inhouse_portfolio',
 						'paged' => 1,
 						'posts_per_page' => $number_posts,
 					);
@@ -812,8 +812,8 @@ function shortcode_recent_works($atts, $content = null) {
 										$html .= 'Permalink';
 									$html .= '</a>';
 									$full_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full');
-									if(get_post_meta(get_the_ID(), 'pyre_video_url', true)) {
-										$full_image[0] = get_post_meta(get_the_ID(), 'pyre_video_url', true);
+									if(get_post_meta(get_the_ID(), 'wired_video_url', true)) {
+										$full_image[0] = get_post_meta(get_the_ID(), 'wired_video_url', true);
 									}
 									$html .= '<a class="icon gallery-icon" href="'.$full_image[0].'" rel="prettyPhoto[gallery<?php echo get_the_ID(); ?>]">Gallery</a>';
 									$html .= '<h3>'.get_the_title().'</h3>';

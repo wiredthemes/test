@@ -32,7 +32,7 @@ function get_related_projects($post_id) {
         'showposts' => -1,
         'post__not_in' => array($post_id),
         'ignore_sticky_posts' => 0,
-        'post_type' => 'avada_portfolio',
+        'post_type' => 'inhouse_portfolio',
         'tax_query' => array(
             array(
                 'taxonomy' => 'portfolio_category',
@@ -47,8 +47,8 @@ function get_related_projects($post_id) {
     return $query;
 }
 
-if(!function_exists('themefusion_pagination')): 
-function themefusion_pagination($pages = '', $range = 2)
+if(!function_exists('wiredthemes_pagination')): 
+function wiredthemes_pagination($pages = '', $range = 2)
 {
     global $data;
     
@@ -71,7 +71,7 @@ function themefusion_pagination($pages = '', $range = 2)
      {
          echo "<div class='pagination clearfix'>";
          //if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'><span class='arrows'>&laquo;</span> First</a>";
-         if($paged > 1) echo "<a class='pagination-prev' href='".get_pagenum_link($paged - 1)."'><span class='page-prev'></span>".__('Previous', 'Avada')."</a>";
+         if($paged > 1) echo "<a class='pagination-prev' href='".get_pagenum_link($paged - 1)."'><span class='page-prev'></span>".__('Previous', 'Inhouse')."</a>";
 
          for ($i=1; $i <= $pages; $i++)
          {
@@ -81,7 +81,7 @@ function themefusion_pagination($pages = '', $range = 2)
              }
          }
 
-         if ($paged < $pages) echo "<a class='pagination-next' href='".get_pagenum_link($paged + 1)."'>".__('Next', 'Avada')."<span class='page-next'></span></a>";  
+         if ($paged < $pages) echo "<a class='pagination-next' href='".get_pagenum_link($paged + 1)."'>".__('Next', 'Inhouse')."<span class='page-next'></span></a>";  
          //if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>Last <span class='arrows'>&raquo;</span></a>";
          echo "</div>\n";
      }
@@ -99,28 +99,28 @@ function string_limit_words($string, $word_limit)
 	return implode(' ', $words);
 }
 
-if(!function_exists('themefusion_breadcrumb')): 
-function themefusion_breadcrumb() {
+if(!function_exists('wiredthemes_breadcrumb')): 
+function wiredthemes_breadcrumb() {
         global $data,$post;
         echo '<ul class="breadcrumbs">';
         
          if ( !is_front_page() ) {
         echo '<li>'.$data['breacrumb_prefix'].' <a href="';
         echo home_url();
-        echo '">'.__('Home', 'Avada');
+        echo '">'.__('Home', 'Inhouse');
         echo "</a></li>";
         }
 
         $params['link_none'] = '';
         $separator = '';
 
-        if (is_category() && !is_singular('avada_portfolio')) {
+        if (is_category() && !is_singular('inhouse_portfolio')) {
             $category = get_the_category();
             $ID = $category[0]->cat_ID;
             echo is_wp_error( $cat_parents = get_category_parents($ID, TRUE, '', FALSE ) ) ? '' : '<li>'.$cat_parents.'</li>';
         }
 
-        if(is_singular('avada_portfolio')) {
+        if(is_singular('inhouse_portfolio')) {
             echo get_the_term_list($post->ID, 'portfolio_category', '<li>', '&nbsp;/&nbsp;&nbsp;', '</li>');  
             echo '<li>'.get_the_title().'</li>'; 
         }
@@ -146,7 +146,7 @@ function themefusion_breadcrumb() {
             echo join( ' ', $parents );
             echo '<li>'.get_the_title().'</li>';
         }
-        if(is_single() && !is_singular('avada_portfolio')) {
+        if(is_single() && !is_singular('inhouse_portfolio')) {
             $categories_1 = get_the_category($post->ID);
             if($categories_1):
                 foreach($categories_1 as $cat_1):
@@ -167,8 +167,8 @@ function themefusion_breadcrumb() {
             echo '<li>'.get_the_title().'</li>';
         }
         if(is_tag()){ echo '<li>'."Tag: ".single_tag_title('',FALSE).'</li>'; }
-        if(is_404()){ echo '<li>'.__("404 - Page not Found", 'Avada').'</li>'; }
-        if(is_search()){ echo '<li>'.__("Search", 'Avada').'</li>'; }
+        if(is_404()){ echo '<li>'.__("404 - Page not Found", 'Inhouse').'</li>'; }
+        if(is_search()){ echo '<li>'.__("Search", 'Inhouse').'</li>'; }
         if(is_year()){ echo '<li>'.get_the_time('Y').'</li>'; }
 
         echo "</ul>";
@@ -176,8 +176,8 @@ function themefusion_breadcrumb() {
 endif;
 
 // Custom RSS Link
-add_filter('feed_link','pyre_feed_link', 1, 2);
-function pyre_feed_link($output, $feed) {
+add_filter('feed_link','wired_feed_link', 1, 2);
+function wired_feed_link($output, $feed) {
     global $data;
 
     if($data['rss_link']):

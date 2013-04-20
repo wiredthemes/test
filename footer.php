@@ -3,7 +3,7 @@
 	<?php global $data; ?>
 	<?php if($data['footer_widgets']): ?>
 	<footer class="footer-area">
-		<div class="avada-row">
+		<div class="inhouse-row">
 			<section class="columns columns-<?php echo $data['footer_widgets_columns']; ?>">
 				<article class="col">
 				<?php
@@ -38,7 +38,7 @@
 	<?php endif; ?>
 	<?php if($data['footer_copyright']): ?>
 	<footer id="footer">
-		<div class="avada-row">
+		<div class="inhouse-row">
 		<?php if($data['icons_footer']): ?>
 		<?php
 		if($data['icons_footer_new']) {

@@ -14,7 +14,7 @@ class Tweets_Widget extends WP_Widget {
 
 		$control_ops = array('id_base' => 'tweets-widget');
 
-		$this->WP_Widget('tweets-widget', 'Avada: Twitter', $widget_ops, $control_ops);
+		$this->WP_Widget('tweets-widget', 'Inhouse: Twitter', $widget_ops, $control_ops);
 	}
 	
 	function widget($args, $instance)

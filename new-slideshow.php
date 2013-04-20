@@ -1,22 +1,22 @@
 			<style type="text/css">
-			<?php if(get_post_meta($post->ID, 'pyre_fimg_width', true) && get_post_meta($post->ID, 'pyre_fimg_width', true) != 'auto'): ?>
+			<?php if(get_post_meta($post->ID, 'wired_fimg_width', true) && get_post_meta($post->ID, 'wired_fimg_width', true) != 'auto'): ?>
 			#post-<?php echo $post->ID; ?> .post-slideshow,
 			#post-<?php echo $post->ID; ?> .floated-post-slideshow,
 			#post-<?php echo $post->ID; ?> .post-slideshow .image > img,
 			#post-<?php echo $post->ID; ?> .floated-post-slideshow .image > img,
 			#post-<?php echo $post->ID; ?> .post-slideshow .image > a > img,
 			#post-<?php echo $post->ID; ?> .floated-post-slideshow .image > a > img
-			{width:<?php echo get_post_meta($post->ID, 'pyre_fimg_width', true); ?> !important;}
+			{width:<?php echo get_post_meta($post->ID, 'wired_fimg_width', true); ?> !important;}
 			<?php endif; ?>
 
-			<?php if(get_post_meta($post->ID, 'pyre_fimg_height', true) && get_post_meta($post->ID, 'pyre_fimg_height', true) != 'auto'): ?>
+			<?php if(get_post_meta($post->ID, 'wired_fimg_height', true) && get_post_meta($post->ID, 'wired_fimg_height', true) != 'auto'): ?>
 			#post-<?php echo $post->ID; ?> .post-slideshow,
 			#post-<?php echo $post->ID; ?> .floated-post-slideshow,
 			#post-<?php echo $post->ID; ?> .post-slideshow .image > img,
 			#post-<?php echo $post->ID; ?> .floated-post-slideshow .image > img,
 			#post-<?php echo $post->ID; ?> .post-slideshow .image > a > img,
 			#post-<?php echo $post->ID; ?> .floated-post-slideshow .image > a > img
-			{height:<?php echo get_post_meta($post->ID, 'pyre_fimg_height', true); ?> !important;}
+			{height:<?php echo get_post_meta($post->ID, 'wired_fimg_height', true); ?> !important;}
 			<?php endif; ?>
 			</style>
 			<?php
@@ -29,14 +29,14 @@
 			<?php if($data['blog_layout'] == 'Large'): ?>
 			<?php
 			if(has_post_thumbnail() ||
-			get_post_meta(get_the_ID(), 'pyre_video', true)
+			get_post_meta(get_the_ID(), 'wired_video', true)
 			):
 			?>
 			<div class="flexslider post-slideshow">
 				<ul class="slides">
-					<?php if(get_post_meta(get_the_ID(), 'pyre_video', true)): ?>
+					<?php if(get_post_meta(get_the_ID(), 'wired_video', true)): ?>
 					<li class="full-video">
-						<?php echo get_post_meta(get_the_ID(), 'pyre_video', true); ?>
+						<?php echo get_post_meta(get_the_ID(), 'wired_video', true); ?>
 					</li>
 					<?php endif; ?>
 					<?php if(has_post_thumbnail()): ?>
@@ -54,8 +54,8 @@
 										<?php $full_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
 										<a class="icon link-icon" href="<?php the_permalink(); ?>">Permalink</a>
 										<?php
-										if(get_post_meta($post->ID, 'pyre_video_url', true)) {
-											$full_image[0] = get_post_meta($post->ID, 'pyre_video_url', true);
+										if(get_post_meta($post->ID, 'wired_video_url', true)) {
+											$full_image[0] = get_post_meta($post->ID, 'wired_video_url', true);
 										}
 										?>
 										<a class="icon gallery-icon" href="<?php echo $full_image[0]; ?>" rel="prettyPhoto[gallery<?php echo $post->ID; ?>]" title="<?php echo get_post_field('post_content', get_post_thumbnail_id()); ?>"><img style="display:none;" alt="<?php echo get_post_field('post_excerpt', get_post_thumbnail_id()); ?>" />Gallery</a>
@@ -91,14 +91,14 @@
 			<?php if($data['blog_layout'] == 'Medium'): ?>
 			<?php
 			if(has_post_thumbnail() ||
-			get_post_meta(get_the_ID(), 'pyre_video', true)
+			get_post_meta(get_the_ID(), 'wired_video', true)
 			):
 			?>
 			<div class="flexslider blog-medium-image floated-post-slideshow">
 				<ul class="slides">
-					<?php if(get_post_meta(get_the_ID(), 'pyre_video', true)): ?>
+					<?php if(get_post_meta(get_the_ID(), 'wired_video', true)): ?>
 					<li class="full-video">
-						<?php echo get_post_meta(get_the_ID(), 'pyre_video', true); ?>
+						<?php echo get_post_meta(get_the_ID(), 'wired_video', true); ?>
 					</li>
 					<?php endif; ?>
 					<?php if(has_post_thumbnail()): ?>
@@ -116,8 +116,8 @@
 										<?php $full_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
 										<a class="icon link-icon" href="<?php the_permalink(); ?>">Permalink</a>
 										<?php
-										if(get_post_meta($post->ID, 'pyre_video_url', true)) {
-											$full_image[0] = get_post_meta($post->ID, 'pyre_video_url', true);
+										if(get_post_meta($post->ID, 'wired_video_url', true)) {
+											$full_image[0] = get_post_meta($post->ID, 'wired_video_url', true);
 										}
 										?>
 										<a class="icon gallery-icon" href="<?php echo $full_image[0]; ?>" rel="prettyPhoto[gallery<?php echo $post->ID; ?>]" title="<?php echo get_post_field('post_content', get_post_thumbnail_id()); ?>"><img style="display:none;" alt="<?php echo get_post_field('post_excerpt', get_post_thumbnail_id()); ?>" />Gallery</a>

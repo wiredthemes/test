@@ -329,7 +329,7 @@
 				jQuery('<div class="shadow-left">').appendTo(this);
 				jQuery('<div class="shadow-right">').appendTo(this);
 
-				jQuery(this).addClass('avada-skin-rev');
+				jQuery(this).addClass('inhouse-skin-rev');
 			}
 		});
 
@@ -626,16 +626,16 @@
 
 	<?php if($data['layout'] == 'Boxed'): ?>
 	body{
-		<?php if(get_post_meta($c_pageID, 'pyre_page_bg_color', true)): ?>
-		background-color:<?php echo get_post_meta($c_pageID, 'pyre_page_bg_color', true); ?>;
+		<?php if(get_post_meta($c_pageID, 'wired_page_bg_color', true)): ?>
+		background-color:<?php echo get_post_meta($c_pageID, 'wired_page_bg_color', true); ?>;
 		<?php else: ?>
 		background-color:<?php echo $data['bg_color']; ?>;
 		<?php endif; ?>
 
-		<?php if(get_post_meta($c_pageID, 'pyre_page_bg', true)): ?>
-		background-image:url(<?php echo get_post_meta($c_pageID, 'pyre_page_bg', true); ?>);
-		background-repeat:<?php echo get_post_meta($c_pageID, 'pyre_page_bg_repeat', true); ?>;
-			<?php if(get_post_meta($c_pageID, 'pyre_page_bg_full', true) == 'yes'): ?>
+		<?php if(get_post_meta($c_pageID, 'wired_page_bg', true)): ?>
+		background-image:url(<?php echo get_post_meta($c_pageID, 'wired_page_bg', true); ?>);
+		background-repeat:<?php echo get_post_meta($c_pageID, 'wired_page_bg_repeat', true); ?>;
+			<?php if(get_post_meta($c_pageID, 'wired_page_bg_full', true) == 'yes'): ?>
 			background-attachment:fixed;
 			background-position:center center;
 			-webkit-background-size: cover;
@@ -656,7 +656,7 @@
 			<?php endif; ?>
 		<?php endif; ?>
 
-		<?php if($data['bg_pattern_option'] && $data['bg_pattern'] && !(get_post_meta($c_pageID, 'pyre_page_bg_color', true) || get_post_meta($c_pageID, 'pyre_page_bg', true))): ?>
+		<?php if($data['bg_pattern_option'] && $data['bg_pattern'] && !(get_post_meta($c_pageID, 'wired_page_bg_color', true) || get_post_meta($c_pageID, 'wired_page_bg', true))): ?>
 		background-image:url("<?php echo get_bloginfo('template_directory') . '/images/patterns/' . $data['bg_pattern'] . '.png'; ?>");
 		background-repeat:repeat;
 		<?php endif; ?>
@@ -671,9 +671,9 @@
 	}
 	<?php endif; ?>
 
-	<?php if(get_post_meta($c_pageID, 'pyre_page_title_bar_bg', true)): ?>
+	<?php if(get_post_meta($c_pageID, 'wired_page_title_bar_bg', true)): ?>
 	.page-title-container{
-		background-image:url(<?php echo get_post_meta($c_pageID, 'pyre_page_title_bar_bg', true); ?>) !important;
+		background-image:url(<?php echo get_post_meta($c_pageID, 'wired_page_title_bar_bg', true); ?>) !important;
 	}
 	<?php elseif($data['page_title_bg']): ?>
 	.page-title-container{
@@ -681,9 +681,9 @@
 	}
 	<?php endif; ?>
 
-	<?php if(get_post_meta($c_pageID, 'pyre_page_title_bar_bg_color', true)): ?>
+	<?php if(get_post_meta($c_pageID, 'wired_page_title_bar_bg_color', true)): ?>
 	.page-title-container{
-		background-color:<?php echo get_post_meta($c_pageID, 'pyre_page_title_bar_bg_color', true); ?>;
+		background-color:<?php echo get_post_meta($c_pageID, 'wired_page_title_bar_bg_color', true); ?>;
 	}
 	<?php elseif($data['page_title_bg_color']): ?>
 	.page-title-container{
@@ -720,7 +720,7 @@
 
 	body,#nav ul li ul li a,
 	.more,
-	.avada-container h3,
+	.inhouse-container h3,
 	.meta .date,
 	.review blockquote q,
 	.review blockquote div strong,
@@ -732,7 +732,7 @@
 	.ei-title h3{
 		font-family:<?php echo $font; ?>;
 	}
-	.avada-container h3,
+	.inhouse-container h3,
 	.review blockquote div strong,
 	.footer-area  h3,
 	.button.large,
@@ -848,7 +848,7 @@
 	<?php endif; ?>
 
 	<?php if($data['responsive']): ?>
-	#header .avada-row, #main .avada-row, .footer-area .avada-row, #footer .avada-row{ max-width:940px; }
+	#header .inhouse-row, #main .inhouse-row, .footer-area .inhouse-row, #footer .inhouse-row{ max-width:940px; }
 	<?php endif; ?>
 
 	<?php if($data['h1_font_size']): ?>
@@ -993,13 +993,13 @@
 	#wrapper .header-social .menu li{border-color:<?php echo $data['snav_color']; ?> !important;}
 	<?php endif; ?>
 
-	<?php if(is_single() && get_post_meta($c_pageID, 'pyre_fimg_width', true)): ?>
+	<?php if(is_single() && get_post_meta($c_pageID, 'wired_fimg_width', true)): ?>
 	#post-<?php echo $c_pageID; ?> .post-slideshow,
-	#post-<?php echo $c_pageID; ?> .post-slideshow img{width:<?php echo get_post_meta($c_pageID, 'pyre_fimg_width', true); ?> !important;}
+	#post-<?php echo $c_pageID; ?> .post-slideshow img{width:<?php echo get_post_meta($c_pageID, 'wired_fimg_width', true); ?> !important;}
 	<?php endif; ?>
 
-	<?php if(is_single() && get_post_meta($c_pageID, 'pyre_fimg_height', true)): ?>
-	#post-<?php echo $c_pageID; ?> .post-slideshow, #post-<?php echo $c_pageID; ?> .post-slideshow img{height:<?php echo get_post_meta($c_pageID, 'pyre_fimg_height', true); ?> !important;}
+	<?php if(is_single() && get_post_meta($c_pageID, 'wired_fimg_height', true)): ?>
+	#post-<?php echo $c_pageID; ?> .post-slideshow, #post-<?php echo $c_pageID; ?> .post-slideshow img{height:<?php echo get_post_meta($c_pageID, 'wired_fimg_height', true); ?> !important;}
 	<?php endif; ?>
 
 	<?php if(!$data['flexslider_circles']): ?>
@@ -1107,11 +1107,11 @@
 	if(is_home() && !is_front_page()){
 		$slider_page_id = get_option('page_for_posts');
 	}
-	if(get_post_meta($slider_page_id, 'pyre_slider_type', true) == 'layer' && (get_post_meta($slider_page_id, 'pyre_slider', true) || get_post_meta($slider_page_id, 'pyre_slider', true) != 0)): ?>
+	if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'layer' && (get_post_meta($slider_page_id, 'wired_slider', true) || get_post_meta($slider_page_id, 'wired_slider', true) != 0)): ?>
 	<?php
 	// Get slider
 	$ls_table_name = $wpdb->prefix . "layerslider";
-	$ls_id = get_post_meta($slider_page_id, 'pyre_slider', true);
+	$ls_id = get_post_meta($slider_page_id, 'wired_slider', true);
 	$ls_slider = $wpdb->get_row("SELECT * FROM $ls_table_name WHERE id = ".(int)$ls_id." ORDER BY date_c DESC LIMIT 1" , ARRAY_A);
 	$ls_slider = json_decode($ls_slider['data'], true);
 	?>
@@ -1120,11 +1120,11 @@
 	</style>
 	<div id="layerslider-container">
 		<div id="layerslider-wrapper">
-		<?php if($ls_slider['properties']['skin'] == 'avada'): ?>
+		<?php if($ls_slider['properties']['skin'] == 'inhouse'): ?>
 		<div class="ls-shadow-top"></div>
 		<?php endif; ?>
-		<?php echo do_shortcode('[layerslider id="'.get_post_meta($slider_page_id, 'pyre_slider', true).'"]'); ?>
-		<?php if($ls_slider['properties']['skin'] == 'avada'): ?>
+		<?php echo do_shortcode('[layerslider id="'.get_post_meta($slider_page_id, 'wired_slider', true).'"]'); ?>
+		<?php if($ls_slider['properties']['skin'] == 'inhouse'): ?>
 		<div class="ls-shadow-bottom"></div>
 		<?php endif; ?>
 		</div>
@@ -1132,29 +1132,29 @@
 	<?php endif; ?>
 	<?php
 	// Flex Slider
-	if(get_post_meta($slider_page_id, 'pyre_slider_type', true) == 'flex' && (get_post_meta($slider_page_id, 'pyre_wooslider', true) || get_post_meta($slider_page_id, 'pyre_wooslider', true) != 0)) {
-		echo do_shortcode('[wooslider slide_page="'.get_post_meta($slider_page_id, 'pyre_wooslider', true).'" slider_type="slides" limit="'.$data['flexslider_number'].'"]');
+	if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'flex' && (get_post_meta($slider_page_id, 'wired_wooslider', true) || get_post_meta($slider_page_id, 'wired_wooslider', true) != 0)) {
+		echo do_shortcode('[wooslider slide_page="'.get_post_meta($slider_page_id, 'wired_wooslider', true).'" slider_type="slides" limit="'.$data['flexslider_number'].'"]');
 	}
 	?>
 	<?php
-	if(get_post_meta($slider_page_id, 'pyre_slider_type', true) == 'rev' && get_post_meta($slider_page_id, 'pyre_revslider', true)) {
-		putRevSlider(get_post_meta($slider_page_id, 'pyre_revslider', true));
+	if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'rev' && get_post_meta($slider_page_id, 'wired_revslider', true)) {
+		putRevSlider(get_post_meta($slider_page_id, 'wired_revslider', true));
 	}
 	?>
 	<?php
-	if(get_post_meta($slider_page_id, 'pyre_slider_type', true) == 'flex2' && get_post_meta($slider_page_id, 'pyre_flexslider', true)) {
+	if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'flex2' && get_post_meta($slider_page_id, 'wired_flexslider', true)) {
 		include_once('flexslider.php');
 	}
 	?>
 	<?php
-	// ThemeFusion Elastic Slider
-	if(get_post_meta($slider_page_id, 'pyre_slider_type', true) == 'elastic' && (get_post_meta($slider_page_id, 'pyre_elasticslider', true) || get_post_meta($slider_page_id, 'pyre_elasticslider', true) != 0)) {
+	// WiredThemes Elastic Slider
+	if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'elastic' && (get_post_meta($slider_page_id, 'wired_elasticslider', true) || get_post_meta($slider_page_id, 'wired_elasticslider', true) != 0)) {
 		include_once('elastic-slider.php');
 	}
 	?>
 	</div>
 	<?php endif; ?>
-	<?php if(get_post_meta($slider_page_id, 'pyre_fallback', true)): ?>
+	<?php if(get_post_meta($slider_page_id, 'wired_fallback', true)): ?>
 	<style type="text/css">
 	@media only screen and (max-width: 940px){
 		#sliders-container{display:none;}
@@ -1166,18 +1166,18 @@
 	}
 	</style>
 	<div id="fallback-slide">
-		<img src="<?php echo get_post_meta($slider_page_id, 'pyre_fallback', true); ?>" alt="" />
+		<img src="<?php echo get_post_meta($slider_page_id, 'wired_fallback', true); ?>" alt="" />
 	</div>
 	<?php endif; ?>
 	<?php if($data['page_title_bar']): ?>
-	<?php if(((is_page() || is_single() || is_singular('avada_portfolio')) && get_post_meta($c_pageID, 'pyre_page_title', true) == 'yes')) : ?>
+	<?php if(((is_page() || is_single() || is_singular('inhouse_portfolio')) && get_post_meta($c_pageID, 'wired_page_title', true) == 'yes')) : ?>
 	<div class="page-title-container">
 		<div class="page-title">
 			<div class="page-title-wrapper">
 			<h1><?php the_title(); ?></h1>
 			<?php if($data['breadcrumb']): ?>
 			<?php if($data['page_title_bar_bs'] == 'Breadcrumbs'): ?>
-			<?php themefusion_breadcrumb(); ?>
+			<?php wiredthemes_breadcrumb(); ?>
 			<?php else: ?>
 			<?php get_search_form(); ?>
 			<?php endif; ?>
@@ -1186,14 +1186,14 @@
 		</div>
 	</div>
 	<?php endif; ?>
-	<?php if(is_home() && !is_front_page() && get_post_meta($slider_page_id, 'pyre_page_title', true) == 'yes'): ?>
+	<?php if(is_home() && !is_front_page() && get_post_meta($slider_page_id, 'wired_page_title', true) == 'yes'): ?>
 	<div class="page-title-container">
 		<div class="page-title">
 			<div class="page-title-wrapper">
 			<h1><?php echo $data['blog_title']; ?></h1>
 			<?php if($data['breadcrumb']): ?>
 			<?php if($data['page_title_bar_bs'] == 'Breadcrumbs'): ?>
-			<?php themefusion_breadcrumb(); ?>
+			<?php wiredthemes_breadcrumb(); ?>
 			<?php else: ?>
 			<?php get_search_form(); ?>
 			<?php endif; ?>
@@ -1206,7 +1206,7 @@
 	<div class="page-title-container">
 		<div class="page-title">
 			<div class="page-title-wrapper">
-			<h1><?php echo __('Search results for:', 'Avada'); ?> <?php echo get_search_query(); ?></h1>
+			<h1><?php echo __('Search results for:', 'Inhouse'); ?> <?php echo get_search_query(); ?></h1>
 			<?php get_search_form(); ?>
 			</div>
 		</div>
@@ -1216,7 +1216,7 @@
 	<div class="page-title-container">
 		<div class="page-title">
 			<div class="page-title-wrapper">
-			<h1><?php echo __('Error 404 Page', 'Avada'); ?></h1>
+			<h1><?php echo __('Error 404 Page', 'Inhouse'); ?></h1>
 			</div>
 		</div>
 	</div>
@@ -1227,18 +1227,18 @@
 			<div class="page-title-wrapper">
 			<h1>
 				<?php if ( is_day() ) : ?>
-					<?php printf( __( 'Daily Archives: %s', 'Avada' ), '<span>' . get_the_date() . '</span>' ); ?>
+					<?php printf( __( 'Daily Archives: %s', 'Inhouse' ), '<span>' . get_the_date() . '</span>' ); ?>
 				<?php elseif ( is_month() ) : ?>
-					<?php printf( __( 'Monthly Archives: %s', 'Avada' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'Avada' ) ) . '</span>' ); ?>
+					<?php printf( __( 'Monthly Archives: %s', 'Inhouse' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'Inhouse' ) ) . '</span>' ); ?>
 				<?php elseif ( is_year() ) : ?>
-					<?php printf( __( 'Yearly Archives: %s', 'Avada' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'Avada' ) ) . '</span>' ); ?>
+					<?php printf( __( 'Yearly Archives: %s', 'Inhouse' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'Inhouse' ) ) . '</span>' ); ?>
 				<?php else : ?>
 					<?php single_cat_title(); ?>
 				<?php endif; ?>
 			</h1>
 			<?php if($data['breadcrumb']): ?>
 			<?php if($data['page_title_bar_bs'] == 'Breadcrumbs'): ?>
-			<?php themefusion_breadcrumb(); ?>
+			<?php wiredthemes_breadcrumb(); ?>
 			<?php else: ?>
 			<?php get_search_form(); ?>
 			<?php endif; ?>
@@ -1324,4 +1324,4 @@
 	</div>
 	<?php endif; ?>
 	<div id="main" style="overflow:hidden !important;">
-		<div class="avada-row">
+		<div class="inhouse-row">

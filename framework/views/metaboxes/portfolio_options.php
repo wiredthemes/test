@@ -1,4 +1,4 @@
-<div class='pyre_metabox'>
+<div class='wired_metabox'>
 <?php
 $this->select(	'width',
 				'Width (Content Columns)',

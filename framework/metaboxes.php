@@ -15,8 +15,8 @@ class PyreThemeFrameworkMetaboxes {
 	function admin_script_loader() {
 		global $pagenow;
 		if (is_admin() && ($pagenow=='post-new.php' || $pagenow=='post.php')) {
-	    	wp_register_script('avada_upload', get_bloginfo('template_directory').'/js/upload.js');
-	    	wp_enqueue_script('avada_upload');
+	    	wp_register_script('inhouse_upload', get_bloginfo('template_directory').'/js/upload.js');
+	    	wp_enqueue_script('inhouse_upload');
 	    	wp_enqueue_script('media-upload');
 	    	wp_enqueue_script('thickbox');
 	   		wp_enqueue_style('thickbox');
@@ -27,15 +27,15 @@ class PyreThemeFrameworkMetaboxes {
 	{
 		$this->add_meta_box('post_options', 'Post Options', 'post');
 		$this->add_meta_box('page_options', 'Page Options', 'page');
-		$this->add_meta_box('portfolio_options', 'Portfolio Options', 'avada_portfolio');
+		$this->add_meta_box('portfolio_options', 'Portfolio Options', 'inhouse_portfolio');
 
-		$this->add_meta_box('es_options', 'Elastic Slide Options', 'themefusion_elastic');
+		$this->add_meta_box('es_options', 'Elastic Slide Options', 'wiredthemes_elastic');
 	}
 	
 	public function add_meta_box($id, $label, $post_type)
 	{
 	    add_meta_box( 
-	        'pyre_' . $id,
+	        'wired_' . $id,
 	        $label,
 	        array($this, $id),
 	        $post_type
@@ -49,7 +49,7 @@ class PyreThemeFrameworkMetaboxes {
 		}
 		
 		foreach($_POST as $key => $value) {
-			if(strstr($key, 'pyre_')) {
+			if(strstr($key, 'wired_')) {
 				update_post_meta($post_id, $key, $value);
 			}
 		}
@@ -85,12 +85,12 @@ class PyreThemeFrameworkMetaboxes {
 		global $post;
 		
 		$html = '';
-		$html .= '<div class="pyre_metabox_field">';
-			$html .= '<label for="pyre_' . $id . '">';
+		$html .= '<div class="wired_metabox_field">';
+			$html .= '<label for="wired_' . $id . '">';
 			$html .= $label;
 			$html .= '</label>';
 			$html .= '<div class="field">';
-				$html .= '<input type="text" id="pyre_' . $id . '" name="pyre_' . $id . '" value="' . get_post_meta($post->ID, 'pyre_' . $id, true) . '" />';
+				$html .= '<input type="text" id="wired_' . $id . '" name="wired_' . $id . '" value="' . get_post_meta($post->ID, 'wired_' . $id, true) . '" />';
 				if($desc) {
 					$html .= '<p>' . $desc . '</p>';
 				}
@@ -105,14 +105,14 @@ class PyreThemeFrameworkMetaboxes {
 		global $post;
 		
 		$html = '';
-		$html .= '<div class="pyre_metabox_field">';
-			$html .= '<label for="pyre_' . $id . '">';
+		$html .= '<div class="wired_metabox_field">';
+			$html .= '<label for="wired_' . $id . '">';
 			$html .= $label;
 			$html .= '</label>';
 			$html .= '<div class="field">';
-				$html .= '<select id="pyre_' . $id . '" name="pyre_' . $id . '">';
+				$html .= '<select id="wired_' . $id . '" name="wired_' . $id . '">';
 				foreach($options as $key => $option) {
-					if(get_post_meta($post->ID, 'pyre_' . $id, true) == $key) {
+					if(get_post_meta($post->ID, 'wired_' . $id, true) == $key) {
 						$selected = 'selected="selected"';
 					} else {
 						$selected = '';
@@ -135,14 +135,14 @@ class PyreThemeFrameworkMetaboxes {
 		global $post;
 		
 		$html = '';
-		$html .= '<div class="pyre_metabox_field">';
-			$html .= '<label for="pyre_' . $id . '">';
+		$html .= '<div class="wired_metabox_field">';
+			$html .= '<label for="wired_' . $id . '">';
 			$html .= $label;
 			$html .= '</label>';
 			$html .= '<div class="field">';
-				$html .= '<select multiple="multiple" id="pyre_' . $id . '" name="pyre_' . $id . '[]">';
+				$html .= '<select multiple="multiple" id="wired_' . $id . '" name="wired_' . $id . '[]">';
 				foreach($options as $key => $option) {
-					if(is_array(get_post_meta($post->ID, 'pyre_' . $id, true)) && in_array($key, get_post_meta($post->ID, 'pyre_' . $id, true))) {
+					if(is_array(get_post_meta($post->ID, 'wired_' . $id, true)) && in_array($key, get_post_meta($post->ID, 'wired_' . $id, true))) {
 						$selected = 'selected="selected"';
 					} else {
 						$selected = '';
@@ -166,12 +166,12 @@ class PyreThemeFrameworkMetaboxes {
 
 		$html = '';
 		$html = '';
-		$html .= '<div class="pyre_metabox_field">';
-			$html .= '<label for="pyre_' . $id . '">';
+		$html .= '<div class="wired_metabox_field">';
+			$html .= '<label for="wired_' . $id . '">';
 			$html .= $label;
 			$html .= '</label>';
 			$html .= '<div class="field">';
-				$html .= '<textarea cols="120" rows="10" id="pyre_' . $id . '" name="pyre_' . $id . '">' . get_post_meta($post->ID, 'pyre_' . $id, true) . '</textarea>';
+				$html .= '<textarea cols="120" rows="10" id="wired_' . $id . '" name="wired_' . $id . '">' . get_post_meta($post->ID, 'wired_' . $id, true) . '</textarea>';
 				if($desc) {
 					$html .= '<p>' . $desc . '</p>';
 				}
@@ -187,12 +187,12 @@ class PyreThemeFrameworkMetaboxes {
 
 		$html = '';
 		$html = '';
-		$html .= '<div class="pyre_metabox_field">';
-			$html .= '<label for="pyre_' . $id . '">';
+		$html .= '<div class="wired_metabox_field">';
+			$html .= '<label for="wired_' . $id . '">';
 			$html .= $label;
 			$html .= '</label>';
 			$html .= '<div class="field">';
-			    $html .= '<input name="pyre_' . $id . '" class="upload_field" id="pyre_' . $id . '" type="text" value="' . get_post_meta($post->ID, 'pyre_' . $id, true) . '" />';
+			    $html .= '<input name="wired_' . $id . '" class="upload_field" id="wired_' . $id . '" type="text" value="' . get_post_meta($post->ID, 'wired_' . $id, true) . '" />';
 			    $html .= '<input class="upload_button" type="button" value="Browse" />';
 				if($desc) {
 					$html .= '<p>' . $desc . '</p>';

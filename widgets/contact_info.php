@@ -14,7 +14,7 @@ class Contact_Info_Widget extends WP_Widget {
 
 		$control_ops = array('id_base' => 'contact_info-widget');
 
-		$this->WP_Widget('contact_info-widget', 'Avada: Contact Info', $widget_ops, $control_ops);
+		$this->WP_Widget('contact_info-widget', 'Inhouse: Contact Info', $widget_ops, $control_ops);
 	}
 	
 	function widget($args, $instance)
@@ -33,19 +33,19 @@ class Contact_Info_Widget extends WP_Widget {
 		<?php endif; ?>
 
 		<?php if($instance['phone']): ?>
-		<p class="phone"><?php _e('Phone:', 'Avada'); ?> <?php echo $instance['phone']; ?></p>
+		<p class="phone"><?php _e('Phone:', 'Inhouse'); ?> <?php echo $instance['phone']; ?></p>
 		<?php endif; ?>
 
 		<?php if($instance['fax']): ?>
-		<p class="fax"><?php _e('Fax:', 'Avada'); ?> <?php echo $instance['fax']; ?></p>
+		<p class="fax"><?php _e('Fax:', 'Inhouse'); ?> <?php echo $instance['fax']; ?></p>
 		<?php endif; ?>
 
 		<?php if($instance['email']): ?>
-		<p class="email"><?php _e('Email:', 'Avada'); ?> <a href="mailto:<?php echo $instance['email']; ?>"><?php if($instance['emailtxt']) { echo $instance['emailtxt']; } else { echo $instance['email']; } ?></a></p>
+		<p class="email"><?php _e('Email:', 'Inhouse'); ?> <a href="mailto:<?php echo $instance['email']; ?>"><?php if($instance['emailtxt']) { echo $instance['emailtxt']; } else { echo $instance['email']; } ?></a></p>
 		<?php endif; ?>
 
 		<?php if($instance['web']): ?>
-		<p class="web"><?php _e('Web:', 'Avada'); ?> <a href="<?php echo $instance['web']; ?>"><?php if($instance['webtxt']) { echo $instance['webtxt']; } else { echo $instance['web']; } ?></a></p>
+		<p class="web"><?php _e('Web:', 'Inhouse'); ?> <a href="<?php echo $instance['web']; ?>"><?php if($instance['webtxt']) { echo $instance['webtxt']; } else { echo $instance['web']; } ?></a></p>
 		<?php endif; ?>
 		<?php
 		echo $after_widget;

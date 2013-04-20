@@ -39,16 +39,16 @@
 			<?php if($data['post_meta']): ?>
 			<div class="meta-info">
 				<div class="alignleft">
-					<?php echo __('By', 'Avada'); ?> <?php the_author_posts_link(); ?><span class="sep">|</span><?php the_time($data['date_format']); ?><span class="sep">|</span><?php the_category(', '); ?><span class="sep">|</span><?php comments_popup_link(__('0 Comments', 'Avada'), __('1 Comment', 'Avada'), '% '.__('Comments', 'Avada')); ?>
+					<?php echo __('By', 'Inhouse'); ?> <?php the_author_posts_link(); ?><span class="sep">|</span><?php the_time($data['date_format']); ?><span class="sep">|</span><?php the_category(', '); ?><span class="sep">|</span><?php comments_popup_link(__('0 Comments', 'Inhouse'), __('1 Comment', 'Inhouse'), '% '.__('Comments', 'Inhouse')); ?>
 				</div>
 				<div class="alignright">
-					<a href="<?php the_permalink(); ?>" class="read-more"><?php echo __('Read More', 'Avada'); ?></a>
+					<a href="<?php the_permalink(); ?>" class="read-more"><?php echo __('Read More', 'Inhouse'); ?></a>
 				</div>
 			</div>
 			<?php endif; ?>
 		</div>
 		<?php endwhile; ?>
-		<?php themefusion_pagination($pages = '', $range = 2); ?>
+		<?php wiredthemes_pagination($pages = '', $range = 2); ?>
 		<?php else: ?>
 		<?php endif; ?>
 	</div>

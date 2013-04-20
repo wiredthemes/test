@@ -1,10 +1,10 @@
 <?php
 global $data;
-if($data[get_post_meta($slider_page_id, 'pyre_flexslider', true)]):
+if($data[get_post_meta($slider_page_id, 'wired_flexslider', true)]):
 ?>
 <div class="tfs-slider flexslider main-flex" style="max-width:<?php echo $data['flexslider_width']; ?>;">
   <ul class="slides" style="width:<?php echo $data['flexslider_width']; ?>;">
-    <?php foreach($data[get_post_meta($slider_page_id, 'pyre_flexslider', true)] as $slide): ?>
+    <?php foreach($data[get_post_meta($slider_page_id, 'wired_flexslider', true)] as $slide): ?>
     <?php if($slide['title'] || ($slide['url'] || $slide['description'])): ?>
     <li style="position:relative;">
       <?php if($slide['link']): ?>

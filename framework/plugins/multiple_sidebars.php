@@ -57,7 +57,7 @@ class sidebar_generator {
 				$sidebar_class = sidebar_generator::name_to_class($sidebar);
 				register_sidebar(array(
 					'name'=>$sidebar,
-					'id' => 'avada-custom-sidebar-'.strtolower($sidebar_class),
+					'id' => 'inhouse-custom-sidebar-'.strtolower($sidebar_class),
 					'before_widget' => '<div id="%1$s" class="widget %2$s">',
 					'after_widget' => '</div>',
 					'before_title' => '<div class="heading"><h3>',
@@ -339,7 +339,7 @@ class sidebar_generator {
 			if($name != "0"){
 				dynamic_sidebar($name);
 			}else{
-				dynamic_sidebar('avada-blog-sidebar');
+				dynamic_sidebar('inhouse-blog-sidebar');
 			}
 			return;//dont do anything
 		}
@@ -356,7 +356,7 @@ class sidebar_generator {
 					
 					if($name == "0" && $selected_sidebar[$i] == "0" &&  $selected_sidebar_replacement[$i] == "0"){
 						//echo "\n\n<!-- [called $name selected {$selected_sidebar[$i]} replacement {$selected_sidebar_replacement[$i]}] -->";
-						dynamic_sidebar('avada-blog-sidebar');//default behavior
+						dynamic_sidebar('inhouse-blog-sidebar');//default behavior
 						$did_sidebar = true;
 						break;
 					}elseif($name == "0" && $selected_sidebar[$i] == "0"){
@@ -383,7 +383,7 @@ class sidebar_generator {
 			if($name != "0"){
 				dynamic_sidebar($name);
 			}else{
-				dynamic_sidebar('avada-blog-sidebar');
+				dynamic_sidebar('inhouse-blog-sidebar');
 			}
 			echo "";
 			return;			
@@ -391,7 +391,7 @@ class sidebar_generator {
 			if($name != "0"){
 				dynamic_sidebar($name);
 			}else{
-				dynamic_sidebar('avada-blog-sidebar');
+				dynamic_sidebar('inhouse-blog-sidebar');
 			}
 		}
 	}

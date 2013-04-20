@@ -910,7 +910,7 @@ $of_options[] = array( "name" => "Copyright Bar",
 $of_options[] = array( "name" => "Copyright Text",
                     "desc" => "",
                     "id" => "footer_text",
-                    "std" => 'Copyright 2012 Avada | All Rights Reserved | Powered by <a href="http://wordpress.org">WordPress</a>  |  <a href="http://theme-fusion.com">Theme Fusion</a>',
+                    "std" => 'Copyright 2012 Inhouse | All Rights Reserved | Powered by <a href="http://wordpress.org">WordPress</a>  |  <a href="http://theme-fusion.com">Wired Themes</a>',
                     "type" => "textarea");
 
 $of_options[] = array( "name" => "Footer Widgets",
@@ -1767,7 +1767,7 @@ $of_options[] = array( "name" => "Pagination circles below video slides",
 					"std" => 0,
 					"type" => "checkbox");
 
-$of_options[] = array( "name" => "ThemeFusion Slider",
+$of_options[] = array( "name" => "WiredThemes Slider",
 					"type" => "heading");
 
 $of_options[] = array( "name" => "Width",
@@ -1807,7 +1807,7 @@ $of_options[] = array( "name" => "Animation speed",
 					"std" => "600",
 					"type" => "text");
 
-$of_options[] = array( "name" => "Number of ThemeFusion Sliders",
+$of_options[] = array( "name" => "Number of WiredThemes Sliders",
 					"desc" => "Select the number of slider sets",
 					"id" => "flexsliders_number",
 					"std" => "1",
@@ -2085,7 +2085,7 @@ if($data['tf_username'] && $data['tf_api']) {
 	$envato = get_template_directory() . '/framework/plugins/envato-wordpress-toolkit-library/class-envato-wordpress-theme-upgrader.php';
 	include $envato;
 	$upgrader = new Envato_WordPress_Theme_Upgrader($data['tf_username'], $data['tf_api']);
-	$check_upgrade = $upgrader->check_for_theme_update('Avada');
+	$check_upgrade = $upgrader->check_for_theme_update('Inhouse');
 	if($check_upgrade->updated_themes_count) {
 		$of_options[] = array( "name" => "Theme Updater",
 					"desc" => "",

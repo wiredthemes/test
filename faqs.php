@@ -2,14 +2,14 @@
 // Template Name: FAQs
 get_header(); ?>
 	<?php
-	if(get_post_meta($post->ID, 'pyre_full_width', true) == 'yes') {
+	if(get_post_meta($post->ID, 'wired_full_width', true) == 'yes') {
 		$content_css = 'width:100%';
 		$sidebar_css = 'display:none';
 	}
-	elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'left') {
+	elseif(get_post_meta($post->ID, 'wired_sidebar_position', true) == 'left') {
 		$content_css = 'float:right;';
 		$sidebar_css = 'float:left;';
-	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'right') {
+	} elseif(get_post_meta($post->ID, 'wired_sidebar_position', true) == 'right') {
 		$content_css = 'float:left;';
 		$sidebar_css = 'float:right;';
 	}
@@ -28,7 +28,7 @@ get_header(); ?>
 		if($portfolio_category):
 		?>
 		<ul class="faq-tabs clearfix">
-			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Avada'); ?></a></li>
+			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Inhouse'); ?></a></li>
 			<?php foreach($portfolio_category as $portfolio_cat): ?>
 			<li><a data-filter=".<?php echo $portfolio_cat->slug; ?>" href="#"><?php echo $portfolio_cat->name; ?></a></li>
 			<?php endforeach; ?>
@@ -38,7 +38,7 @@ get_header(); ?>
 			<div class="accordian">
 			<?php
 			$args = array(
-				'post_type' => 'avada_faq',
+				'post_type' => 'inhouse_faq',
 				'nopaging' => true
 			);
 			$gallery = new WP_Query($args);
