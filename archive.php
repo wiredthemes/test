@@ -24,11 +24,7 @@
 
 			<?php
 				if($data['featured_images']):
-				if($data['legacy_posts_slideshow']) {
-					include('legacy-slideshow.php');
-				} else {
 					include('new-slideshow.php');
-				}
 				endif;
 			?>
 

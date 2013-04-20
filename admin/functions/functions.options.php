@@ -1712,12 +1712,6 @@ $of_options[] = array( "name" => "Custom Icon Link",
 $of_options[] = array( "name" => "Slideshows",
 					"type" => "heading");
 
-$of_options[] = array( "name" => "Legacy Posts Slideshow",
-					"desc" => "Check to enable posts slideshow in legacy mode.",
-					"id" => "legacy_posts_slideshow",
-					"std" => 0,
-					"type" => "checkbox");
-
 $of_options[] = array( "name" => "Posts Slideshow",
 					"desc" => "Show posts slideshow in post/portfolio pages.",
 					"id" => "posts_slideshow",

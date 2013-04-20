@@ -17,18 +17,18 @@
 	?>
 
 	<div id="content" style="<?php echo $content_css; ?>">
+
 		<?php if (have_posts()) : ?>
 		<?php while(have_posts()): the_post(); ?>
+
 		<div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
+
 			<?php
-			if('page' != $post->post_type && $data['featured_images']):
-			if($data['legacy_posts_slideshow']) {
-				include('legacy-slideshow.php');
-			} else {
-				include('new-slideshow.php');
-			}
-			endif;
+				if('page' != $post->post_type && $data['featured_images']):
+					include('new-slideshow.php');
+				endif;
 			?>
+
 			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<?php if(!$data['search_excerpt']): ?>
 			<div class="post-content">

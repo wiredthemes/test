@@ -17,17 +17,17 @@
 	?>
 
 	<div id="content" style="<?php echo $content_css; ?>">
+
 		<?php while(have_posts()): the_post();  ?>
+
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 			<?php
-			if($data['featured_images']):
-			if($data['legacy_posts_slideshow']) {
-				include('legacy-slideshow.php');
-			} else {
-				include('new-slideshow.php');
-			}
-			endif;
+				if($data['featured_images']):
+					include('new-slideshow.php');
+				endif;
 			?>
+			
 			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<div class="post-content">
 				<?php

@@ -11,7 +11,6 @@ add_filter('widget_text', 'do_shortcode');
 // Register Navigation
 register_nav_menu('main_navigation', 'Main Navigation');
 register_nav_menu('top_navigation', 'Top Navigation');
-register_nav_menu('404_pages', '404 Useful Pages');
 
 // Content Width
 if (!isset( $content_width )) $content_width = 1000;
