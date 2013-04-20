@@ -2082,7 +2082,7 @@ $of_options[] = array( "name" => "Transfer Theme Options Data",
 					"type" => "heading");
 
 if($data['tf_username'] && $data['tf_api']) {
-	$envato = get_template_directory() . '/framework/plugins/envato-wordpress-toolkit-library/class-envato-wordpress-theme-upgrader.php';
+	$envato = get_template_directory() . '/base/plugins/envato-wordpress-toolkit-library/class-envato-wordpress-theme-upgrader.php';
 	include $envato;
 	$upgrader = new Envato_WordPress_Theme_Upgrader($data['tf_username'], $data['tf_api']);
 	$check_upgrade = $upgrader->check_for_theme_update('Inhouse');

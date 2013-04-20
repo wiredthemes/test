@@ -32,7 +32,7 @@ if(get_option('inhouse_int_plugins', '0') == '1') {
 	/* Include LayerSlider WP */
 	/**************************/
 
-	$layerslider = get_template_directory() . '/framework/plugins/LayerSlider/layerslider.php';
+	$layerslider = get_template_directory() . '/base/plugins/LayerSlider/layerslider.php';
 
 	include $layerslider;
 	
@@ -62,13 +62,13 @@ if(get_option('inhouse_int_plugins', '0') == '1') {
 	/* Include RevSlider WP */
 	/**************************/
 
-	$revslider = get_template_directory() . '/framework/plugins/revslider/revslider.php';
+	$revslider = get_template_directory() . '/base/plugins/revslider/revslider.php';
 	include $revslider;
 
 	// Activate the plugin if necessary
 	if(get_option('inhouse_revslider_activated', '0') == '0') {
 		if(!class_exists('RevSliderAdmin')) {
-			$revslider_admin_script = get_template_directory() . '/framework/plugins/revslider/revslider_admin.php';
+			$revslider_admin_script = get_template_directory() . '/base/plugins/revslider/revslider_admin.php';
 			include $revslider_admin_script;
 		}
 
@@ -84,14 +84,14 @@ if(get_option('inhouse_int_plugins', '0') == '1') {
 	/* Include Flexslider WP */
 	/**************************/
 
-	$flexslider = get_template_directory() . '/framework/plugins/tf-flexslider/wooslider.php';
+	$flexslider = get_template_directory() . '/base/plugins/tf-flexslider/wooslider.php';
 	include $flexslider;
 
 	/**************************/
 	/* Include Posts Type Order */
 	/**************************/
 
-	$pto = get_template_directory() . '/framework/plugins/post-types-order/post-types-order.php';
+	$pto = get_template_directory() . '/base/plugins/post-types-order/post-types-order.php';
 	if($data['post_type_order']) {
 		include $pto;
 	}
@@ -99,7 +99,7 @@ if(get_option('inhouse_int_plugins', '0') == '1') {
 	/************************************************/
 	/* Include Previous / Next Post Pagination Plus */
 	/************************************************/
-	$pnp = 	get_template_directory() . '/framework/plugins/ambrosite-post-link-plus.php';
+	$pnp = 	get_template_directory() . '/base/plugins/ambrosite-post-link-plus.php';
 	include $pnp;
 }
 
@@ -109,7 +109,7 @@ if(get_option('inhouse_int_plugins', '0') == '1') {
 	$revslider_db_exists = $wpdb->get_results("SHOW TABLES LIKE '".$wpdb->prefix."revslider_slides'");
 	if(!$revslider_db_exists) {
 		if(!class_exists('RevSliderAdmin')) {
-			$revslider_admin_script = get_template_directory() . '/framework/plugins/revslider/revslider_admin.php';
+			$revslider_admin_script = get_template_directory() . '/base/plugins/revslider/revslider_admin.php';
 			include $revslider_admin_script;
 		}
 
@@ -121,7 +121,7 @@ if(get_option('inhouse_int_plugins', '0') == '1') {
 	$revslider_siteid_exists = $wpdb->get_results("SHOW COLUMNS FROM ".$wpdb->prefix."revslider_sliders LIKE 'siteid'");
 	if(!$revslider_siteid_exists) {
 		if(!class_exists('RevSliderAdmin')) {
-			$revslider_admin_script = get_template_directory() . '/framework/plugins/revslider/revslider_admin.php';
+			$revslider_admin_script = get_template_directory() . '/base/plugins/revslider/revslider_admin.php';
 			include $revslider_admin_script;
 		}
 
@@ -136,7 +136,7 @@ if(get_option('inhouse_int_plugins', '0') == '1') {
 
 // Check for theme updates
 /*if($data['tf_username'] && $data['tf_api']) {
-	$envato = get_template_directory() . '/framework/plugins/envato-wordpress-toolkit-library/class-envato-wordpress-theme-upgrader.php';
+	$envato = get_template_directory() . '/base/plugins/envato-wordpress-toolkit-library/class-envato-wordpress-theme-upgrader.php';
 	include $envato;
 	$upgrader = new Envato_WordPress_Theme_Upgrader($data['tf_username'], $data['tf_api']);
 	$check_upgrade = $upgrader->check_for_theme_update('Inhouse');
@@ -147,19 +147,19 @@ if(get_option('inhouse_int_plugins', '0') == '1') {
 }*/
 
 // Metaboxes
-include_once('framework/metaboxes.php');
+include_once('base/metaboxes.php');
 
 // Extend Visual Composer
-include_once('shortcodes.php');
+include_once('extend/shortcodes/shortcodes.php');
 
 // Custom Functions
-include_once('framework/custom_functions.php');
+include_once('base/custom_functions.php');
 
 // Plugins
-include_once('framework/plugins/multiple_sidebars.php');
+include_once('base/plugins/multiple_sidebars.php');
 
 // Widgets
-include_once('widgets/widgets.php');
+include_once('extend/widgets/widgets.php');
 
 // Add post thumbnail functionality
 add_theme_support('post-thumbnails');
@@ -327,7 +327,7 @@ function inhouse_pretty($content) {
 	return $content;
 }
 
-require_once('framework/plugins/multiple-featured-images/multiple-featured-images.php');
+require_once('base/plugins/multiple-featured-images/multiple-featured-images.php');
 
 if( class_exists( 'kdMultipleFeaturedImages' )  && !$data['legacy_posts_slideshow']) {
 		$i = 2;

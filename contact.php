@@ -4,7 +4,7 @@ get_header(); global $data; ?>
 <?php
 global $data;
 if($data['recaptcha_public'] && $data['recaptcha_private']) {
-	require_once('framework/recaptchalib.php');
+	require_once('base/recaptchalib.php');
 }
 //If the form is submitted
 if(isset($_POST['submit'])) {

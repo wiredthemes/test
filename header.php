@@ -1075,27 +1075,27 @@
 	<?php
 	if($data['header_layout']) {
 		if(is_page('header-2')) {
-			include_once('framework/headers/header-v2.php');
+			include_once('base/headers/header-v2.php');
 		} elseif(is_page('header-3')) {
-			include_once('framework/headers/header-v3.php');
+			include_once('base/headers/header-v3.php');
 		} elseif(is_page('header-4')) {
-			include_once('framework/headers/header-v4.php');
+			include_once('base/headers/header-v4.php');
 		} elseif(is_page('header-5')) {
-			include_once('framework/headers/header-v5.php');
+			include_once('base/headers/header-v5.php');
 		} else {
-			include_once('framework/headers/header-'.$data['header_layout'].'.php');
+			include_once('base/headers/header-'.$data['header_layout'].'.php');
 		}
 	} else {
 		if(is_page('header-2')) {
-			include_once('framework/headers/header-v2.php');
+			include_once('base/headers/header-v2.php');
 		} elseif(is_page('header-3')) {
-			include_once('framework/headers/header-v3.php');
+			include_once('base/headers/header-v3.php');
 		} elseif(is_page('header-4')) {
-			include_once('framework/headers/header-v4.php');
+			include_once('base/headers/header-v4.php');
 		} elseif(is_page('header-5')) {
-			include_once('framework/headers/header-v5.php');
+			include_once('base/headers/header-v5.php');
 		} else {
-			include_once('framework/headers/header-v1.php');
+			include_once('base/headers/header-v1.php');
 		}
 	}
 	?>
