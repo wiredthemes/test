@@ -1,5 +1,9 @@
 <?php
-// Template Name: Portfolio One Column Text
+/*----------------------------------------
+
+	Template Name: Portfolio One Column Text
+	
+----------------------------------------*/
 get_header(); ?>
 
 	<?php

@@ -1,5 +1,9 @@
 <?php
-// Template Name: FAQs
+/*----------------------------------------
+
+	Template Name: FAQs
+	
+----------------------------------------*/
 get_header(); ?>
 
 	<?php
@@ -20,17 +24,19 @@ get_header(); ?>
 	?>
 
 	<div id="content" class="faqs" style="<?php echo $content_css; ?>">
-		<?php while(have_posts()): the_post(); ?>
-		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<div class="post-content">
-				<?php the_content(); ?>
-				<?php wp_link_pages(); ?>
+
+		<?php while( have_posts() ): the_post(); ?>
+			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<div class="post-content">
+					<?php the_content(); ?>
+					<?php wp_link_pages(); ?>
+				</div>
 			</div>
-		</div>
 		<?php endwhile; ?>
+
 		<?php
-		$portfolio_category = get_terms('faq_category');
-		if($portfolio_category):
+			$portfolio_category = get_terms('faq_category');
+			if( $portfolio_category ) :
 		?>
 		<ul class="faq-tabs clearfix">
 			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Inhouse'); ?></a></li>
@@ -39,6 +45,7 @@ get_header(); ?>
 			<?php endforeach; ?>
 		</ul>
 		<?php endif; ?>
+
 		<div class="portfolio-wrapper">
 			<div class="accordian">
 			<?php
@@ -67,6 +74,11 @@ get_header(); ?>
 			<?php endwhile; ?>
 			</div>
 		</div>
-	</div>
-	<div id="sidebar" style="<?php echo $sidebar_css; ?>"><?php generated_dynamic_sidebar(); ?></div>
+
+	</div><!-- /#content -->
+
+	<div id="sidebar" style="<?php echo $sidebar_css; ?>">
+		<?php generated_dynamic_sidebar(); ?>
+	</div><!-- /#sidebar -->
+	
 <?php get_footer(); ?>

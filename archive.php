@@ -17,19 +17,23 @@
 	?>
 
 	<div id="content" style="<?php echo $content_css; ?>">
-		<?php if (have_posts()) : ?>
-		<?php while(have_posts()): the_post(); ?>
+
+		<?php if( have_posts() ) : while( have_posts() ): the_post(); ?>
+
 		<div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
+
 			<?php
-			if($data['featured_images']):
-			if($data['legacy_posts_slideshow']) {
-				include('legacy-slideshow.php');
-			} else {
-				include('new-slideshow.php');
-			}
-			endif;
+				if($data['featured_images']):
+				if($data['legacy_posts_slideshow']) {
+					include('legacy-slideshow.php');
+				} else {
+					include('new-slideshow.php');
+				}
+				endif;
 			?>
+
 			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
 			<div class="post-content">
 				<?php
 				if($data['content_length'] == 'Excerpt') {
@@ -40,7 +44,9 @@
 				}
 				?>
 			</div>
+
 			<div style="clear:both;"></div>
+			
 			<?php if($data['post_meta']): ?>
 			<div class="meta-info">
 				<div class="alignleft">
@@ -51,18 +57,18 @@
 				</div>
 			</div>
 			<?php endif; ?>
-		</div>
+
+		</div><!-- /#post-## -->
+
 		<?php endwhile; ?>
 		<?php wiredthemes_pagination($pages = '', $range = 2); ?>
 		<?php else: ?>
 		<?php endif; ?>
-	</div>
+
+	</div><!-- /#content -->
 
 	<div id="sidebar" style="<?php echo $sidebar_css; ?>">
-		<?php
-		if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar')): 
-		endif;
-		?>
-	</div>
+		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar')): endif; ?>
+	</div><!-- /#sidebar -->
 
 <?php get_footer(); ?>

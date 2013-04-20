@@ -1,5 +1,9 @@
 <?php
-// Template Name: Portfolio Three Column
+/*----------------------------------------
+
+	Template Name: Portfolio Three Column
+	
+----------------------------------------*/
 get_header(); ?>
 
 	<?php

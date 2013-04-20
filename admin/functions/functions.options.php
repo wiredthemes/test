@@ -745,19 +745,6 @@ $of_options[] = array( "name" => "Space before &lt;/body&gt;",
 $of_options[] = array( "name" => "Header Options",
 					"type" => "heading");
 
-$of_options[] = array( "name" => "Select a Header Layout",
-					"desc" => "",
-					"id" => "header_layout",
-					"std" => "v1",
-					"type" => "images",
-					"options" => array(
-						"v1" => get_bloginfo('template_directory')."/images/patterns/header1.jpg",
-						"v2" => get_bloginfo('template_directory')."/images/patterns/header2.jpg",
-						"v3" => get_bloginfo('template_directory')."/images/patterns/header3.jpg",
-						"v4" => get_bloginfo('template_directory')."/images/patterns/header4.jpg",
-						"v5" => get_bloginfo('template_directory')."/images/patterns/header5.jpg"
-					));
-
 $of_options[] = array( "name" => "Header Top Margin",
 					"desc" => "(in pixels)",
 					"id" => "margin_header_top",
@@ -780,12 +767,6 @@ $of_options[] = array( "name" => "Logo Bottom Margin",
 					"desc" => "(in pixels)",
 					"id" => "margin_logo_bottom",
 					"std" => "0px",
-					"type" => "text");
-
-$of_options[] = array( "name" => "Main Nav Height",
-					"desc" => "(Only use number without 'px', default is 83)",
-					"id" => "nav_height",
-					"std" => "83",
 					"type" => "text");
 
 $of_options[] = array( "name" => "Logo",

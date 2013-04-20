@@ -1,5 +1,9 @@
 <?php
-// Template Name: Full Width
+/*----------------------------------------
+
+	Template Name: Full Width
+	
+----------------------------------------*/
 get_header(); ?>
 	<div id="content" class="full-width">
 		<?php while(have_posts()): the_post(); ?>

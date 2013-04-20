@@ -140,7 +140,7 @@
 	?>
 
 	<?php
-	if((is_page_template('contact.php') || is_page_template('contact-2.php')) && $data['gmap_address']) {
+	if((is_page_template('template-contact.php') || is_page_template('contact-2.php')) && $data['gmap_address']) {
     	wp_deregister_script( 'jquery.ui.map' );
     	wp_register_script( 'jquery.ui.map', get_bloginfo('template_directory').'/js/gmap.js', array(), false, true);
 		wp_enqueue_script( 'jquery.ui.map' );
@@ -1077,20 +1077,6 @@
 	<?php if(!$data['image_rollover']): ?>
 	.image-extras{display:none !important;}
 	<?php endif; ?>
-	
-	<?php if($data['nav_height']): ?>
-	#nav > li > a,#nav li.current-menu-ancestor a{height:<?php echo $data['nav_height']; ?>px;line-height:<?php echo $data['nav_height']; ?>px;}
-	#nav > li > a,#nav li.current-menu-ancestor a{height:<?php echo $data['nav_height']; ?>px;line-height:<?php echo $data['nav_height']; ?>px;}
-
-	#nav ul ul{top:<?php echo $data['nav_height']+3; ?>px;}
-
-	<?php if(is_page('header-4') || is_page('header-5')) { ?>
-	#nav > li > a,#nav li.current-menu-ancestor a{height:40px;line-height:40px;}
-	#nav > li > a,#nav li.current-menu-ancestor a{height:40px;line-height:40px;}
-
-	#nav ul ul{top:43px;}
-	<?php } ?>
-	<?php endif; ?>
 
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
 		.page-title-container {
@@ -1164,33 +1150,18 @@
 	----------------------------------------------------------------------------------------------------*/
 	?>
 
-	<?php
-	if($data['header_layout']) {
-		if(is_page('header-2')) {
-			include_once('base/headers/header-v2.php');
-		} elseif(is_page('header-3')) {
-			include_once('base/headers/header-v3.php');
-		} elseif(is_page('header-4')) {
-			include_once('base/headers/header-v4.php');
-		} elseif(is_page('header-5')) {
-			include_once('base/headers/header-v5.php');
-		} else {
-			include_once('base/headers/header-'.$data['header_layout'].'.php');
-		}
-	} else {
-		if(is_page('header-2')) {
-			include_once('base/headers/header-v2.php');
-		} elseif(is_page('header-3')) {
-			include_once('base/headers/header-v3.php');
-		} elseif(is_page('header-4')) {
-			include_once('base/headers/header-v4.php');
-		} elseif(is_page('header-5')) {
-			include_once('base/headers/header-v5.php');
-		} else {
-			include_once('base/headers/header-v1.php');
-		}
-	}
-	?>
+	<header id="header">
+	<div class="inside-container" style="margin-top:<?php echo $data['margin_header_top']; ?>;margin-bottom:<?php echo $data['margin_header_bottom']; ?>;">
+		<div class="logo" style="margin-left:<?php echo $data['margin_logo_left']; ?>;margin-bottom:<?php echo $data['margin_logo_bottom']; ?>;"><a href="<?php bloginfo('url'); ?>"><img src="<?php echo $data['logo']; ?>" alt="<?php bloginfo('name'); ?>" /></a></div>
+		<?php if($data['ubermenu']): ?>
+		<nav id="nav-uber">
+		<?php else: ?>
+		<nav id="nav" class="nav-holder">
+		<?php endif; ?>
+			<?php wp_nav_menu(array('theme_location' => 'main_navigation', 'depth' => 4, 'container' => false, 'menu_id' => 'nav')); ?>
+		</nav>
+	</div>
+	</header>
 
 	<?php
 	/*----------------------------------------------------------------------------------------------------
@@ -1373,7 +1344,7 @@
 	----------------------------------------------------------------------------------------------------*/
 	?>
 
-	<?php if(is_page_template('contact.php') && $data['gmap_address']): ?>
+	<?php if(is_page_template('template-contact.php') && $data['gmap_address']): ?>
 	<style type="text/css">
 	#gmap{
 		width:<?php echo $data['gmap_width']; ?>;

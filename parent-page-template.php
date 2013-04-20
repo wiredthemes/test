@@ -1,5 +1,9 @@
 <?php
-// Template Name: Side Navigation
+/*----------------------------------------
+
+	Template Name: Side Navigation
+	
+----------------------------------------*/
 get_header(); ?>
 
 	<?php
