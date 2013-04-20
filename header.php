@@ -1175,6 +1175,7 @@
 
 	<?php if(!is_search()): ?>
 	<div id="sliders-container">
+		
 	<?php
 	// Layer Slider
 	$slider_page_id = $post->ID;
@@ -1194,16 +1195,17 @@
 	</style>
 	<div id="layerslider-container">
 		<div id="layerslider-wrapper">
-		<?php if($ls_slider['properties']['skin'] == 'inhouse'): ?>
+		<?php if($ls_slider['properties']['skin'] == 'avada'): ?>
 		<div class="ls-shadow-top"></div>
 		<?php endif; ?>
 		<?php echo do_shortcode('[layerslider id="'.get_post_meta($slider_page_id, 'wired_slider', true).'"]'); ?>
-		<?php if($ls_slider['properties']['skin'] == 'inhouse'): ?>
+		<?php if($ls_slider['properties']['skin'] == 'avada'): ?>
 		<div class="ls-shadow-bottom"></div>
 		<?php endif; ?>
 		</div>
 	</div>
 	<?php endif; ?>
+
 	<?php
 	// Flex Slider
 	if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'flex' && (get_post_meta($slider_page_id, 'wired_wooslider', true) || get_post_meta($slider_page_id, 'wired_wooslider', true) != 0)) {
