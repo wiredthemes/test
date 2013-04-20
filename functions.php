@@ -147,19 +147,19 @@ if(get_option('inhouse_int_plugins', '0') == '1') {
 }*/
 
 // Metaboxes
-include_once('base/metaboxes.php');
+include_once('extend/metaboxes/metaboxes.php');
 
 // Extend Visual Composer
 include_once('extend/shortcodes/shortcodes.php');
+
+// Widgets
+include_once('extend/widgets/widgets.php');
 
 // Custom Functions
 include_once('extend/functions/theme-functions.php');
 
 // Plugins
 include_once('base/plugins/multiple_sidebars.php');
-
-// Widgets
-include_once('extend/widgets/widgets.php');
 
 // Add post thumbnail functionality
 add_theme_support('post-thumbnails');

@@ -28,7 +28,6 @@ class WiredThemeFrameworkMetaboxes {
 		$this->add_meta_box('post_options', 'Post Options', 'post');
 		$this->add_meta_box('page_options', 'Page Options', 'page');
 		$this->add_meta_box('portfolio_options', 'Portfolio Options', 'inhouse_portfolio');
-
 		$this->add_meta_box('es_options', 'Elastic Slide Options', 'wiredthemes_elastic');
 	}
 	
@@ -58,26 +57,26 @@ class WiredThemeFrameworkMetaboxes {
 	public function post_options()
 	{
 		$data = $this->data;
-		include 'views/metaboxes/style.php';
-		include 'views/metaboxes/post_options.php';
+		include 'style.php';
+		include 'post_options.php';
 	}
 
 	public function page_options()
 	{
-		include 'views/metaboxes/style.php';
-		include 'views/metaboxes/page_options.php';
+		include 'style.php';
+		include 'page_options.php';
 	}
 
 	public function portfolio_options()
 	{	
-		include 'views/metaboxes/style.php';
-		include 'views/metaboxes/portfolio_options.php';
+		include 'style.php';
+		include 'portfolio_options.php';
 	}
 	
 	public function es_options()
 	{	
-		include 'views/metaboxes/style.php';
-		include 'views/metaboxes/es_options.php';
+		include 'style.php';
+		include 'es_options.php';
 	}
 
 	public function text($id, $label, $desc = '')
