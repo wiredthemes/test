@@ -3,12 +3,12 @@ add_action('widgets_init', 'wired_tabs_load_widgets');
 
 function wired_tabs_load_widgets()
 {
-	register_widget('Pyre_Tabs_Widget');
+	register_widget('Wired_Tabs_Widget');
 }
 
-class Pyre_Tabs_Widget extends WP_Widget {
+class Wired_Tabs_Widget extends WP_Widget {
 	
-	function Pyre_Tabs_Widget()
+	function Wired_Tabs_Widget()
 	{
 		$widget_ops = array('classname' => 'wired_tabs', 'description' => 'Popular posts, recent post and comments.');
 

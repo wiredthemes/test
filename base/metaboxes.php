@@ -1,5 +1,5 @@
 <?php
-class PyreThemeFrameworkMetaboxes {
+class WiredThemeFrameworkMetaboxes {
 	
 	public function __construct()
 	{
@@ -205,4 +205,4 @@ class PyreThemeFrameworkMetaboxes {
 	
 }
 
-$metaboxes = new PyreThemeFrameworkMetaboxes;
+$metaboxes = new WiredThemeFrameworkMetaboxes;

@@ -153,7 +153,7 @@ include_once('base/metaboxes.php');
 include_once('extend/shortcodes/shortcodes.php');
 
 // Custom Functions
-include_once('base/custom_functions.php');
+include_once('extend/functions/theme-functions.php');
 
 // Plugins
 include_once('base/plugins/multiple_sidebars.php');
