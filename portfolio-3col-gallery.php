@@ -1,23 +1,28 @@
 <?php
 // Template Name: Portfolio Three Column
 get_header(); ?>
+
 	<?php
-	$content_css = 'width:100%';
-	$sidebar_css = 'display:none';
-	if(get_post_meta($post->ID, 'wired_portfolio_full_width', true) == 'yes') {
+		/*----------------------------------------
+			Layout variables
+		----------------------------------------*/
 		$content_css = 'width:100%';
 		$sidebar_css = 'display:none';
-	}
-	elseif(get_post_meta($post->ID, 'wired_portfolio_sidebar_position', true) == 'left') {
-		$content_css = 'float:right;';
-		$sidebar_css = 'float:left;';
-		$content_class = 'portfolio-three-sidebar';
-	} elseif(get_post_meta($post->ID, 'wired_portfolio_sidebar_position', true) == 'right') {
-		$content_css = 'float:left;';
-		$sidebar_css = 'float:right;';
-		$content_class = 'portfolio-three-sidebar';
-	}
+		if(get_post_meta($post->ID, 'wired_portfolio_full_width', true) == 'yes') {
+			$content_css = 'width:100%';
+			$sidebar_css = 'display:none';
+		}
+		elseif(get_post_meta($post->ID, 'wired_portfolio_sidebar_position', true) == 'left') {
+			$content_css = 'float:right;';
+			$sidebar_css = 'float:left;';
+			$content_class = 'portfolio-three-sidebar';
+		} elseif(get_post_meta($post->ID, 'wired_portfolio_sidebar_position', true) == 'right') {
+			$content_css = 'float:left;';
+			$sidebar_css = 'float:right;';
+			$content_class = 'portfolio-three-sidebar';
+		}
 	?>
+
 	<div id="content" class="portfolio portfolio-three <?php echo $content_class; ?>" style="<?php echo $content_css; ?>">
 		<?php while(have_posts()): the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

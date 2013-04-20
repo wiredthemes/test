@@ -1,6 +1,6 @@
 <div class="header-v3">
 	<div class="header-social">
-		<div class="inhouse-row">
+		<div class="inside-container">
 			<?php if($data['header_number'] || $data['header_email']): ?>
 			<div class="alignleft">
 				<?php echo $data['header_number']; ?><?php if($data['header_number'] && $data['header_email']): ?><span class="sep">|</span><?php endif; ?><a href="mailto:<?php echo $data['header_email']; ?>"><?php echo $data['header_email']; ?></a>
@@ -202,7 +202,7 @@
 		</div>
 	</div>
 	<header id="header">
-		<div class="inhouse-row" style="margin-top:<?php echo $data['margin_header_top']; ?>;margin-bottom:<?php echo $data['margin_header_bottom']; ?>;">
+		<div class="inside-container" style="margin-top:<?php echo $data['margin_header_top']; ?>;margin-bottom:<?php echo $data['margin_header_bottom']; ?>;">
 			<div class="logo" style="margin-left:<?php echo $data['margin_logo_left']; ?>;margin-bottom:<?php echo $data['margin_logo_bottom']; ?>;"><a href="<?php bloginfo('url'); ?>"><img src="<?php echo $data['logo']; ?>" alt="<?php bloginfo('name'); ?>" /></a></div>
 			<?php if($data['ubermenu']): ?>
 			<nav id="nav-uber">

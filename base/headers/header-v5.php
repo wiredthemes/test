@@ -1,6 +1,6 @@
 <div class="header-v5">
 	<div class="header-social">
-		<div class="inhouse-row">
+		<div class="inside-container">
 			<div class="alignright">
 				<?php if($data['icons_header']): ?>
 				<?php
@@ -202,12 +202,12 @@
 		</div>
 	</div>
 	<header id="header">
-		<div class="inhouse-row" style="margin-top:<?php echo $data['margin_header_top']; ?>;margin-bottom:<?php echo $data['margin_header_bottom']; ?>;">
+		<div class="inside-container" style="margin-top:<?php echo $data['margin_header_top']; ?>;margin-bottom:<?php echo $data['margin_header_bottom']; ?>;">
 			<div class="logo" style="margin-left:<?php echo $data['margin_logo_left']; ?>;margin-bottom:<?php echo $data['margin_logo_bottom']; ?>;"><a href="<?php bloginfo('url'); ?>"><img src="<?php echo $data['logo']; ?>" alt="<?php bloginfo('name'); ?>" /></a></div>
 		</div>
 	</header>
 	<div id="small-nav">
-		<div class="inhouse-row">
+		<div class="inside-container">
 			<?php if($data['ubermenu']): ?>
 			<nav id="nav-uber">
 			<?php else: ?>

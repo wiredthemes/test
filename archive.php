@@ -1,16 +1,21 @@
 <?php get_header(); ?>
+
 	<?php
-	if($data['blog_full_width']) {
-		$content_css = 'width:100%';
-		$sidebar_css = 'display:none';
-	} elseif($data['blog_sidebar_position'] == 'Left') {
-		$content_css = 'float:right;';
-		$sidebar_css = 'float:left;';
-	} elseif($data['blog_sidebar_position'] == 'Right') {
-		$content_css = 'float:left;';
-		$sidebar_css = 'float:right;';
-	}
+		/*----------------------------------------
+			Layout variables
+		----------------------------------------*/
+		if($data['blog_full_width']) {
+			$content_css = 'width:100%';
+			$sidebar_css = 'display:none';
+		} elseif($data['blog_sidebar_position'] == 'Left') {
+			$content_css = 'float:right;';
+			$sidebar_css = 'float:left;';
+		} elseif($data['blog_sidebar_position'] == 'Right') {
+			$content_css = 'float:left;';
+			$sidebar_css = 'float:right;';
+		}
 	?>
+
 	<div id="content" style="<?php echo $content_css; ?>">
 		<?php if (have_posts()) : ?>
 		<?php while(have_posts()): the_post(); ?>
@@ -52,10 +57,12 @@
 		<?php else: ?>
 		<?php endif; ?>
 	</div>
+
 	<div id="sidebar" style="<?php echo $sidebar_css; ?>">
 		<?php
 		if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar')): 
 		endif;
 		?>
 	</div>
+
 <?php get_footer(); ?>

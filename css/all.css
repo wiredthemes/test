@@ -53,11 +53,11 @@ form, fieldset {
 }
 .clear{clear:both;}
 #header{padding:0 10px 0px;}
-.inhouse-row{
+.inside-container{
 	margin:0 auto;
 	max-width:940px;
 }
-.inhouse-row:after{
+.inside-container:after{
 	content:"";
 	display:block;
 	clear:both;

@@ -1,17 +1,22 @@
 <?php get_header(); ?>
+
 	<?php
-	if(get_post_meta($post->ID, 'wired_full_width', true) == 'yes') {
-		$content_css = 'width:100%';
-		$sidebar_css = 'display:none';
-	}
-	elseif(get_post_meta($post->ID, 'wired_sidebar_position', true) == 'left') {
-		$content_css = 'float:right;';
-		$sidebar_css = 'float:left;';
-	} elseif(get_post_meta($post->ID, 'wired_sidebar_position', true) == 'right') {
-		$content_css = 'float:left;';
-		$sidebar_css = 'float:right;';
-	}
+		/*----------------------------------------
+			Layout variables
+		----------------------------------------*/
+		if(get_post_meta($post->ID, 'wired_full_width', true) == 'yes') {
+			$content_css = 'width:100%';
+			$sidebar_css = 'display:none';
+		}
+		elseif(get_post_meta($post->ID, 'wired_sidebar_position', true) == 'left') {
+			$content_css = 'float:right;';
+			$sidebar_css = 'float:left;';
+		} elseif(get_post_meta($post->ID, 'wired_sidebar_position', true) == 'right') {
+			$content_css = 'float:left;';
+			$sidebar_css = 'float:right;';
+		}
 	?>
+
 	<div id="content" style="<?php echo $content_css; ?>">
 		<?php wp_reset_query(); ?>
 		<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>

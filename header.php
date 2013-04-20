@@ -2,10 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	
 	<title><?php bloginfo('name'); ?> <?php wp_title(' - ', true, 'left'); ?></title>
+
+	<?php
+	/*----------------------------------------------------------------------------------------------------
+
+
+		Serve up Google fonts if chosen in the theme options
+
+
+	----------------------------------------------------------------------------------------------------*/
+	?>
 
 	<?php global $data; if($data['google_body'] && $data['google_body'] != 'Select Font'): ?>
 	<link href='http://fonts.googleapis.com/css?family=<?php echo urlencode($data['google_body']); ?>:400,400italic,700,700italic&amp;subset=latin,greek-ext,cyrillic,latin-ext,greek,cyrillic-ext,vietnamese' rel='stylesheet' type='text/css' />
@@ -23,12 +32,32 @@
 	<link href='http://fonts.googleapis.com/css?family=<?php echo urlencode($data['google_footer_headings']); ?>:400,400italic,700,700italic&amp;subset=latin,greek-ext,cyrillic,latin-ext,greek,cyrillic-ext,vietnamese' rel='stylesheet' type='text/css' />
 	<?php endif; ?>
 
+	<?php
+	/*----------------------------------------------------------------------------------------------------
+
+
+		CSS
+
+
+	----------------------------------------------------------------------------------------------------*/
+	?>
+
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
 	
 	<!--[if IE]>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/respond.min.js"></script>
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/ie.css" />
 	<![endif]-->
+
+	<?php
+	/*----------------------------------------------------------------------------------------------------
+
+
+		Responsive CSS
+
+
+	----------------------------------------------------------------------------------------------------*/
+	?>
 
 	<?php global $data; ?>
 	<?php if($data['responsive']): ?>
@@ -66,6 +95,16 @@
 		<?php endif; ?>
 	<?php endif; ?>
 
+	<?php
+	/*----------------------------------------------------------------------------------------------------
+
+
+		Icons
+
+
+	----------------------------------------------------------------------------------------------------*/
+	?>
+
 	<?php if($data['favicon']): ?>
 	<link rel="shortcut icon" href="<?php echo $data['favicon']; ?>" type="image/x-icon" />
 	<?php endif; ?>
@@ -89,6 +128,16 @@
 	<!-- For iPad Retina display -->
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $data['ipad_icon_retina']; ?>">
 	<?php endif; ?>
+
+	<?php
+	/*----------------------------------------------------------------------------------------------------
+
+
+		jQuery
+
+
+	----------------------------------------------------------------------------------------------------*/
+	?>
 
 	<?php
 	if((is_page_template('contact.php') || is_page_template('contact-2.php')) && $data['gmap_address']) {
@@ -479,6 +528,16 @@
 	});
 	</script>
 
+	<?php
+	/*----------------------------------------------------------------------------------------------------
+
+
+		Styles from the theme options
+
+
+	----------------------------------------------------------------------------------------------------*/
+	?>
+
 	<style type="text/css">
 	<?php if($data['primary_color']): ?>
 	a:hover,
@@ -848,7 +907,7 @@
 	<?php endif; ?>
 
 	<?php if($data['responsive']): ?>
-	#header .inhouse-row, #main .inhouse-row, .footer-area .inhouse-row, #footer .inhouse-row{ max-width:940px; }
+	#header .inside-container, #main .inside-container, .footer-area .inside-container, #footer .inside-container{ max-width:940px; }
 	<?php endif; ?>
 
 	<?php if($data['h1_font_size']): ?>
@@ -1062,6 +1121,16 @@
 	<?php echo $data['custom_css']; ?>
 	</style>
 
+	<?php
+	/*----------------------------------------------------------------------------------------------------
+
+
+		End CSS from the theme options
+
+
+	----------------------------------------------------------------------------------------------------*/
+	?>
+
 	<!--<style type="text/css" id="ss">
 	</style>
 	<link rel="stylesheet" id="style_selector_ss" href="#" />-->
@@ -1070,8 +1139,31 @@
 
 	<?php echo $data['space_head']; ?>
 </head>
+
+	<?php
+	/*----------------------------------------------------------------------------------------------------
+
+
+		End of head / start the body
+
+
+	----------------------------------------------------------------------------------------------------*/
+	?>
+
 <body <?php body_class(); ?>>
+
 	<div id="wrapper">
+
+	<?php
+	/*----------------------------------------------------------------------------------------------------
+
+
+		Serve up the header layout that is chosen
+
+
+	----------------------------------------------------------------------------------------------------*/
+	?>
+
 	<?php
 	if($data['header_layout']) {
 		if(is_page('header-2')) {
@@ -1099,6 +1191,17 @@
 		}
 	}
 	?>
+
+	<?php
+	/*----------------------------------------------------------------------------------------------------
+
+
+		Serve up the slider
+
+
+	----------------------------------------------------------------------------------------------------*/
+	?>
+
 	<?php if(!is_search()): ?>
 	<div id="sliders-container">
 	<?php
@@ -1169,6 +1272,17 @@
 		<img src="<?php echo get_post_meta($slider_page_id, 'wired_fallback', true); ?>" alt="" />
 	</div>
 	<?php endif; ?>
+
+	<?php
+	/*----------------------------------------------------------------------------------------------------
+
+
+		Serve up the page title
+
+
+	----------------------------------------------------------------------------------------------------*/
+	?>
+
 	<?php if($data['page_title_bar']): ?>
 	<?php if(((is_page() || is_single() || is_singular('inhouse_portfolio')) && get_post_meta($c_pageID, 'wired_page_title', true) == 'yes')) : ?>
 	<div class="page-title-container">
@@ -1248,6 +1362,17 @@
 	</div>
 	<?php endif; ?>
 	<?php endif; ?>
+
+	<?php
+	/*----------------------------------------------------------------------------------------------------
+
+
+		Check if this is the contact template
+
+
+	----------------------------------------------------------------------------------------------------*/
+	?>
+
 	<?php if(is_page_template('contact.php') && $data['gmap_address']): ?>
 	<style type="text/css">
 	#gmap{
@@ -1290,6 +1415,17 @@
 	<div class="gmap" id="gmap">
 	</div>
 	<?php endif; ?>
+
+	<?php
+	/*----------------------------------------------------------------------------------------------------
+
+
+		Check if this is contact 2 template
+
+
+	----------------------------------------------------------------------------------------------------*/
+	?>
+
 	<?php if(is_page_template('contact-2.php') && $data['gmap_address']): ?>
 	<style type="text/css">
 	#gmap{
@@ -1323,5 +1459,17 @@
 	<div class="gmap" id="gmap">
 	</div>
 	<?php endif; ?>
+
+	<?php
+	/*----------------------------------------------------------------------------------------------------
+
+
+		Start the main content
+
+
+	----------------------------------------------------------------------------------------------------*/
+	?>
+
 	<div id="main" style="overflow:hidden !important;">
-		<div class="inhouse-row">
+		
+		<div class="inside-container">
