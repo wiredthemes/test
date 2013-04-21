@@ -772,7 +772,7 @@ $of_options[] = array( "name" => "Logo Bottom Margin",
 $of_options[] = array( "name" => "Logo",
 					"desc" => "Please choose an image file for your logo.",
 					"id" => "logo",
-					"std" => get_bloginfo('template_directory')."/images/logo.gif",
+					"std" => get_bloginfo('template_directory')."/images/logo.png",
 					"mod" => "min",
 					"type" => "media");
 
@@ -1337,6 +1337,12 @@ $of_options[] = array( "name" =>  "Menu Font Color - First Level",
 					"desc" => "",
 					"id" => "menu_first_color",
 					"std" => "#333333",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Active Link Font Color - First Level",
+					"desc" => "",
+					"id" => "active_menu_first_color",
+					"std" => "#ffffff",
 					"type" => "color");
 
 $of_options[] = array( "name" =>  "Menu Background Color - Sublevels",

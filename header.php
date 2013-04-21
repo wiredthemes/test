@@ -541,7 +541,6 @@
 	<style type="text/css">
 	<?php if($data['primary_color']): ?>
 	a:hover,
-	#nav ul .current_page_item a, #nav ul .current-menu-item a, #nav ul > .current-menu-parent a,
 	.footer-area ul li a:hover,
 	.side-nav li.current_page_item a,
 	.portfolio-tabs li.active a, .faq-tabs li.active a,
@@ -554,8 +553,6 @@
 	#nav ul a:hover{
 		color:<?php echo $data['primary_color']; ?> !important;
 	}
-	#nav ul .current_page_item a, #nav ul .current-menu-item a, #nav ul > .current-menu-parent a,
-	#nav ul ul,#nav li.current-menu-ancestor a,
 	.reading-box,
 	.portfolio-tabs li.active a, .faq-tabs li.active a,
 	.tab-holder .tabs li.active a,
@@ -580,6 +577,14 @@
 		background-color:<?php echo $data['primary_color']; ?> !important;
 	}
 	<?php endif; ?>
+
+
+	<?php if($data['active_menu_first_color']): ?>
+	#nav ul .current_page_item a, #nav ul .current-menu-item  a, #nav ul > .current-menu-parent a {
+		color:<?php echo $data['active_menu_first_color']; ?> !important;
+	}
+	<?php endif; ?>
+
 
 	<?php if($data['pricing_box_color']): ?>
 	.sep-boxed-pricing ul li.title-row{
@@ -1174,61 +1179,55 @@
 	?>
 
 	<?php if(!is_search()): ?>
-	<div id="sliders-container">
-		
-	<?php
-	// Layer Slider
-	$slider_page_id = $post->ID;
-	if(is_home() && !is_front_page()){
-		$slider_page_id = get_option('page_for_posts');
-	}
-	if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'layer' && (get_post_meta($slider_page_id, 'wired_slider', true) || get_post_meta($slider_page_id, 'wired_slider', true) != 0)): ?>
-	<?php
-	// Get slider
-	$ls_table_name = $wpdb->prefix . "layerslider";
-	$ls_id = get_post_meta($slider_page_id, 'wired_slider', true);
-	$ls_slider = $wpdb->get_row("SELECT * FROM $ls_table_name WHERE id = ".(int)$ls_id." ORDER BY date_c DESC LIMIT 1" , ARRAY_A);
-	$ls_slider = json_decode($ls_slider['data'], true);
-	?>
-	<style type="text/css">
-	#layerslider-container{max-width:<?php echo $ls_slider['properties']['width'] ?>;}
-	</style>
-	<div id="layerslider-container">
-		<div id="layerslider-wrapper">
-		<?php if($ls_slider['properties']['skin'] == 'inhouse'): ?>
-		<div class="ls-shadow-top"></div>
-		<?php endif; ?>
-		<?php echo do_shortcode('[layerslider id="'.get_post_meta($slider_page_id, 'wired_slider', true).'"]'); ?>
-		<?php if($ls_slider['properties']['skin'] == 'inhouse'): ?>
-		<div class="ls-shadow-bottom"></div>
-		<?php endif; ?>
+		<div id="sliders-container">
+			
+		<?php
+		// Layer Slider
+		$slider_page_id = $post->ID;
+		if(is_home() && !is_front_page()){
+			$slider_page_id = get_option('page_for_posts');
+		}
+		if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'layer' && (get_post_meta($slider_page_id, 'wired_slider', true) || get_post_meta($slider_page_id, 'wired_slider', true) != 0)): ?>
+		<?php
+		// Get slider
+		$ls_table_name = $wpdb->prefix . "layerslider";
+		$ls_id = get_post_meta($slider_page_id, 'wired_slider', true);
+		$ls_slider = $wpdb->get_row("SELECT * FROM $ls_table_name WHERE id = ".(int)$ls_id." ORDER BY date_c DESC LIMIT 1" , ARRAY_A);
+		$ls_slider = json_decode($ls_slider['data'], true);
+		?>
+		<style type="text/css">
+		#layerslider-container{max-width:<?php echo $ls_slider['properties']['width'] ?>;}
+		</style>
+		<div id="layerslider-container">
+			<div id="layerslider-wrapper">
+				<?php echo do_shortcode('[layerslider id="'.get_post_meta($slider_page_id, 'wired_slider', true).'"]'); ?>
+			</div>
 		</div>
-	</div>
-	<?php endif; ?>
+		<?php endif; ?>
 
-	<?php
-	// Flex Slider
-	if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'flex' && (get_post_meta($slider_page_id, 'wired_wooslider', true) || get_post_meta($slider_page_id, 'wired_wooslider', true) != 0)) {
-		echo do_shortcode('[wooslider slide_page="'.get_post_meta($slider_page_id, 'wired_wooslider', true).'" slider_type="slides" limit="'.$data['flexslider_number'].'"]');
-	}
-	?>
-	<?php
-	if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'rev' && get_post_meta($slider_page_id, 'wired_revslider', true)) {
-		putRevSlider(get_post_meta($slider_page_id, 'wired_revslider', true));
-	}
-	?>
-	<?php
-	if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'flex2' && get_post_meta($slider_page_id, 'wired_flexslider', true)) {
-		include_once('flexslider.php');
-	}
-	?>
-	<?php
-	// WiredThemes Elastic Slider
-	if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'elastic' && (get_post_meta($slider_page_id, 'wired_elasticslider', true) || get_post_meta($slider_page_id, 'wired_elasticslider', true) != 0)) {
-		include_once('elastic-slider.php');
-	}
-	?>
-	</div>
+		<?php
+		// Flex Slider
+		if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'flex' && (get_post_meta($slider_page_id, 'wired_wooslider', true) || get_post_meta($slider_page_id, 'wired_wooslider', true) != 0)) {
+			echo do_shortcode('[wooslider slide_page="'.get_post_meta($slider_page_id, 'wired_wooslider', true).'" slider_type="slides" limit="'.$data['flexslider_number'].'"]');
+		}
+		?>
+		<?php
+		if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'rev' && get_post_meta($slider_page_id, 'wired_revslider', true)) {
+			putRevSlider(get_post_meta($slider_page_id, 'wired_revslider', true));
+		}
+		?>
+		<?php
+		if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'flex2' && get_post_meta($slider_page_id, 'wired_flexslider', true)) {
+			include_once('flexslider.php');
+		}
+		?>
+		<?php
+		// WiredThemes Elastic Slider
+		if(get_post_meta($slider_page_id, 'wired_slider_type', true) == 'elastic' && (get_post_meta($slider_page_id, 'wired_elasticslider', true) || get_post_meta($slider_page_id, 'wired_elasticslider', true) != 0)) {
+			include_once('elastic-slider.php');
+		}
+		?>
+		</div>
 	<?php endif; ?>
 	<?php if(get_post_meta($slider_page_id, 'wired_fallback', true)): ?>
 	<style type="text/css">
