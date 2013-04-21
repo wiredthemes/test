@@ -4,7 +4,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	
-	<title><?php bloginfo('name'); ?> <?php wp_title(' - ', true, 'left'); ?></title>
+	<title><?php bloginfo('name'); ?> <?php wp_title(' / ', true, 'left'); ?></title>
 
 	<?php
 	/*----------------------------------------------------------------------------------------------------
@@ -1195,11 +1195,11 @@
 	</style>
 	<div id="layerslider-container">
 		<div id="layerslider-wrapper">
-		<?php if($ls_slider['properties']['skin'] == 'avada'): ?>
+		<?php if($ls_slider['properties']['skin'] == 'inhouse'): ?>
 		<div class="ls-shadow-top"></div>
 		<?php endif; ?>
 		<?php echo do_shortcode('[layerslider id="'.get_post_meta($slider_page_id, 'wired_slider', true).'"]'); ?>
-		<?php if($ls_slider['properties']['skin'] == 'avada'): ?>
+		<?php if($ls_slider['properties']['skin'] == 'inhouse'): ?>
 		<div class="ls-shadow-bottom"></div>
 		<?php endif; ?>
 		</div>

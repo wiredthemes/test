@@ -35,6 +35,10 @@
 			<?php endif; ?>
 		</div>
 		<?php endif; ?>
-	</div>
-	<div id="sidebar" style="<?php echo $sidebar_css; ?>"><?php generated_dynamic_sidebar(); ?></div>
+	</div><!-- /#content -->
+
+	<div id="sidebar" style="<?php echo $sidebar_css; ?>">
+		<?php generated_dynamic_sidebar(); ?>
+	</div><!-- /#sidebar -->
+
 <?php get_footer(); ?>

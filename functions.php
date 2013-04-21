@@ -245,23 +245,6 @@ function wired_init() {
 	register_taxonomy('portfolio_skills', 'inhouse_portfolio', array('hierarchical' => true, 'label' => 'Skills', 'query_var' => true, 'rewrite' => true));
 
 	register_post_type(
-		'inhouse_faq',
-		array(
-			'labels' => array(
-				'name' => 'FAQs',
-				'singular_name' => 'FAQ'
-			),
-			'public' => true,
-			'has_archive' => true,
-			'rewrite' => array('slug' => 'faq-items'),
-			'supports' => array('title', 'editor', 'thumbnail','comments'),
-			'can_export' => true,
-		)
-	);
-
-	register_taxonomy('faq_category', 'inhouse_faq', array('hierarchical' => true, 'label' => 'Categories', 'query_var' => true, 'rewrite' => true));
-
-	register_post_type(
 		'wiredthemes_elastic',
 		array(
 			'labels' => array(
