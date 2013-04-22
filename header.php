@@ -791,8 +791,6 @@
 	.image .image-extras .image-extras-content h4,
 	.project-content .project-info h4,
 	.post-content blockquote,
-	.button.large,
-	.button.small,
 	.ei-title h3{
 		font-family:<?php echo $font; ?>;
 	}

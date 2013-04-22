@@ -1225,9 +1225,9 @@ $of_options[] = array( "name" => "Styling Options",
 $of_options[] = array( "name" => "Predefined Color Schemes",
 					"desc" => "",
 					"id" => "color_scheme",
-					"std" => "Green",
+					"std" => "Peach",
 					"type" => "select",
-					"options" => array('red' => 'Red', 'lighred' => 'Light Red', 'blue' => 'Blue', 'lightblue' => 'Light Blue', 'green' => 'Green', 'darkgreen' => 'Dark Green', 'yellow' => 'Yellow', 'pink' => 'Pink', 'brown' => 'Brown', 'lightgrey' => 'Light Grey'));
+					"options" => array( 'peach' => 'Peach', 'orange' => 'Orange', 'yellow' => 'Yellow' ) );
 
 $of_options[] = array( "name" => "Custom Color Scheme",
 					"desc" => "",

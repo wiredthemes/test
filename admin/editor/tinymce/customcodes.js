@@ -74,7 +74,7 @@
                 title : 'Add a button',  
                 image : url+'/button-button.png',  
                 onclick : function() {  
-                     ed.selection.setContent('[button color="e.g. green, darkgreen, orange, blue, red, pink, darkgray, lightgray or leave blank" size="large or small" link="" target=""]Text here[/button]');  
+                     ed.selection.setContent('[button color="e.g. peach, orange or leave blank" size="large or small" link="" target=""]Text here[/button]');  
   
                 }  
             });  

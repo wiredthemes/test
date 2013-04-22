@@ -110,7 +110,7 @@ ul#nav > li:last-child{margin-right:0;}
 #nav ul .current_page_item a, #nav ul .current-menu-item  a, #nav ul > .current-menu-parent a{
 	color:#fff;
 	text-decoration:none;
-	background: #ff552e;
+	background: #fc5c46;
 }
 #nav ul li{
 	position:relative;
@@ -387,7 +387,6 @@ ul#nav > li:last-child{margin-right:0;}
 .footer-widget-col{margin-bottom:20px;}
 .footer-widget-col:last-child{margin-bottom:0;}
 .footer-area{
-	border-top:12px solid #e9eaee;
 	background:#363839;
 	padding:43px 10px 40px;
 	color:#8c8989;
@@ -405,9 +404,6 @@ ul#nav > li:last-child{margin-right:0;}
 	font:13px/20px 'PTSansBold', arial, helvetica, sans-serif;
 }
 .footer-area .columns{margin:0;}
-.footer-area .text-block{
-	text-shadow:1px 2px 1px #000;
-}
 .footer-area .holder-block img{width:100%;}
 .footer-area ul{
 	list-style:none;
@@ -443,7 +439,6 @@ ul#nav > li:last-child{margin-right:0;}
 	float:left;
 	color:#8c8989;
 	font-size:12px;
-	text-shadow:1px 2px 1px #000;
 }
 .copyright li{
 	float:left;
@@ -1958,35 +1953,22 @@ h5.toggle.active + .toggle-content{
 .button{
 	display:inline-block;
 }
+
 .button.large{
 	height:43px;
 	line-height:43px;
-	font:13px/43px 'PTSansBold', arial, helvetica, sans-serif;
-	text-transform:uppercase;
+	font:14px/43px Arial, helvetica, sans-serif;
 	text-align:center;
-	text-shadow:0 1px 0 #fff;
 	padding:0 30px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-	box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
+
 .button.small{
 	height:32px;
-	font:13px/32px 'PTSansBold', arial, helvetica, sans-serif;
-	text-transform:uppercase;
+	font:12px/32px Arial, helvetica, sans-serif;
 	text-align:center;
-	text-shadow:0 1px 0 #fff;
 	padding:0 20px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-	box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
+
 .button.green{
 	color:#54770f !important;
 	background-image: linear-gradient(top, #D1E990 0%, #AAD75D 100%);
