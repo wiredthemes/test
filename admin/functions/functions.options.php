@@ -1225,9 +1225,21 @@ $of_options[] = array( "name" => "Styling Options",
 $of_options[] = array( "name" => "Predefined Color Schemes",
 					"desc" => "",
 					"id" => "color_scheme",
-					"std" => "Peach",
+					"std" => "Yellow",
 					"type" => "select",
-					"options" => array( 'peach' => 'Peach', 'orange' => 'Orange', 'yellow' => 'Yellow' ) );
+					"options" => array( 
+						'lightgrey' => 'Light Grey', 
+						'darkgrey' => 'Dark Grey', 
+						'red' => 'Red', 
+						'yellow' => 'Yellow',
+						'green' => 'Green',
+						'blue' => 'Blue',
+						'lightblue' => 'Light Blue',
+						'steelblue' => 'Steel Blue',
+						'purple' => 'Purple',
+						'orange' => 'Orange',
+						'pink' => 'Pink',
+					) );
 
 $of_options[] = array( "name" => "Custom Color Scheme",
 					"desc" => "",
@@ -1275,6 +1287,18 @@ $of_options[] = array( "name" =>  "Button Gradient Bottom Color",
 $of_options[] = array( "name" =>  "Button Text Color",
 					"desc" => "",
 					"id" => "button_gradient_text_color",
+					"std" => "#54770f",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Button Text Highlight Color",
+					"desc" => "",
+					"id" => "button_text_highlight_color",
+					"std" => "#54770f",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Button Border Color",
+					"desc" => "",
+					"id" => "button_border_color",
 					"std" => "#54770f",
 					"type" => "color");
 

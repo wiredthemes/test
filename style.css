@@ -98,7 +98,7 @@ nav#nav{
 #nav ul li{
 	float:left;
 	padding: 0;
-	margin: 0 10px 0 0;
+	margin: 0 8px 0 0;
 }
 ul#nav > li:last-child{margin-right:0;}
 #nav ul a,#nav li.current-menu-ancestor a {
@@ -110,7 +110,6 @@ ul#nav > li:last-child{margin-right:0;}
 #nav ul .current_page_item a, #nav ul .current-menu-item  a, #nav ul > .current-menu-parent a{
 	color:#fff;
 	text-decoration:none;
-	background: #fc5c46;
 }
 #nav ul li{
 	position:relative;
@@ -1950,24 +1949,37 @@ h5.toggle.active + .toggle-content{
 .buttons a{
 	margin-right:30px;
 }
-.button{
+.button {
 	display:inline-block;
 }
 
-.button.large{
-	height:43px;
-	line-height:43px;
-	font:14px/43px Arial, helvetica, sans-serif;
+.button.large {
+	font: 14px/14px Arial, helvetica, sans-serif;
 	text-align:center;
-	padding:0 30px;
+	padding: 15px 28px;
+	border-radius: 20px 20px 20px 20px;
 }
 
-.button.small{
-	height:32px;
-	font:12px/32px Arial, helvetica, sans-serif;
-	text-align:center;
-	padding:0 20px;
+.button.small {
+	font: 12px/12px Arial, helvetica, sans-serif;
+	text-align: center;
+	padding: 10px 18px;
+	border-radius: 20px 20px 20px 20px;
 }
+
+/*------------------------------------------------------------------
+
+	I think the button border & shadow colour etc should come out
+	in the header styles as options values e.g if($data border_color)
+	then print it here etc..
+
+	But then these colour classes below need all the gradient
+	and border colours etc all in one because these are for shortcodes.
+	Because you can still use a green button even if you're using
+	the yellow skin.. so the css for the shortcodes needs hardcoded styles
+	rather than relying on theme options..
+
+------------------------------------------------------------------*/
 
 .button.green{
 	color:#54770f !important;

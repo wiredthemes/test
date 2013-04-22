@@ -573,7 +573,8 @@
 	.post-content ul.arrow li:before,
 	.progress-bar-content,
 	.pagination .current,
-	.header-v3 .header-social,.header-v4 .header-social,.header-v5 .header-social{
+	.header-v3 .header-social,.header-v4 .header-social,.header-v5 .header-social,
+	#nav ul .current_page_item a, #nav ul .current-menu-item  a, #nav ul > .current-menu-parent a {
 		background-color:<?php echo $data['primary_color']; ?> !important;
 	}
 	<?php endif; ?>
@@ -641,6 +642,28 @@
 
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $data['button_gradient_top_color']; ?>', endColorstr='<?php echo $data['button_gradient_bottom_color']; ?>');
 	}
+
+	<?php if( $data['button_text_highlight_color'] ) :; ?>
+	#main .reading-box .button,
+	#main .continue.button,
+	#main .portfolio-one .button,
+	#main .comment-submit,
+	.button.default{
+		text-shadow: 0 1px 0 <?php echo $data['button_text_highlight_color']; ?>;
+		box-shadow: 0 1px 2px #D9D9D9, 0 1px 0 <?php echo $data['button_text_highlight_color']; ?> inset;
+	}
+	<?php endif; ?>
+
+	<?php if( $data['button_border_color'] ) :; ?>
+	#main .reading-box .button,
+	#main .continue.button,
+	#main .portfolio-one .button,
+	#main .comment-submit,
+	.button.default{
+		border: 1px solid <?php echo $data['button_border_color']; ?>;
+	}
+	<?php endif; ?>
+
 	.no-cssgradients #main .reading-box .button,
 	.no-cssgradients #main .continue.button,
 	.no-cssgradients #main .portfolio-one .button,
