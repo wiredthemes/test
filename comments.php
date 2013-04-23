@@ -67,7 +67,7 @@
 		
 		<div id="comment-submit">
 		
-			<p><div class=""><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Post Comment', 'Inhouse'); ?>" class="comment-submit  small button green" /></div></p>
+			<p><div class=""><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Post Comment', 'Inhouse'); ?>" class="comment-submit  small button" /></div></p>
 			<?php comment_id_fields(); ?>
 			<?php do_action('comment_form', $post->ID); ?>
 			
@@ -93,7 +93,7 @@
 		
 		<div id="comment-submit">
 		
-			<p><div><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Post Comment', 'Inhouse'); ?>" class="comment-submit small button green" /></div></p>
+			<p><div><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Post Comment', 'Inhouse'); ?>" class="comment-submit small button" /></div></p>
 			<?php comment_id_fields(); ?>
 			<?php do_action('comment_form', $post->ID); ?>
 			

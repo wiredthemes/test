@@ -296,7 +296,7 @@ add_shortcode('tagline_box', 'shortcode_tagline_box');
 		$str = '';
 		$str .= '<section class="reading-box">';
 			if($atts['link'] && $atts['button']):
-			$str .= '<a href="'.$atts['link'].'" target="'.$atts['linktarget'].'" class="continue button large green">'.$atts['button'].'</a>';
+			$str .= '<a href="'.$atts['link'].'" target="'.$atts['linktarget'].'" class="continue button large">'.$atts['button'].'</a>';
 			endif;
 			if($atts['title']):
 			$str .= '<h2>'.$atts['title'].'</h2>';
@@ -305,7 +305,7 @@ add_shortcode('tagline_box', 'shortcode_tagline_box');
 			$str.= '<p>'.$atts['description'].'</p>';
 			endif;
 			if($atts['link'] && $atts['button']):
-			$str .= '<a href="'.$atts['link'].'" target="'.$atts['linktarget'].'" class="continue mobile-button button large green">'.$atts['button'].'</a>';
+			$str .= '<a href="'.$atts['link'].'" target="'.$atts['linktarget'].'" class="continue mobile-button button large">'.$atts['button'].'</a>';
 			endif;
 		$str .= '</section>';
 

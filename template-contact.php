@@ -122,7 +122,7 @@ get_header(); global $data; ?>
 						<?php endif; ?>
 						
 						<div id="comment-submit">
-							<p><div><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Submit Form', 'Inhouse'); ?>" class="comment-submit button small green"></div></p>			
+							<p><div><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Submit Form', 'Inhouse'); ?>" class="comment-submit button small"></div></p>			
 						</div><!-- /#comment-submit-->
 				</form>
 
