@@ -565,7 +565,12 @@
 	.progress-bar-content,
 	.pagination .current,
 	.header-v3 .header-social,.header-v4 .header-social,.header-v5 .header-social,
-	#nav ul .current_page_item a, #nav ul .current-menu-item  a, #nav ul > .current-menu-parent a {
+	#nav ul .current_page_item a, #nav ul .current-menu-item  a, #nav ul > .current-menu-parent a,
+	#main .reading-box .button,
+	#main .continue.button,
+	#main .portfolio-one .button,
+	#main .comment-submit,
+	.button.default {
 		background-color:<?php echo $data['primary_color']; ?> !important;
 	}
 	<?php endif; ?>
@@ -607,90 +612,6 @@
 	}
 	.no-cssgradients .image .image-extras{
 		background:<?php echo $data['image_gradient_top_color']; ?>;
-	}
-	<?php endif; ?>
-	<?php if($data['button_gradient_top_color'] && $data['button_gradient_bottom_color'] && $data['button_gradient_text_color']): ?>
-	#main .reading-box .button,
-	#main .continue.button,
-	#main .portfolio-one .button,
-	#main .comment-submit,
-	.button.default{
-		color: <?php echo $data['button_gradient_text_color']; ?> !important;
-		background-image: linear-gradient(top, <?php echo $data['button_gradient_top_color']; ?> 0%, <?php echo $data['button_gradient_bottom_color']; ?> 100%);
-		background-image: -o-linear-gradient(top, <?php echo $data['button_gradient_top_color']; ?> 0%, <?php echo $data['button_gradient_bottom_color']; ?> 100%);
-		background-image: -moz-linear-gradient(top, <?php echo $data['button_gradient_top_color']; ?> 0%, <?php echo $data['button_gradient_bottom_color']; ?> 100%);
-		background-image: -webkit-linear-gradient(top, <?php echo $data['button_gradient_top_color']; ?> 0%, <?php echo $data['button_gradient_bottom_color']; ?> 100%);
-		background-image: -ms-linear-gradient(top, <?php echo $data['button_gradient_top_color']; ?> 0%, <?php echo $data['button_gradient_bottom_color']; ?> 100%);
-
-		background-image: -webkit-gradient(
-			linear,
-			left top,
-			left bottom,
-			color-stop(0, <?php echo $data['button_gradient_top_color']; ?>),
-			color-stop(1, <?php echo $data['button_gradient_bottom_color']; ?>)
-		);
-		border:1px solid <?php echo $data['button_gradient_bottom_color']; ?>;
-
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $data['button_gradient_top_color']; ?>', endColorstr='<?php echo $data['button_gradient_bottom_color']; ?>');
-	}
-
-	<?php if( $data['button_text_highlight_color'] ) :; ?>
-	#main .reading-box .button,
-	#main .continue.button,
-	#main .portfolio-one .button,
-	#main .comment-submit,
-	.button.default{
-		text-shadow: 0 1px 0 <?php echo $data['button_text_highlight_color']; ?>;
-		box-shadow: 0 1px 2px #D9D9D9, 0 1px 0 <?php echo $data['button_text_highlight_color']; ?> inset;
-	}
-	<?php endif; ?>
-
-	<?php if( $data['button_border_color'] ) :; ?>
-	#main .reading-box .button,
-	#main .continue.button,
-	#main .portfolio-one .button,
-	#main .comment-submit,
-	.button.default{
-		border: 1px solid <?php echo $data['button_border_color']; ?>;
-	}
-	<?php endif; ?>
-
-	.no-cssgradients #main .reading-box .button,
-	.no-cssgradients #main .continue.button,
-	.no-cssgradients #main .portfolio-one .button,
-	.no-cssgradients #main .comment-submit,
-	.no-cssgradients .button.default{
-		background:<?php echo $data['button_gradient_top_color']; ?>;
-	}
-	#main .reading-box .button:hover,
-	#main .continue.button:hover,
-	#main .portfolio-one .button:hover,
-	#main .comment-submit:hover,
-	.button.default:hover{
-		color: <?php echo $data['button_gradient_text_color']; ?> !important;
-		background-image: linear-gradient(top, <?php echo $data['button_gradient_bottom_color']; ?> 0%, <?php echo $data['button_gradient_top_color']; ?> 100%);
-		background-image: -o-linear-gradient(top, <?php echo $data['button_gradient_bottom_color']; ?> 0%, <?php echo $data['button_gradient_top_color']; ?> 100%);
-		background-image: -moz-linear-gradient(top, <?php echo $data['button_gradient_bottom_color']; ?> 0%, <?php echo $data['button_gradient_top_color']; ?> 100%);
-		background-image: -webkit-linear-gradient(top, <?php echo $data['button_gradient_bottom_color']; ?> 0%, <?php echo $data['button_gradient_top_color']; ?> 100%);
-		background-image: -ms-linear-gradient(top, <?php echo $data['button_gradient_bottom_color']; ?> 0%, <?php echo $data['button_gradient_top_color']; ?> 100%);
-
-		background-image: -webkit-gradient(
-			linear,
-			left top,
-			left bottom,
-			color-stop(0, <?php echo $data['button_gradient_bottom_color']; ?>),
-			color-stop(1, <?php echo $data['button_gradient_top_color']; ?>)
-		);
-		border:1px solid <?php echo $data['button_gradient_bottom_color']; ?>;
-
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $data['button_gradient_bottom_color']; ?>', endColorstr='<?php echo $data['button_gradient_top_color']; ?>');
-	}
-	.no-cssgradients #main .reading-box .button:hover,
-	.no-cssgradients #main .continue.button:hover,
-	.no-cssgradients #main .portfolio-one .button:hover,
-	.no-cssgradients #main .comment-submit:hover,
-	.no-cssgradients .button.default{
-		background:<?php echo $data['button_gradient_bottom_color']; ?>;
 	}
 	<?php endif; ?>
 
