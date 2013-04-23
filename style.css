@@ -3013,37 +3013,7 @@ html[xmlns] .flexslider .slides {display: block;}
 #layerslider-wrapper,.rev_slider_wrapper{
 	position:relative;
 }
-#layerslider-wrapper .ls-shadow-top,.rev_slider_wrapper .shadow-left{
-	position:absolute;
-	background-image:url(images/shadow-top.png);
-	background-repeat:no-repeat;
-	background-position:top center;
-	height:42px;
-	width:100%;
-	top:0;
-	z-index:99;
-}
-.rev_slider_wrapper .shadow-left{
-	top:-1px;
-}
-#layerslider-wrapper .ls-shadow-bottom,.rev_slider_wrapper .shadow-right{
-	position:absolute;
-	background-image:url(images/shadow-bottom.png);
-	background-repeat:no-repeat;
-	background-position:bottom center;
-	height:32px;
-	width:100%;
-	bottom:0;
-	z-index:99;
-}
-.ls-inhouse,.inhouse-skin-rev{
-	border-top: 1px solid #d2d3d4;
-	border-bottom: 1px solid #d2d3d4;
-}
-.ls-inhouse .ls-layer{
-	background-repeat:no-repeat;
-	background-position:center center;
-}
+
 .ls-inhouse .ls-nav-prev, .ls-inhouse .ls-nav-next{
 	background-color: rgba(0, 0, 0, 0.5);
 	background-repeat: no-repeat;
@@ -3054,6 +3024,7 @@ html[xmlns] .flexslider .slides {display: block;}
 	top: 42% !important;
 	opacity:0.8 !important;
 }
+
 .rev_slider_wrapper .tp-leftarrow, .rev_slider_wrapper .tp-rightarrow{
 	background-color: rgba(0, 0, 0, 0.5)  !important;
 	background-repeat: no-repeat;

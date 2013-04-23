@@ -373,15 +373,6 @@
 			playVideoAndPauseOthers(jQuery('.play3 iframe')[0]);
 		});
 
-		jQuery('.rev_slider_wrapper').each(function() {
-			if(jQuery(this).length >=1 && jQuery(this).find('.tp-bannershadow').length == 0) {
-				jQuery('<div class="shadow-left">').appendTo(this);
-				jQuery('<div class="shadow-right">').appendTo(this);
-
-				jQuery(this).addClass('inhouse-skin-rev');
-			}
-		});
-
 		jQuery('.tparrows').each(function() {
 			if(jQuery(this).css('visibility') == 'hidden') {
 				jQuery(this).remove();
