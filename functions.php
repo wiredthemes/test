@@ -12,6 +12,8 @@ add_filter('widget_text', 'do_shortcode');
 register_nav_menu('main_navigation', 'Main Navigation');
 register_nav_menu('top_navigation', 'Top Navigation');
 
+
+
 // Content Width
 if (!isset( $content_width )) $content_width = 1000;
 

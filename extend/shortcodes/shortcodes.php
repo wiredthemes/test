@@ -1,7 +1,8 @@
 <?php
-//////////////////////////////////////////////////////////////////
-// Remove extra P tags
-//////////////////////////////////////////////////////////////////
+
+/*----------------------------------------------------
+	Remove extra <p> tags
+----------------------------------------------------*/
 function inhouse_shortcodes_formatter($content) {
 	$block = join("|",array("youtube", "vimeo", "soundcloud", "button", "dropcap", "highlight", "checklist", "tabs", "tab", "accordian", "toggle", "one_half", "one_third", "one_fourth", "two_third", "three_fourth", "tagline_box", "pricing_table", "pricing_column", "pricing_price", "pricing_row", "pricing_footer", "content_boxes", "content_box", "slider", "slide", "testimonials", "testimonial", "progress", "person", "recent_posts", "recent_works", "alert", "fontawesome", "social_links", "clients", "client", "title", "separator"));
 
@@ -17,9 +18,9 @@ function inhouse_shortcodes_formatter($content) {
 add_filter('the_content', 'inhouse_shortcodes_formatter');
 add_filter('widget_text', 'inhouse_shortcodes_formatter');
 
-//////////////////////////////////////////////////////////////////
-// Youtube shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	YouTube Embeds
+----------------------------------------------------*/
 add_shortcode('youtube', 'shortcode_youtube');
 	function shortcode_youtube($atts) {
 		$atts = shortcode_atts(
@@ -32,9 +33,9 @@ add_shortcode('youtube', 'shortcode_youtube');
 			return '<div style="max-width:'.$atts['width'].'px;max-height:'.$atts['height'].'px;"><div class="video-shortcode"><iframe title="YouTube video player" width="' . $atts['width'] . '" height="' . $atts['height'] . '" src="http://www.youtube.com/embed/' . $atts['id'] . '" frameborder="0" allowfullscreen></iframe></div></div>';
 	}
 	
-//////////////////////////////////////////////////////////////////
-// Vimeo shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Vimeo Embeds
+----------------------------------------------------*/
 add_shortcode('vimeo', 'shortcode_vimeo');
 	function shortcode_vimeo($atts) {
 		$atts = shortcode_atts(
@@ -47,9 +48,9 @@ add_shortcode('vimeo', 'shortcode_vimeo');
 			return '<div style="max-width:'.$atts['width'].'px;max-height:'.$atts['height'].'px;"><div class="video-shortcode"><iframe src="http://player.vimeo.com/video/' . $atts['id'] . '" width="' . $atts['width'] . '" height="' . $atts['height'] . '" frameborder="0"></iframe></div></div>';
 	}
 	
-//////////////////////////////////////////////////////////////////
-// SoundCloud shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	SoundCloud Embeds
+----------------------------------------------------*/
 add_shortcode('soundcloud', 'shortcode_soundcloud');
 	function shortcode_soundcloud($atts) {
 		$atts = shortcode_atts(
@@ -66,9 +67,9 @@ add_shortcode('soundcloud', 'shortcode_soundcloud');
 			//return '<object height="' . $atts['height'] . '" width="' . $atts['width'] . '"><param name="movie" value="http://player.soundcloud.com/player.swf?url=' . urlencode($atts['url']) . '&amp;show_comments=' . $atts['comments'] . '&amp;auto_play=' . $atts['auto_play'] . '&amp;color=' . $atts['color'] . '"></param><param name="allowscriptaccess" value="always"></param><embed allowscriptaccess="always" height="' . $atts['height'] . '" src="http://player.soundcloud.com/player.swf?url=' . urlencode($atts['url']) . '&amp;show_comments=' . $atts['comments'] . '&amp;auto_play=' . $atts['auto_play'] . '&amp;color=' . $atts['color'] . '" type="application/x-shockwave-flash" width="' . $atts['width'] . '"></embed></object>';
 	}
 	
-//////////////////////////////////////////////////////////////////
-// Button shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Buttons
+----------------------------------------------------*/
 add_shortcode('button', 'shortcode_button');
 	function shortcode_button($atts, $content = null) {
 			if(!$atts['color']) {
@@ -77,9 +78,9 @@ add_shortcode('button', 'shortcode_button');
 			return '<a class="button ' . $atts['size'] . ' ' . $atts['color'] . '" href="' . $atts['link'] . '" target="' . $atts['target'] . '">' .do_shortcode($content). '</a>';
 	}
 	
-//////////////////////////////////////////////////////////////////
-// Dropcap shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Dropcaps
+----------------------------------------------------*/
 add_shortcode('dropcap', 'shortcode_dropcap');
 	function shortcode_dropcap( $atts, $content = null ) {  
 		
@@ -87,9 +88,9 @@ add_shortcode('dropcap', 'shortcode_dropcap');
 		
 }
 	
-//////////////////////////////////////////////////////////////////
-// Highlight shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Highlights
+----------------------------------------------------*/
 add_shortcode('highlight', 'shortcode_highlight');
 	function shortcode_highlight($atts, $content = null) {
 		$atts = shortcode_atts(
@@ -105,9 +106,9 @@ add_shortcode('highlight', 'shortcode_highlight');
 
 	}
 	
-//////////////////////////////////////////////////////////////////
-// Check list shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Check list
+----------------------------------------------------*/
 add_shortcode('checklist', 'shortcode_checklist');
 	function shortcode_checklist( $atts, $content = null ) {
 	
@@ -118,9 +119,9 @@ add_shortcode('checklist', 'shortcode_checklist');
 	
 }
 
-//////////////////////////////////////////////////////////////////
-// Tabs shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Tabs
+----------------------------------------------------*/
 add_shortcode('tabs', 'shortcode_tabs');
 	function shortcode_tabs( $atts, $content = null ) {
 	extract(shortcode_atts(array(
@@ -156,9 +157,9 @@ add_shortcode('tab', 'shortcode_tab');
 	return $out;
 }
 
-//////////////////////////////////////////////////////////////////
-// Accordian
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Accordian
+----------------------------------------------------*/
 add_shortcode('accordian', 'shortcode_accordian');
 	function shortcode_accordian( $atts, $content = null ) {
 	$out = '';
@@ -169,9 +170,9 @@ add_shortcode('accordian', 'shortcode_accordian');
    return $out;
 }	
 
-//////////////////////////////////////////////////////////////////
-// Toggle shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Toggles
+----------------------------------------------------*/
 add_shortcode('toggle', 'shortcode_toggle');
 	function shortcode_toggle( $atts, $content = null ) {
 	extract(shortcode_atts(array(

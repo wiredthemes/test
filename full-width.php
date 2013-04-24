@@ -5,7 +5,9 @@
 	
 ----------------------------------------*/
 get_header(); ?>
+
 	<div id="content" class="full-width">
+
 		<?php while(have_posts()): the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<?php global $data; if($data['featured_images'] && has_post_thumbnail()): ?>
@@ -22,5 +24,7 @@ get_header(); ?>
 			<?php endif; ?>
 		</div>
 		<?php endwhile; ?>
-	</div>
+
+	</div><!-- /#content -->
+
 <?php get_footer(); ?>
