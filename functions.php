@@ -80,13 +80,6 @@ if(get_option('inhouse_int_plugins', '0') == '1') {
 	}
 
 	/**************************/
-	/* Include Flexslider WP */
-	/**************************/
-
-	$flexslider = get_template_directory() . '/base/plugins/tf-flexslider/wooslider.php';
-	include $flexslider;
-
-	/**************************/
 	/* Include Posts Type Order */
 	/**************************/
 
@@ -244,23 +237,6 @@ function wired_init() {
 	register_taxonomy('portfolio_category', 'inhouse_portfolio', array('hierarchical' => true, 'label' => 'Categories', 'query_var' => true, 'rewrite' => true));
 	register_taxonomy('portfolio_skills', 'inhouse_portfolio', array('hierarchical' => true, 'label' => 'Skills', 'query_var' => true, 'rewrite' => true));
 
-	register_post_type(
-		'wiredthemes_elastic',
-		array(
-			'labels' => array(
-				'name' => 'Elastic Slider',
-				'singular_name' => 'Elastic Slide'
-			),
-			'public' => true,
-			'has_archive' => true,
-			'rewrite' => array('slug' => 'elastic-slide'),
-			'supports' => array('title', 'thumbnail'),
-			'can_export' => true,
-			'menu_position' => 100,
-		)
-	);
-
-	register_taxonomy('wiredthemes_es_groups', 'wiredthemes_elastic', array('hierarchical' => false, 'label' => 'Groups', 'query_var' => true, 'rewrite' => true));
 }
 
 // How comments are displayed

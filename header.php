@@ -266,54 +266,6 @@
 		        jQuery('.flexslider, .tfs-slider').flexslider("play");
 		    });
 		}
-
-		jQuery('.tfs-slider').flexslider({
-			animation: "<?php if($data['tfs_animation']) { echo $data['tfs_animation']; } else { echo 'fade'; } ?>",
-			slideshow: <?php if($data['tfs_autoplay']) { echo 'true'; } else { echo 'false'; } ?>,
-			slideshowSpeed: <?php if($data['tfs_slideshow_speed']) { echo $data['tfs_slideshow_speed']; } else { echo '7000'; } ?>,
-			animationSpeed: <?php if($data['tfs_animation_speed']) { echo $data['tfs_animation_speed']; } else { echo '600'; } ?>,
-			smoothHeight: true,
-			pauseOnHover: false,
-			useCSS: false,
-			video: true,
-			start: function(slider) {
-		        if (slider.slides.eq(slider.currentSlide).find('iframe').length !== 0) {
-		           <?php if($data['pagination_video_slide']): ?>
-		           jQuery(slider).find('.flex-control-nav').css('bottom', '-30px');
-		           <?php else: ?>
-		           jQuery(slider).find('.flex-control-nav').hide();
-		           <?php endif; ?>
-		       } else {
-		           <?php if($data['pagination_video_slide']): ?>
-		           jQuery(slider).find('.flex-control-nav').css('bottom', '0px');
-		           <?php else: ?>
-		           jQuery(slider).find('.flex-control-nav').show();
-		           <?php endif; ?>
-		       }
-			},
-		    before: function(slider) {
-		        if (slider.slides.eq(slider.currentSlide).find('iframe').length !== 0) {
-		           $f( slider.slides.eq(slider.currentSlide).find('iframe').attr('id') ).api('pause');
-		           /* ------------------  YOUTUBE FOR AUTOSLIDER ------------------ */
-		           playVideoAndPauseOthers(jQuery('.play3 iframe')[0]);
-		       }
-		    },
-		   	after: function(slider) {
-		        if (slider.slides.eq(slider.currentSlide).find('iframe').length !== 0) {
-		           <?php if($data['pagination_video_slide']): ?>
-		           jQuery(slider).find('.flex-control-nav').css('bottom', '-30px');
-		           <?php else: ?>
-		           jQuery(slider).find('.flex-control-nav').hide();
-		           <?php endif; ?>
-		       } else {
-		           <?php if($data['pagination_video_slide']): ?>
-		           jQuery(slider).find('.flex-control-nav').css('bottom', '0px');
-		           <?php else: ?>
-		           jQuery(slider).find('.flex-control-nav').show();
-		           <?php endif; ?>
-		       }
-		    }
-		});
 		
 		jQuery('.flexslider').flexslider({
 			slideshow: <?php if($data["slideshow_autoplay"]) { echo 'true'; } else { echo 'false'; } ?>,
@@ -379,6 +331,8 @@
 			}
 		});
 	});
+
+
 	jQuery(document).ready(function($) {
 		function onAfter(curr, next, opts, fwd) {
 		  var $ht = jQuery(this).height();
@@ -491,31 +445,8 @@
 		});
 		<?php endif; ?>
 
-        jQuery('#ei-slider').eislideshow({
-        	<?php if($data["tfes_animation"]): ?>
-        	animation: '<?php echo $data["tfes_animation"]; ?>',
-        	<?php endif; ?>
-        	autoplay: <?php if($data["tfes_autoplay"]) { echo 'true'; } else { echo 'false'; } ?>,
-        	<?php if($data["tfes_interval"]): ?>
-        	slideshow_interval: <?php echo $data['tfes_interval']; ?>,
-        	<?php endif; ?>
-        	<?php if($data["tfes_speed"]): ?>
-        	speed: <?php echo $data['tfes_speed']; ?>,
-        	<?php endif; ?>
-        	<?php if($data["tfes_width"]): ?>
-        	thumbMaxWidth: <?php echo $data['tfes_width']; ?>
-        	<?php endif; ?>
-        });
-
         var retina = window.devicePixelRatio > 1 ? true : false;
 
-        <?php if($data['logo_retina'] && $data['retina_logo_width'] && $data['retina_logo_height']): ?>
-        if(retina) {
-        	jQuery('#header .logo img').attr('src', '<?php echo $data["logo_retina"]; ?>');
-        	jQuery('#header .logo img').attr('width', '<?php echo $data["retina_logo_width"]; ?>');
-        	jQuery('#header .logo img').attr('height', '<?php echo $data["retina_logo_height"]; ?>');
-        }
-        <?php endif; ?>
 	});
 	</script>
 

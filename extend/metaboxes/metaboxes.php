@@ -72,12 +72,6 @@ class WiredThemeFrameworkMetaboxes {
 		include 'style.php';
 		include 'portfolio_options.php';
 	}
-	
-	public function es_options()
-	{	
-		include 'style.php';
-		include 'es_options.php';
-	}
 
 	public function text($id, $label, $desc = '')
 	{
