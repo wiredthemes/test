@@ -1032,28 +1032,28 @@ $of_options[] = array( "name" => "Google Fonts",
 $of_options[] = array( "name" => "Select Body Font Family",
 					"desc" => "Select a font family for body text",
 					"id" => "google_body",
-					"std" => "PT Sans",
+					"std" => "",
 					"type" => "select",
 					"options" => $google_fonts);
 
 $of_options[] = array( "name" => "Select Menu Font",
 					"desc" => "Select a font family for navigation",
 					"id" => "google_nav",
-					"std" => "Antic Slab",
+					"std" => "",
 					"type" => "select",
 					"options" => $google_fonts);
 
 $of_options[] = array( "name" => "Select Headings Font",
 					"desc" => "Select a font family for headings",
 					"id" => "google_headings",
-					"std" => "Antic Slab",
+					"std" => "",
 					"type" => "select",
 					"options" => $google_fonts);
 
 $of_options[] = array( "name" => "Select Footer Headings Font",
 					"desc" => "Select a font family for footer headings",
 					"id" => "google_footer_headings",
-					"std" => "Antic Slab",
+					"std" => "",
 					"type" => "select",
 					"options" => $google_fonts);
 
@@ -1088,28 +1088,28 @@ $standard_fonts = array(
 $of_options[] = array( "name" => "Select Body Font Family",
 					"desc" => "Select a font family for body text",
 					"id" => "standard_body",
-					"std" => "",
+					"std" => "Arial, Helvetica, sans-serif",
 					"type" => "select",
 					"options" => $standard_fonts);
 
 $of_options[] = array( "name" => "Select Menu Font Family",
 					"desc" => "Select a font family for menu / navigation",
 					"id" => "standard_nav",
-					"std" => "",
+					"std" => "Arial, Helvetica, sans-serif",
 					"type" => "select",
 					"options" => $standard_fonts);
 
 $of_options[] = array( "name" => "Select Headings Font Family",
 					"desc" => "Select a font family for headings",
 					"id" => "standard_headings",
-					"std" => "",
+					"std" => "Arial, Helvetica, sans-serif",
 					"type" => "select",
 					"options" => $standard_fonts);
 
 $of_options[] = array( "name" => "Select Footer Headings Font Family",
 					"desc" => "Select a font family for footer headings",
 					"id" => "standard_footer_headings",
-					"std" => "",
+					"std" => "Arial, Helvetica, sans-serif",
 					"type" => "select",
 					"options" => $standard_fonts);
 
