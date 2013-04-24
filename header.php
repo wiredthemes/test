@@ -564,7 +564,7 @@
 		.progress-bar-content,
 		.pagination .current,
 		.header-v3 .header-social,.header-v4 .header-social,.header-v5 .header-social,
-		#nav ul .current_page_item a, #nav ul .current-menu-item  a, #nav ul > .current-menu-parent a,
+		#nav ul .current_page_item a, #nav ul .current-menu-item > a, #nav ul > .current-menu-parent a,
 		#main .reading-box .button,
 		#main .continue.button,
 		#main .portfolio-one .button,
@@ -969,19 +969,11 @@
 		<?php endif; ?>
 
 		<?php if($data['menu_sub_bg_color']): ?>
-		#nav ul ul{background-color:<?php echo $data['menu_sub_bg_color']; ?>;}
+		#nav ul ul{background-color:<?php echo $data['menu_sub_bg_color']; ?> !important;}
 		<?php endif; ?>
 
 		<?php if($data['menu_sub_color']): ?>
 		#wrapper #nav ul li ul li a,.side-nav li li a,.side-nav li.current_page_item li a{color:<?php echo $data['menu_sub_color']; ?> !important;}
-		<?php endif; ?>
-
-		<?php if($data['es_title_color']): ?>
-		.ei-title h2{color:<?php echo $data['es_title_color']; ?> !important;}
-		<?php endif; ?>
-
-		<?php if($data['es_caption_color']): ?>
-		.ei-title h3{color:<?php echo $data['es_caption_color']; ?> !important;}
 		<?php endif; ?>
 
 		<?php if($data['snav_color']): ?>

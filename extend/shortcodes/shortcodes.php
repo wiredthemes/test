@@ -199,9 +199,9 @@ add_shortcode('toggle', 'shortcode_toggle');
    return $out;
 }
 	
-//////////////////////////////////////////////////////////////////
-// Column one_half shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	1/2 Column
+----------------------------------------------------*/
 add_shortcode('one_half', 'shortcode_one_half');
 	function shortcode_one_half($atts, $content = null) {
 		$atts = shortcode_atts(
@@ -217,9 +217,9 @@ add_shortcode('one_half', 'shortcode_one_half');
 
 	}
 	
-//////////////////////////////////////////////////////////////////
-// Column one_third shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	1/3 Column
+----------------------------------------------------*/
 add_shortcode('one_third', 'shortcode_one_third');
 	function shortcode_one_third($atts, $content = null) {
 		$atts = shortcode_atts(
@@ -235,9 +235,9 @@ add_shortcode('one_third', 'shortcode_one_third');
 
 	}
 	
-//////////////////////////////////////////////////////////////////
-// Column two_third shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	2/3 Column
+----------------------------------------------------*/
 add_shortcode('two_third', 'shortcode_two_third');
 	function shortcode_two_third($atts, $content = null) {
 		$atts = shortcode_atts(
@@ -253,9 +253,9 @@ add_shortcode('two_third', 'shortcode_two_third');
 
 	}
 	
-//////////////////////////////////////////////////////////////////
-// Column one_fourth shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	1/4 Column
+----------------------------------------------------*/
 add_shortcode('one_fourth', 'shortcode_one_fourth');
 	function shortcode_one_fourth($atts, $content = null) {
 		$atts = shortcode_atts(
@@ -271,9 +271,9 @@ add_shortcode('one_fourth', 'shortcode_one_fourth');
 
 	}
 	
-//////////////////////////////////////////////////////////////////
-// Column three_fourth shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	3/4 Column
+----------------------------------------------------*/
 add_shortcode('three_fourth', 'shortcode_three_fourth');
 	function shortcode_three_fourth($atts, $content = null) {
 		$atts = shortcode_atts(
@@ -289,9 +289,9 @@ add_shortcode('three_fourth', 'shortcode_three_fourth');
 
 	}
 
-//////////////////////////////////////////////////////////////////
-// Tagline box shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Pitch Box
+----------------------------------------------------*/
 add_shortcode('tagline_box', 'shortcode_tagline_box');
 	function shortcode_tagline_box($atts, $content = null) {
 		$str = '';
@@ -313,9 +313,9 @@ add_shortcode('tagline_box', 'shortcode_tagline_box');
 		return $str;
 	}
 
-//////////////////////////////////////////////////////////////////
-// Pricing table
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Pricing Tables
+----------------------------------------------------*/
 add_shortcode('pricing_table', 'shortcode_pricing_table');
 	function shortcode_pricing_table($atts, $content = null) {
 		$str = '';
@@ -331,9 +331,9 @@ add_shortcode('pricing_table', 'shortcode_pricing_table');
 		return $str;
 	}
 
-//////////////////////////////////////////////////////////////////
-// Pricing Column
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Pricing Column
+----------------------------------------------------*/
 add_shortcode('pricing_column', 'shortcode_pricing_column');
 	function shortcode_pricing_column($atts, $content = null) {
 		$str = '<div class="column">';
@@ -348,9 +348,9 @@ add_shortcode('pricing_column', 'shortcode_pricing_column');
 		return $str;
 	}
 
-//////////////////////////////////////////////////////////////////
-// Pricing Row
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Pricing Row
+----------------------------------------------------*/
 add_shortcode('pricing_price', 'shortcode_pricing_price');
 	function shortcode_pricing_price($atts, $content = null) {
 		$str = '';
@@ -379,9 +379,9 @@ add_shortcode('pricing_price', 'shortcode_pricing_price');
 		return $str;
 	}
 
-//////////////////////////////////////////////////////////////////
-// Pricing Row
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Pricing Row
+----------------------------------------------------*/
 add_shortcode('pricing_row', 'shortcode_pricing_row');
 	function shortcode_pricing_row($atts, $content = null) {
 		$str = '';
@@ -392,9 +392,9 @@ add_shortcode('pricing_row', 'shortcode_pricing_row');
 		return $str;
 	}
 
-//////////////////////////////////////////////////////////////////
-// Pricing Footer
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Pricing Footer
+----------------------------------------------------*/
 add_shortcode('pricing_footer', 'shortcode_pricing_footer');
 	function shortcode_pricing_footer($atts, $content = null) {
 		$str = '';
@@ -405,9 +405,9 @@ add_shortcode('pricing_footer', 'shortcode_pricing_footer');
 		return $str;
 	}
 
-//////////////////////////////////////////////////////////////////
-// Content box shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Content Boxes
+----------------------------------------------------*/
 add_shortcode('content_boxes', 'shortcode_content_boxes');
 	function shortcode_content_boxes($atts, $content = null) {
 		$str = '';
@@ -418,9 +418,9 @@ add_shortcode('content_boxes', 'shortcode_content_boxes');
 		return $str;
 	}
 
-//////////////////////////////////////////////////////////////////
-// Content box shortcode
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Content Box
+----------------------------------------------------*/
 add_shortcode('content_box', 'shortcode_content_box');
 	function shortcode_content_box($atts, $content = null) {
 		$str = '';
@@ -459,9 +459,9 @@ add_shortcode('content_box', 'shortcode_content_box');
 		return $str;
 	}
 
-//////////////////////////////////////////////////////////////////
-// Slider
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Slider
+----------------------------------------------------*/
 add_shortcode('slider', 'shortcode_slider');
 	function shortcode_slider($atts, $content = null) {
 		$str = '';
@@ -474,9 +474,9 @@ add_shortcode('slider', 'shortcode_slider');
 		return $str;
 	}
 
-//////////////////////////////////////////////////////////////////
-// Slide
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Slide
+----------------------------------------------------*/
 add_shortcode('slide', 'shortcode_slide');
 	function shortcode_slide($atts, $content = null) {
 		$str = '';
@@ -501,9 +501,9 @@ add_shortcode('slide', 'shortcode_slide');
 		return $str;
 	}
 
-//////////////////////////////////////////////////////////////////
-// Testimonials
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Testimonials
+----------------------------------------------------*/
 add_shortcode('testimonials', 'shortcode_testimonials');
 	function shortcode_testimonials($atts, $content = null) {
 		$str = '';
@@ -514,9 +514,9 @@ add_shortcode('testimonials', 'shortcode_testimonials');
 		return $str;
 	}
 
-//////////////////////////////////////////////////////////////////
-// Testimonial
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Testimonial
+----------------------------------------------------*/
 add_shortcode('testimonial', 'shortcode_testimonial');
 	function shortcode_testimonial($atts, $content = null) {
 		if(!isset($atts['gender'])) {
@@ -549,9 +549,9 @@ add_shortcode('testimonial', 'shortcode_testimonial');
 	}
 
 	
-//////////////////////////////////////////////////////////////////
-// Progess Bar
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Progress Bar
+----------------------------------------------------*/
 add_shortcode('progress', 'shortcode_progress');
 function shortcode_progress($atts, $content = null) {
 	$html = '';
@@ -564,9 +564,9 @@ function shortcode_progress($atts, $content = null) {
 	return $html;
 }
 
-//////////////////////////////////////////////////////////////////
-// Person
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Team Member
+----------------------------------------------------*/
 add_shortcode('person', 'shortcode_person');
 function shortcode_person($atts, $content = null) {
 	$html = '';
@@ -616,9 +616,9 @@ function shortcode_person($atts, $content = null) {
 	return $html;
 }
 
-//////////////////////////////////////////////////////////////////
-// Recent Posts
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Blog Posts
+----------------------------------------------------*/
 add_shortcode('recent_posts', 'shortcode_recent_posts');
 function shortcode_recent_posts($atts, $content = null) {
 	global $data;
@@ -755,9 +755,9 @@ function shortcode_recent_posts($atts, $content = null) {
 	return $html;
 }
 
-//////////////////////////////////////////////////////////////////
-// Recent Works
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Portfolio Posts
+----------------------------------------------------*/
 add_shortcode('recent_works', 'shortcode_recent_works');
 function shortcode_recent_works($atts, $content = null) {
 	global $data;
@@ -832,9 +832,9 @@ function shortcode_recent_works($atts, $content = null) {
 }
 
 
-//////////////////////////////////////////////////////////////////
-// Alert Message
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Alerts
+----------------------------------------------------*/
 add_shortcode('alert', 'shortcode_alert');
 function shortcode_alert($atts, $content = null) {
 	$html = '';
@@ -846,9 +846,9 @@ function shortcode_alert($atts, $content = null) {
 	return $html;
 }
 
-//////////////////////////////////////////////////////////////////
-// FontAwesome Icons
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	FontAwesome Icons
+----------------------------------------------------*/
 add_shortcode('fontawesome', 'shortcode_fontawesome');
 function shortcode_fontawesome($atts, $content = null) {
 	$html = '';
@@ -857,9 +857,9 @@ function shortcode_fontawesome($atts, $content = null) {
 	return $html;
 }
 
-//////////////////////////////////////////////////////////////////
-// Social Links
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Social Icons
+----------------------------------------------------*/
 add_shortcode('social_links', 'shortcode_social_links');
 function shortcode_social_links($atts, $content = null) {
 	$html = '<div class="social_links_shortcode clearfix">';
@@ -882,9 +882,9 @@ function shortcode_social_links($atts, $content = null) {
 	return $html;
 }
 
-//////////////////////////////////////////////////////////////////
-// Clients container
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Clients Carousel
+----------------------------------------------------*/
 add_shortcode('clients', 'shortcode_clients');
 function shortcode_clients($atts, $content = null) {
 	$html = '<div class="related-posts related-projects"><div id="carousel" class="clients-carousel es-carousel-wrapper"><div class="es-carousel"><ul>';
@@ -893,9 +893,9 @@ function shortcode_clients($atts, $content = null) {
 	return $html;
 }
 
-//////////////////////////////////////////////////////////////////
-// Client
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Client
+----------------------------------------------------*/
 add_shortcode('client', 'shortcode_client');
 function shortcode_client($atts, $content = null) {
 	$html = '<li>';
@@ -904,9 +904,9 @@ function shortcode_client($atts, $content = null) {
 	return $html;
 }
 
-//////////////////////////////////////////////////////////////////
-// Title
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Headings
+----------------------------------------------------*/
 add_shortcode('title', 'shortcode_title');
 function shortcode_title($atts, $content = null) {
 	$html = '';
@@ -914,9 +914,9 @@ function shortcode_title($atts, $content = null) {
 	return $html;
 }
 
-//////////////////////////////////////////////////////////////////
-// Separator
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Divider
+----------------------------------------------------*/
 add_shortcode('separator', 'shortcode_separator');
 function shortcode_separator($atts, $content = null) {
 	$html = '';
@@ -924,9 +924,9 @@ function shortcode_separator($atts, $content = null) {
 	return $html;
 }
 
-//////////////////////////////////////////////////////////////////
-// Add buttons to tinyMCE
-//////////////////////////////////////////////////////////////////
+/*----------------------------------------------------
+	Add shortcode buttons to the post editor
+----------------------------------------------------*/
 add_action('init', 'add_button');
 add_action('init', 'add_button_2');
 

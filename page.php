@@ -10,6 +10,7 @@
 	?>
 
 	<div id="content" style="<?php echo $content_css; ?>">
+
 		<?php if(have_posts()): the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<?php global $data; if($data['featured_images'] && has_post_thumbnail()): ?>
@@ -27,6 +28,7 @@
 			<?php endif; ?>
 		</div>
 		<?php endif; ?>
+		
 	</div><!-- /#content -->
 
 	<div id="sidebar" style="<?php echo $sidebar_css; ?>">
