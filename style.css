@@ -394,8 +394,9 @@ ul#nav > li:last-child {
 
 .title {
 	margin: 0 0 31px;
+	padding: 0 0 5px;
+	border-bottom: 1px solid #efefef;
 	overflow: hidden;
-	background: url(images/bg-title.gif) repeat-x 0 50%;
 }
 
 .title h1,
@@ -536,7 +537,7 @@ ul#nav > li:last-child {
 }
 
 .footer-area {
-	background: #f7f7f7;
+	background: #3a3a3a;
 	padding: 60px 10px;
 	color: #8c8989;
 }
@@ -591,7 +592,7 @@ ul#nav > li:last-child {
 
 #footer {
 	padding: 20px 10px;
-	background: #efefef;
+	background: #303030;
 }
 
 .copyright {
@@ -742,12 +743,11 @@ ul#nav > li:last-child {
 }
 
 .page-title-container {
-	height: 87px;
-	background-position: center center;
-	background-repeat: no-repeat;
+	height: 85px;
+	background-repeat: repeat;
 	background-color: #f6f6f6;
-	border-top: 1px solid #d2d3d4;
-	border-bottom: 1px solid #d2d3d4;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
 	display: table;
 	width: 100%;
 }
@@ -1699,7 +1699,8 @@ ul#nav > li:last-child {
 	width: 28%;
 	font-size: 12px;
 	color: #747474;
-	background: #efefef;
+	background: #f8f8f8;
+	border: 1px solid #e8e8e8;
 	padding: 10px 2%;
 	float: left;
 	margin-right: 1%;
@@ -1711,7 +1712,8 @@ ul#nav > li:last-child {
 	height: 150px;
 	font-size: 12px;
 	color: #747474;
-	background: #efefef;
+	background: #f8f8f8;
+	border: 1px solid #e8e8e8;
 	padding: 12px 14px;
 }
 

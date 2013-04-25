@@ -564,7 +564,6 @@
 		.progress-bar-content,
 		.pagination .current,
 		.header-v3 .header-social,.header-v4 .header-social,.header-v5 .header-social,
-		#nav ul .current_page_item a, #nav ul .current-menu-item > a, #nav ul > .current-menu-parent a,
 		#main .reading-box .button,
 		#main .continue.button,
 		#main .portfolio-one .button,
@@ -572,45 +571,25 @@
 		.button.default {
 			background-color:<?php echo $data['primary_color']; ?> !important;
 		}
+
+		.sep-boxed-pricing ul li.title-row{
+			background-color: <?php echo $data['primary_color']; ?> !important;
+			border-color: <?php echo $data['primary_color']; ?> !important;
+		}
+		.pricing-row .exact_price, .pricing-row sup{
+			color: <?php echo $data['primary_color']; ?> !important;
+		}
+
+		.image .image-extras {
+			background: <?php echo $data['primary_color']; ?> !important;
+		}
 		<?php endif; ?>
 
 
 		<?php if($data['active_menu_first_color']): ?>
 		#nav ul .current_page_item a, #nav ul .current-menu-item  a, #nav ul > .current-menu-parent a {
 			color:<?php echo $data['active_menu_first_color']; ?> !important;
-		}
-		<?php endif; ?>
-
-
-		<?php if($data['pricing_box_color']): ?>
-		.sep-boxed-pricing ul li.title-row{
-			background-color:<?php echo $data['pricing_box_color']; ?> !important;
-			border-color:<?php echo $data['pricing_box_color']; ?> !important;
-		}
-		.pricing-row .exact_price, .pricing-row sup{
-			color:<?php echo $data['pricing_box_color']; ?> !important;
-		}
-		<?php endif; ?>
-		<?php if($data['image_gradient_top_color'] && $data['image_gradient_bottom_color']): ?>
-		.image .image-extras{
-			background-image: linear-gradient(top, <?php echo $data['image_gradient_top_color']; ?> 0%, <?php echo $data['image_gradient_bottom_color']; ?> 100%);
-			background-image: -o-linear-gradient(top, <?php echo $data['image_gradient_top_color']; ?> 0%, <?php echo $data['image_gradient_bottom_color']; ?> 100%);
-			background-image: -moz-linear-gradient(top, <?php echo $data['image_gradient_top_color']; ?> 0%, <?php echo $data['image_gradient_bottom_color']; ?> 100%);
-			background-image: -webkit-linear-gradient(top, <?php echo $data['image_gradient_top_color']; ?> 0%, <?php echo $data['image_gradient_bottom_color']; ?> 100%);
-			background-image: -ms-linear-gradient(top, <?php echo $data['image_gradient_top_color']; ?> 0%, <?php echo $data['image_gradient_bottom_color']; ?> 100%);
-
-			background-image: -webkit-gradient(
-				linear,
-				left top,
-				left bottom,
-				color-stop(0, <?php echo $data['image_gradient_top_color']; ?>),
-				color-stop(1, <?php echo $data['image_gradient_bottom_color']; ?>)
-			);
-
-			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $data['image_gradient_top_color']; ?>', endColorstr='<?php echo $data['image_gradient_bottom_color']; ?>');
-		}
-		.no-cssgradients .image .image-extras{
-			background:<?php echo $data['image_gradient_top_color']; ?>;
+			background-color:<?php echo $data['primary_color']; ?> !important;
 		}
 		<?php endif; ?>
 
@@ -915,16 +894,6 @@
 			font-size:<?php echo $data['es_title_font_size']; ?>px !important;
 			<?php
 			$line_height = round((1.5 * $data['es_title_font_size']));
-			?>
-			line-height:<?php echo $line_height; ?>px !important;
-		}
-		<?php endif; ?>
-
-		<?php if($data['es_caption_font_size']): ?>
-		.ei-title h3{
-			font-size:<?php echo $data['es_caption_font_size']; ?>px !important;
-			<?php
-			$line_height = round((1.5 * $data['es_caption_font_size']));
 			?>
 			line-height:<?php echo $line_height; ?>px !important;
 		}

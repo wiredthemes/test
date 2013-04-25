@@ -158,7 +158,7 @@ border-radius: 2px;
 #of_container #of-nav li.backgroundoptions a{ background-image:url(../images/icon-background.png);}
 #of_container #of-nav li.typographyoptions a{ background-image:url(../images/icon-typography.gif);}
 #of_container #of-nav li.generaloptions a{ background-image:url(../images/icon-settings.png);}
-#of_container #of-nav li.stylingoptions a{ background-image:url(../images/icon-paint.png);}
+#of_container #of-nav li.coloroptions a{ background-image:url(../images/icon-paint.png);}
 #of_container #of-nav li.blogoptions a{ background-image:url(../images/icon-docs.png);}
 #of_container #of-nav li.portfoliooptions a{ background-image:url(../images/icon-portfolio.png);}
 #of_container #of-nav li.socialmediaoptions a, #of_container #of-nav li.socialsharingoptions a{ background-image:url(../images/icon-social.png);}
@@ -171,7 +171,6 @@ border-radius: 2px;
 #of_container #of-nav li.extraoptions a {background: url(../images/extra.png) no-repeat;}
 #of_container #of-nav li.customcss a {background: url(../images/css.png) no-repeat;}
 #of_container #of-nav li.upgradeoptions a {background: url(../images/upgrade_icon.png) no-repeat;}
-#of_container #of-nav li.elasticslider a {background: url(../images/elasticslider_icon.png) no-repeat;}
 #of_container #of-nav li.socialsharinglinks a {background: url(../images/social_links_icon.png) no-repeat;}
 
 #of_container #content {

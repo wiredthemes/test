@@ -464,7 +464,7 @@ function inhouse_scripts() {
 	wp_enqueue_script( 'jquery.waypoint' );
 	
     wp_deregister_script( 'inhouse' );
-    wp_register_script( 'inhouse', get_bloginfo('template_directory').'/js/main.js', array(), false, true);
+    wp_register_script( 'inhouse', get_bloginfo('template_directory').'/js/init.js', array(), false, true);
 	wp_enqueue_script( 'inhouse' );
 	}
 }

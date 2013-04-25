@@ -1219,87 +1219,13 @@ $of_options[] = array( "name" => "Heading Font Size H6 (px)",
 					"type" => "select",
 					"options" => $font_sizes);
  
-$of_options[] = array( "name" => "Styling Options",
+$of_options[] = array( "name" => "Color Options",
 					"type" => "heading");
-
-$of_options[] = array( "name" => "Predefined Color Schemes",
-					"desc" => "",
-					"id" => "color_scheme",
-					"std" => "Yellow",
-					"type" => "select",
-					"options" => array( 
-						'lightgrey' => 'Light Grey', 
-						'darkgrey' => 'Dark Grey', 
-						'red' => 'Red', 
-						'yellow' => 'Yellow',
-						'green' => 'Green',
-						'blue' => 'Blue',
-						'lightblue' => 'Light Blue',
-						'steelblue' => 'Steel Blue',
-						'purple' => 'Purple',
-						'orange' => 'Orange',
-						'pink' => 'Pink',
-					) );
-
-$of_options[] = array( "name" => "Custom Color Scheme",
-					"desc" => "",
-					"id" => "custom_color_scheme_intro",
-					"std" => "<h3 style='margin: 0;'>Create Custom Color Scheme</h3>",
-					"icon" => true,
-					"type" => "info");
 
 $of_options[] = array( "name" =>  "Primary Color",
 					"desc" => "",
 					"id" => "primary_color",
-					"std" => "#a0ce4e",
-					"type" => "color");
-
-$of_options[] = array( "name" =>  "Pricing Box Color",
-					"desc" => "",
-					"id" => "pricing_box_color",
-					"std" => "#92C563",
-					"type" => "color");
-
-$of_options[] = array( "name" =>  "Rollover Image Gradient Top Color",
-					"desc" => "",
-					"id" => "image_gradient_top_color",
-					"std" => "#D1E990",
-					"type" => "color");
-
-$of_options[] = array( "name" =>  "Rollover Image Gradient Bottom Color",
-					"desc" => "",
-					"id" => "image_gradient_bottom_color",
-					"std" => "#AAD75B",
-					"type" => "color");
-
-$of_options[] = array( "name" =>  "Button Gradient Top Color",
-					"desc" => "",
-					"id" => "button_gradient_top_color",
-					"std" => "#D1E990",
-					"type" => "color");
-
-$of_options[] = array( "name" =>  "Button Gradient Bottom Color",
-					"desc" => "",
-					"id" => "button_gradient_bottom_color",
-					"std" => "#AAD75B",
-					"type" => "color");
-
-$of_options[] = array( "name" =>  "Button Text Color",
-					"desc" => "",
-					"id" => "button_gradient_text_color",
-					"std" => "#54770f",
-					"type" => "color");
-
-$of_options[] = array( "name" =>  "Button Text Highlight Color",
-					"desc" => "",
-					"id" => "button_text_highlight_color",
-					"std" => "#54770f",
-					"type" => "color");
-
-$of_options[] = array( "name" =>  "Button Border Color",
-					"desc" => "",
-					"id" => "button_border_color",
-					"std" => "#54770f",
+					"std" => "#2d91ff",
 					"type" => "color");
 
 $of_options[] = array( "name" =>  "Headings Font Color",
