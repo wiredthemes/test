@@ -484,13 +484,13 @@
 // Add Tagline Box Button
 //////////////////////////////////////////////////////////////////
 (function() {  
-    tinymce.create('tinymce.plugins.tagline_box', {  
+    tinymce.create('tinymce.plugins.company_pitch', {  
         init : function(ed, url) {  
-            ed.addButton('tagline_box', {  
-                title : 'Add tagline box',  
-                image : url+'/tagline-box.png',  
+            ed.addButton('company_pitch', {  
+                title : 'Add company pitch',  
+                image : url+'/company-pitch.png',  
                 onclick : function() {  
-                     ed.selection.setContent('[tagline_box link="http://themeforest.net/user/WiredThemes" linktarget="" button="Purchase Now" title="Inhouse is incredibly responsive, with a refreshingly clean design" description="And it has some awesome features, premium sliders, unlimited colors, advanced theme options and so much more!"][/tagline_box]');  
+                     ed.selection.setContent('[company_pitch link="http://themeforest.net/user/WiredThemes" linktarget="" button="Purchase Now" title="Inhouse is incredibly responsive, with a refreshingly clean design" description="And it has some awesome features, premium sliders, unlimited colors, advanced theme options and so much more!"][/company_pitch]');  
   
                 }  
             });  
@@ -499,7 +499,7 @@
             return null;  
         },  
     });  
-    tinymce.PluginManager.add('tagline_box', tinymce.plugins.tagline_box);  
+    tinymce.PluginManager.add('company_pitch', tinymce.plugins.company_pitch);  
 })();
 
 //////////////////////////////////////////////////////////////////

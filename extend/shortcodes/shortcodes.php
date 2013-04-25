@@ -4,7 +4,7 @@
 	Remove extra <p> tags
 ----------------------------------------------------*/
 function inhouse_shortcodes_formatter($content) {
-	$block = join("|",array("youtube", "vimeo", "soundcloud", "button", "dropcap", "highlight", "checklist", "tabs", "tab", "accordian", "toggle", "one_half", "one_third", "one_fourth", "two_third", "three_fourth", "tagline_box", "pricing_table", "pricing_column", "pricing_price", "pricing_row", "pricing_footer", "content_boxes", "content_box", "slider", "slide", "testimonials", "testimonial", "progress", "person", "recent_posts", "recent_works", "alert", "fontawesome", "social_links", "clients", "client", "title", "separator"));
+	$block = join("|",array("youtube", "vimeo", "soundcloud", "button", "dropcap", "highlight", "checklist", "tabs", "tab", "accordian", "toggle", "one_half", "one_third", "one_fourth", "two_third", "three_fourth", "company_pitch", "pricing_table", "pricing_column", "pricing_price", "pricing_row", "pricing_footer", "content_boxes", "content_box", "slider", "slide", "testimonials", "testimonial", "progress", "person", "recent_posts", "recent_works", "alert", "fontawesome", "social_links", "clients", "client", "title", "separator"));
 
 	// opening tag
 	$rep = preg_replace("/(<p>)?\[($block)(\s[^\]]+)?\](<\/p>|<br \/>)?/","[$2$3]",$content);
@@ -292,10 +292,10 @@ add_shortcode('three_fourth', 'shortcode_three_fourth');
 /*----------------------------------------------------
 	Pitch Box
 ----------------------------------------------------*/
-add_shortcode('tagline_box', 'shortcode_tagline_box');
-	function shortcode_tagline_box($atts, $content = null) {
+add_shortcode('company_pitch', 'shortcode_company_pitch');
+	function shortcode_company_pitch($atts, $content = null) {
 		$str = '';
-		$str .= '<section class="reading-box">';
+		$str .= '<section class="pitch-container"><div class="pitch-inside">';
 			if($atts['link'] && $atts['button']):
 			$str .= '<a href="'.$atts['link'].'" target="'.$atts['linktarget'].'" class="continue button large">'.$atts['button'].'</a>';
 			endif;
@@ -308,7 +308,7 @@ add_shortcode('tagline_box', 'shortcode_tagline_box');
 			if($atts['link'] && $atts['button']):
 			$str .= '<a href="'.$atts['link'].'" target="'.$atts['linktarget'].'" class="continue mobile-button button large">'.$atts['button'].'</a>';
 			endif;
-		$str .= '</section>';
+		$str .= '</div></section>';
 
 		return $str;
 	}
@@ -952,7 +952,7 @@ function register_button($buttons) {
 }  
 
 function register_button_2($buttons) {
-   array_push($buttons, "social_links", "clients", "title", "separatoor", "tfprettyphoto", "progress", "person", "alert", "pricing_table", "recent_works", "tagline_box", "content_boxes", "recent_posts", "fontawesome");
+   array_push($buttons, "social_links", "clients", "title", "separatoor", "tfprettyphoto", "progress", "person", "alert", "pricing_table", "recent_works", "company_pitch", "content_boxes", "recent_posts", "fontawesome");
    return $buttons;
 }  
 
@@ -983,7 +983,7 @@ function add_plugin_2($plugin_array) {
    $plugin_array['alert'] = get_template_directory_uri().'/admin/editor/tinymce/editor-buttons.js';
    $plugin_array['pricing_table'] = get_template_directory_uri().'/admin/editor/tinymce/editor-buttons.js';
    $plugin_array['recent_works'] = get_template_directory_uri().'/admin/editor/tinymce/editor-buttons.js';
-   $plugin_array['tagline_box'] = get_template_directory_uri().'/admin/editor/tinymce/editor-buttons.js';
+   $plugin_array['company_pitch'] = get_template_directory_uri().'/admin/editor/tinymce/editor-buttons.js';
    $plugin_array['content_boxes'] = get_template_directory_uri().'/admin/editor/tinymce/editor-buttons.js';
    $plugin_array['recent_posts'] = get_template_directory_uri().'/admin/editor/tinymce/editor-buttons.js';
    $plugin_array['fontawesome'] = get_template_directory_uri().'/admin/editor/tinymce/editor-buttons.js';

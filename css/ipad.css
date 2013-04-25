@@ -242,34 +242,8 @@
 
 	.social_links_shortcode .social li{width:10% !important;}
 
-	.header-social{padding-top:10px;}
-
-	.header-v2 .header-social .alignleft,.header-v3 .header-social .alignleft{margin-left:20px !important;}
-	.header-v2 .header-social .alignright,.header-v3 .header-social .alignright{margin-right:20px !important;}
-
-	.header-v4 .header-social .alignleft{width:100%; margin:0; text-align:center;}
-	.header-v4 .header-social .alignright{width:100%; margin:0; text-align:center;}
-	.header-v4 .header-social .social-networks{width:100%; margin-top:0; padding-bottom:0; height:26px;}
-	.header-v4 .header-social .social-networks li{float:none; margin-left:10px; margin-right:10px;}
-	.header-v4 .header-social .social-networks li a{margin-bottom:0;}
-	.header-v4 .header-social{padding-bottom:0;}
-	.header-v4 #header{padding-left:20px; padding-right:20px;}
-	.header-v4 #header .logo{float:left;}
-	.header-v4 #small-nav{padding:6px 20px;}
-	.header-v4 #small-nav #nav{width:100%;}
-
-	.header-v5 .header-social .alignleft{width:100%; margin:0; text-align:center;}
-	.header-v5 .header-social .alignright{width:100%; margin:0; text-align:center;}
-	.header-v5 .header-social .social-networks{width:100%; padding-bottom:0; height:26px;}
-	.header-v5 .header-social .social-networks li{float:none; margin-left:10px; margin-right:10px;}
-	.header-v5 .header-social .social-networks li a{margin-bottom:0;}
-	.header-v5 .header-social{padding-bottom:0;}
-	.header-v5 #small-nav{padding:6px 20px;}
-	.header-v5 #small-nav #nav{width:100%;}
-
 	#wrapper .ei-slider{width:100% !important;}
 
-	.tfs-slider .slides{width:auto !important;}
 	#wrapper .ei-slider{height:200px !important;}
 
 	.progress-bar{margin-bottom:10px !important;}

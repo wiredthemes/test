@@ -46,7 +46,6 @@
 	
 	<!--[if IE]>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/respond.min.js"></script>
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/ie.css" />
 	<![endif]-->
 
 	<?php
@@ -165,19 +164,19 @@
 
 
 	<!--[if IE 8]>
-	<script type="text/javascript">
-	jQuery(document).ready(function() {
-	var imgs, i, w;
-	var imgs = document.getElementsByTagName( 'img' );
-	for( i = 0; i < imgs.length; i++ ) {
-	    w = imgs[i].getAttribute( 'width' );
-	    if ( 615 < w ) {
-	        imgs[i].removeAttribute( 'width' );
-	        imgs[i].removeAttribute( 'height' );
-	    }
-	}
-	});
-	</script>
+		<script type="text/javascript">
+		jQuery(document).ready(function() {
+		var imgs, i, w;
+		var imgs = document.getElementsByTagName( 'img' );
+		for( i = 0; i < imgs.length; i++ ) {
+		    w = imgs[i].getAttribute( 'width' );
+		    if ( 615 < w ) {
+		        imgs[i].removeAttribute( 'width' );
+		        imgs[i].removeAttribute( 'height' );
+		    }
+		}
+		});
+		</script>
 	<![endif]-->
 
 
@@ -191,11 +190,6 @@
 	?>
 
 	<script type="text/javascript">
-	/*@cc_on
-	  @if (@_jscript_version == 10)
-	    document.write(' <link type= "text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/ie10.css" />');
-	  @end
-	@*/
 	function insertParam(url, parameterName, parameterValue, atStart){
 	    replaceDuplicates = true;
 	    if(url.indexOf('#') > 0){
@@ -543,7 +537,6 @@
 		#nav ul a:hover{
 			color:<?php echo $data['primary_color']; ?> !important;
 		}
-		.reading-box,
 		.portfolio-tabs li.active a, .faq-tabs li.active a,
 		.tab-holder .tabs li.active a,
 		.post-content blockquote,
@@ -564,7 +557,7 @@
 		.progress-bar-content,
 		.pagination .current,
 		.header-v3 .header-social,.header-v4 .header-social,.header-v5 .header-social,
-		#main .reading-box .button,
+		#main .pitch-container .button,
 		#main .continue.button,
 		#main .portfolio-one .button,
 		#main .comment-submit,
@@ -705,7 +698,7 @@
 		.project-content .project-info h4,
 		.post-content blockquote,
 		.ei-title h3{
-			font-family:<?php echo $font; ?>;
+			font-family:<?php echo $font; ?> !important;
 		}
 		.inhouse-container h3,
 		.review blockquote div strong,
@@ -731,7 +724,7 @@
 
 		#nav,
 		.side-nav li a{
-			font-family:<?php echo $nav_font; ?>;
+			font-family:<?php echo $nav_font; ?> !important;
 		}
 		<?php endif; ?>
 
@@ -744,7 +737,7 @@
 		if(isset($headings_font)):
 		?>
 
-		#main .reading-box h2,
+		#main .pitch-container h2,
 		#main h2,
 		.page-title h1,
 		.image .image-extras .image-extras-content h3,
@@ -761,7 +754,7 @@
 		.person-author-wrapper,
 		.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6,
 		.ei-title h2, #header .tagline{
-			font-family:<?php echo $headings_font; ?>;
+			font-family:<?php echo $headings_font; ?> !important;
 		}
 		<?php endif; ?>
 
@@ -774,7 +767,7 @@
 		?>
 
 		.footer-area  h3{
-			font-family:<?php echo $font; ?>;
+			font-family:<?php echo $font; ?> !important;
 		}
 
 		<?php if($data['body_font_size']): ?>
