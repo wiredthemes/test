@@ -523,6 +523,8 @@
 
 
 <style type="text/css">
+	<?php global $data; ?>
+
 		<?php if($data['primary_color']): ?>
 		a:hover,
 		.footer-area ul li a:hover,
@@ -569,21 +571,15 @@
 			background-color: <?php echo $data['primary_color']; ?> !important;
 			border-color: <?php echo $data['primary_color']; ?> !important;
 		}
-		.pricing-row .exact_price, .pricing-row sup{
+		.pricing-row .exact_price, .pricing-row sup,
+		#nav ul .current_page_item a, #nav ul .current-menu-item  a, #nav ul > .current-menu-parent a {
 			color: <?php echo $data['primary_color']; ?> !important;
 		}
 
 		.image .image-extras {
 			background: <?php echo $data['primary_color']; ?> !important;
 		}
-		<?php endif; ?>
 
-
-		<?php if($data['active_menu_first_color']): ?>
-		#nav ul .current_page_item a, #nav ul .current-menu-item  a, #nav ul > .current-menu-parent a {
-			color:<?php echo $data['active_menu_first_color']; ?> !important;
-			background-color:<?php echo $data['primary_color']; ?> !important;
-		}
 		<?php endif; ?>
 
 		<?php
@@ -698,7 +694,7 @@
 		.project-content .project-info h4,
 		.post-content blockquote,
 		.ei-title h3{
-			font-family:<?php echo $font; ?> !important;
+			font-family:<?php echo $font; ?>;
 		}
 		.inhouse-container h3,
 		.review blockquote div strong,
@@ -724,7 +720,7 @@
 
 		#nav,
 		.side-nav li a{
-			font-family:<?php echo $nav_font; ?> !important;
+			font-family:<?php echo $nav_font; ?>;
 		}
 		<?php endif; ?>
 
@@ -754,7 +750,7 @@
 		.person-author-wrapper,
 		.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6,
 		.ei-title h2, #header .tagline{
-			font-family:<?php echo $headings_font; ?> !important;
+			font-family:<?php echo $headings_font; ?>;
 		}
 		<?php endif; ?>
 
@@ -767,7 +763,7 @@
 		?>
 
 		.footer-area  h3{
-			font-family:<?php echo $font; ?> !important;
+			font-family:<?php echo $font; ?>;
 		}
 
 		<?php if($data['body_font_size']): ?>

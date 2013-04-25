@@ -20,7 +20,7 @@ body {
 	color: #747474;
 	min-width: 320px;
 	-webkit-text-size-adjust: 100%;
-	font: 13px/20px 'PTSansRegular', Arial, Helvetica, sans-serif;
+	font: 13px/20px Arial, Helvetica, sans-serif;
 	background: #fff;
 }
 
@@ -144,7 +144,6 @@ ul#nav > li:last-child {
 #nav ul .current_page_item a, 
 #nav ul .current-menu-item  a, 
 #nav ul > .current-menu-parent a {
-	color: #fff;
 	text-decoration: none;
 }
 
@@ -211,6 +210,15 @@ ul#nav > li:last-child {
 
 #wrapper #nav ul ul ul li:hover ul {
 	display: block !important;
+}
+
+nav#nav > ul li a {
+	border: 3px solid transparent;
+	border-radius: 10px;
+}
+
+nav#nav > ul .current-menu-item a {
+	border-color: #e5e5e5;
 }
 
 /*------------ SLIDERS ------------*/
