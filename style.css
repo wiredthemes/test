@@ -113,7 +113,7 @@ input[type="image"] {
 
 nav#nav {
 	float: right;
-	font: 14px/16px Arial, helvetica, sans-serif;
+	font: 14px/16px 'MuseoSlab500Regular', Arial, helvetica, sans-serif;
 	z-index: 99999
 }
 
@@ -369,7 +369,7 @@ nav#nav > ul .current-menu-item a {
 .page-title h1 {
 	float: left;
 	font-weight: normal;
-	font: 18px Arial, helvetica, sans-serif;
+	font: 18px 'MuseoSlab500Regular', Arial, helvetica, sans-serif;
 	line-height: 26px;
 	color: #343333;
 	margin: 0;
@@ -588,7 +588,7 @@ nav#nav > ul .current-menu-item a {
 #main h2 {
 	color: #333;
 	margin: 0 0 20px;
-	font: 18px/20px Arial, helvetica, sans-serif;
+	font: 18px/20px 'MuseoSlab500Regular', Arial, helvetica, sans-serif;
 }
 
 #main .columns h2 {
@@ -741,7 +741,7 @@ nav#nav > ul .current-menu-item a {
 
 .inhouse-container h3 {
 	margin: 18px 0 5px;
-	font: 13px/15px 'PTSansBold', arial, helvetica, sans-serif;
+	font: 13px/15px 'MuseoSlab500Regular', arial, helvetica, sans-serif;
 }
 
 .container h3 a.active {
@@ -841,7 +841,7 @@ nav#nav > ul .current-menu-item a {
 	margin: 0 0 28px;
 	color: #ddd;
 	text-transform: uppercase;
-	font: 13px/20px 'PTSansBold', arial, helvetica, sans-serif;
+	font: 13px/20px 'MuseoSlab500Regular', arial, helvetica, sans-serif;
 }
 
 .footer-area .columns {
@@ -977,7 +977,7 @@ iframe[src="about:blank"]{display:none;}
 	background: url(images/side_nav_bg.png) no-repeat top right;
 	height: auto;
 	font-weight: normal !important;
-	font: 14px/39px Arial, helvetica, sans-serif !important;
+	font: 14px/39px 'MuseoSlab500Regular', Arial, helvetica, sans-serif !important;
 	color: #333333 !important;
 }
 
@@ -1081,7 +1081,7 @@ iframe[src="about:blank"]{display:none;}
 
 .post-content blockquote {
 	background: #f5f5f5;
-	font: 13px/20px 'PTSansItalic', arial, helvetica, sans-serif;
+	font: 13px/20px 'MuseoSlab500Regular', arial, helvetica, sans-serif;
 	color: #444444;
 	border-left: 4px solid #a0ce4e;
 	padding: 15px;
@@ -1121,7 +1121,7 @@ iframe[src="about:blank"]{display:none;}
 .post-content h4, 
 .post-content h5, 
 .post-content h6 {
-	font-family: Arial, helvetica, sans-serif;
+	font-family: 'MuseoSlab500Regular', Arial, helvetica, sans-serif;
 	color: #333333;
 	font-weight: normal;
 }
@@ -1156,7 +1156,7 @@ iframe[src="about:blank"]{display:none;}
 	color: #343333 !important;
 	margin: 0;
 	padding: 0 25px;
-	font: 13px/71px Arial, helvetica, sans-serif !important;
+	font: 13px/71px 'MuseoSlab500Regular', Arial, helvetica, sans-serif !important;
 	float: left;
 }
 
@@ -1502,7 +1502,7 @@ iframe[src="about:blank"]{display:none;}
 }
 
 .meta .date {
-	font: 12px/14px 'PTSansItalic', arial, helvetica, sans-serif;
+	font: 12px/14px 'MuseoSlab500Regular', arial, helvetica, sans-serif;
 }
 
 .image {
@@ -1583,7 +1583,7 @@ iframe[src="about:blank"]{display:none;}
 }
 
 .image .image-extras .image-extras-content h3 {
-	font: 13px Arial, helvetica, sans-serif;
+	font: 13px 'MuseoSlab500Regular', Arial, helvetica, sans-serif;
 	color: #333333;
 	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 	margin: 0 !important;
@@ -1591,7 +1591,7 @@ iframe[src="about:blank"]{display:none;}
 }
 
 .image .image-extras .image-extras-content h4 {
-	font: 12px Arial, helvetica, sans-serif;
+	font: 12px 'MuseoSlab500Regular', Arial, helvetica, sans-serif;
 	color: #333333;
 	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 	margin: 0;
@@ -1641,7 +1641,7 @@ iframe[src="about:blank"]{display:none;}
 }
 
 #main .post h2 {
-	font: 18px Arial, helvetica, sans-serif;
+	font: 18px 'MuseoSlab500Regular', Arial, helvetica, sans-serif;
 	color: #333333;
 	margin: 0 0 25px 0;
 	padding: 0;
@@ -1862,7 +1862,7 @@ h5.toggle {
 }
 
 h5.toggle a {
-	font: 13px/20px Arial, helvetica, sans-serif !important;
+	font: 13px/20px 'MuseoSlab500Regular', Arial, helvetica, sans-serif !important;
 	cursor: pointer;
 	color: #333333 !important;
 	border-bottom: 1px solid #e8e6e6;
@@ -1941,13 +1941,13 @@ h5.toggle.active + .toggle-content {
 }
 
 .full-boxed-pricing ul li.title-row {
-	font: 18px Arial, helvetica, sans-serif !important;
+	font: 18px 'MuseoSlab500Regular', Arial, helvetica, sans-serif !important;
 	color: #333333;
 }
 
 .full-boxed-pricing ul li.pricing-row {
 	background: #f8f8f8;
-	font: 25px Arial, helvetica, sans-serif !important;
+	font: 25px 'MuseoSlab500Regular', Arial, helvetica, sans-serif !important;
 	color: #a0ce4e;
 	text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
 }
@@ -2000,13 +2000,13 @@ h5.toggle.active + .toggle-content {
 .sep-boxed-pricing ul li.title-row {
 	background: #92c563;
 	border-color: #92c563;
-	font: 18px Arial, helvetica, sans-serif !important;
+	font: 18px 'MuseoSlab500Regular', Arial, helvetica, sans-serif !important;
 	color: #333333;
 }
 
 .sep-boxed-pricing ul li.pricing-row {
 	background: #f8f8f8;
-	font: 25px Arial, helvetica, sans-serif !important;
+	font: 25px 'MuseoSlab500Regular', Arial, helvetica, sans-serif !important;
 	color: #a0ce4e;
 	text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
 }
@@ -2116,7 +2116,7 @@ h5.toggle.active + .toggle-content {
 .more {
 	overflow: hidden;
 	display: block;
-	font: 13px/15px Arial, helvetica, sans-serif;
+	font: 13px/15px 'MuseoSlab500Regular', Arial, helvetica, sans-serif;
 }
 
 .more a {
@@ -2160,7 +2160,7 @@ h5.toggle.active + .toggle-content {
 	border: 0 !important;
 	height: 39px !important;
 	line-height: 39px !important;
-	font: 13px/39px Arial, helvetica, sans-serif !important;
+	font: 13px/39px 'MuseoSlab500Regular', Arial, helvetica, sans-serif !important;
 	text-indent: 0 !important;
 	color: #333333 !important;
 	padding: 0 15px !important;
@@ -2339,7 +2339,7 @@ h5.toggle.active + .toggle-content {
 
 #main .pitch-container h2 {
 	margin: 0 0 5px;
-	font: 18px/20px Arial, helvetica, sans-serif;
+	font: 18px/20px 'MuseoSlab500Regular', Arial, helvetica, sans-serif;
 }
 
 .pitch-container p {
@@ -2469,7 +2469,7 @@ h5.toggle.active + .toggle-content {
 
 .person-author-wrapper {
 	float: left;
-	font: 13px/20px Arial, helvetica, sans-serif !important;
+	font: 13px/20px 'MuseoSlab500Regular', Arial, helvetica, sans-serif !important;
 	color: #333333 !important;
 	margin-bottom: 25px;
 }
@@ -2534,7 +2534,7 @@ h5.toggle.active + .toggle-content {
 	display: block;
 	padding: 25px 14px 24px 24px;
 	background: #f6f3f3;
-	font: 13px/20px 'PTSansItalic', arial, helvetica, sans-serif;
+	font: 13px/20px 'MuseoSlab500Regular', arial, helvetica, sans-serif;
 }
 
 .review blockquote div {
@@ -2548,7 +2548,7 @@ h5.toggle.active + .toggle-content {
 
 .review blockquote div strong {
 	padding: 0;
-	font: 13px/15px 'PTSansBold', arial, helvetica, sans-serif;
+	font: 13px/15px 'MuseoSlab500Regular', arial, helvetica, sans-serif;
 	font-style: normal !important;
 }
 
@@ -2733,7 +2733,7 @@ h5.toggle.active + .toggle-content {
 #sidebar .widget h3 {
 	margin: 0;
 	padding: 0;
-	font: 13px Arial, helvetica, sans-serif;
+	font: 13px 'MuseoSlab500Regular', Arial, helvetica, sans-serif;
 	margin-bottom: 18px;
 	color: #333333;
 }

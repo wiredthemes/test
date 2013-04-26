@@ -544,8 +544,7 @@
 		.post-content blockquote,
 		.progress-bar-content,
 		.pagination .current,
-		.pagination a.inactive:hover,
-		#nav ul a:hover{
+		.pagination a.inactive:hover {
 			border-color:<?php echo $data['primary_color']; ?> !important;
 		}
 		.side-nav li.current_page_item a{
@@ -657,12 +656,7 @@
 		}
 		<?php endif; ?>
 
-		<?php
-		if(
-			$data['custom_font_woff'] && $data['custom_font_ttf'] &&
-			$data['custom_font_svg'] && $data['custom_font_eot']
-		):
-		?>
+		<?php if( $data['custom_font_woff'] && $data['custom_font_ttf'] && $data['custom_font_svg'] && $data['custom_font_eot'] ) : ?>
 		@font-face {
 			font-family: 'MuseoSlab500Regular';
 			src: url('<?php echo $data['custom_font_eot']; ?>');
