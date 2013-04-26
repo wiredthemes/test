@@ -556,14 +556,25 @@
 		h5.toggle.active span.arrow,
 		.post-content ul.arrow li:before,
 		.progress-bar-content,
-		.pagination .current,
-		.header-v3 .header-social,.header-v4 .header-social,.header-v5 .header-social,
+		.pagination .current {
+			background-color:<?php echo $data['primary_color']; ?> !important;
+		}
+
 		#main .pitch-container .button,
 		#main .continue.button,
 		#main .portfolio-one .button,
 		#main .comment-submit,
 		.button.default {
-			background-color:<?php echo $data['primary_color']; ?> !important;
+			border: 3px solid <?php echo $data['primary_color']; ?> !important;
+		}
+
+		.button-bg {
+			background-color: <?php echo $data['primary_color']; ?> !important;
+			opacity: 0.7;
+		}
+
+		.button-bg:hover {
+			opacity: 1;
 		}
 
 		.sep-boxed-pricing ul li.title-row{
@@ -742,8 +753,7 @@
 		.sep-boxed-pricing ul li.title-row,
 		.sep-boxed-pricing ul li.pricing-row,
 		.person-author-wrapper,
-		.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6,
-		.ei-title h2, #header .tagline{
+		.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
 			font-family:<?php echo $headings_font; ?>;
 		}
 		<?php endif; ?>

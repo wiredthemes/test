@@ -126,7 +126,7 @@ nav#nav {
 #nav ul li {
 	float: left;
 	padding: 0;
-	margin: 0 8px 0 0;
+	margin: 0 3px 0 0;
 }
 
 ul#nav > li:last-child {
@@ -213,11 +213,11 @@ ul#nav > li:last-child {
 }
 
 nav#nav > ul li a {
-	border: 3px solid transparent;
-	border-radius: 10px;
+	border: 4px solid transparent;
 }
 
-nav#nav > ul .current-menu-item a {
+nav#nav > ul .current-menu-item a,
+nav#nav ul .current-menu-ancestor a {
 	border-color: #e5e5e5;
 }
 
@@ -460,24 +460,33 @@ nav#nav > ul .current-menu-item a {
 
 .button {
 	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	border-radius: 20px;
+}
+
+.button-text {
+	z-index: 10;
 }
 
 .button.large {
 	font: 14px/14px Arial, helvetica, sans-serif;
 	text-align: center;
-	padding: 13px 26px;
 	color: #fff !important;
-	border: 0;
-	text-transform: uppercase;
 }
 
 .button.small {
-	font: 10px/10px Arial, helvetica, sans-serif;
+	font: 12px/12px Arial, helvetica, sans-serif;
 	text-align: center;
-	padding: 10px 18px;
 	color: #fff !important;
-	border: 0;
-	text-transform: uppercase;
+}
+
+.button.small .button-bg {
+	padding: 10px 30px;
+}
+
+.button.large .button-bg {
+	padding: 10px 20px;
 }
 
 #content {

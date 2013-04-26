@@ -75,7 +75,7 @@ add_shortcode('button', 'shortcode_button');
 			if(!$atts['color']) {
 				$atts['color'] = 'default';
 			}
-			return '<a class="button ' . $atts['size'] . ' ' . $atts['color'] . '" href="' . $atts['link'] . '" target="' . $atts['target'] . '">' .do_shortcode($content). '</a>';
+			return '<a class="button ' . $atts['size'] . ' ' . $atts['color'] . '" href="' . $atts['link'] . '" target="' . $atts['target'] . '"><div class="button-bg">' .do_shortcode($content). '</div></a>';
 	}
 	
 /*----------------------------------------------------
@@ -297,7 +297,7 @@ add_shortcode('company_pitch', 'shortcode_company_pitch');
 		$str = '';
 		$str .= '<section class="pitch-container"><div class="pitch-inside">';
 			if($atts['link'] && $atts['button']):
-			$str .= '<a href="'.$atts['link'].'" target="'.$atts['linktarget'].'" class="continue button large">'.$atts['button'].'</a>';
+			$str .= '<a href="'.$atts['link'].'" target="'.$atts['linktarget'].'" class="continue button large"><div class="button-bg">'.$atts['button'].'</div></a>';
 			endif;
 			if($atts['title']):
 			$str .= '<h2>'.$atts['title'].'</h2>';
@@ -306,7 +306,7 @@ add_shortcode('company_pitch', 'shortcode_company_pitch');
 			$str.= '<p>'.$atts['description'].'</p>';
 			endif;
 			if($atts['link'] && $atts['button']):
-			$str .= '<a href="'.$atts['link'].'" target="'.$atts['linktarget'].'" class="continue mobile-button button large">'.$atts['button'].'</a>';
+			$str .= '<a href="'.$atts['link'].'" target="'.$atts['linktarget'].'" class="continue mobile-button button large"><div class="button-bg">'.$atts['button'].'</div></a>';
 			endif;
 		$str .= '</div></section>';
 
